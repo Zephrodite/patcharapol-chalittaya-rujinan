@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">lendy_LoginPage</string>
+    <string name="app_name">Lendy</string>
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
     <string name="username">Username</string>
@@ -17,4 +17,6 @@
     <string name="title_home">Home</string>
     <string name="title_bookshelf">Bookshelf</string>
     <string name="title_proflie">Profile</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
