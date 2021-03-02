@@ -13,4 +13,6 @@
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
     <color name="colorBar">#ee534f</color>
+    <color name="Pink">#FFCDD2</color>
+    <color name="Gray">#F2F5F9</color>
 </resources>
