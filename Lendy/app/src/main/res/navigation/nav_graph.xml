@@ -7,7 +7,7 @@
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.example.Lendy.HomeFragment"
-        android:label="fragment_home"
+        android:label="@string/lendyText"
         tools:layout="@layout/fragment_home" >
         <action
             android:id="@+id/action_homeFragment_to_bookshelfFragment"
@@ -19,7 +19,7 @@
     <fragment
         android:id="@+id/bookshelfFragment"
         android:name="com.example.Lendy.BookshelfFragment"
-        android:label="fragment_bookshelf"
+        android:label="@string/lendyText"
         tools:layout="@layout/fragment_bookshelf" >
         <action
             android:id="@+id/action_bookshelfFragment_to_profileFragment"
@@ -31,7 +31,7 @@
     <fragment
         android:id="@+id/profileFragment"
         android:name="com.example.Lendy.ProfileFragment"
-        android:label="fragment_profile"
+        android:label="@string/lendyText"
         tools:layout="@layout/fragment_profile" >
         <action
             android:id="@+id/action_profileFragment_to_bookshelfFragment"
