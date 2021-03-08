@@ -9,8 +9,11 @@ import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.FragmentTransaction
 import androidx.navigation.Navigation
 import androidx.navigation.ui.NavigationUI
+<<<<<<< HEAD
 import kotlinx.android.synthetic.main.activity_home.*
 import com.example.Lendy.databinding.ActivityHomeBinding
+=======
+>>>>>>> 6a0eecd9212fce83a296dbfef9e350a36d30c2c2
 
 class HomeActivity : AppCompatActivity() {
     lateinit var homeFragment: HomeFragment
@@ -19,8 +22,10 @@ class HomeActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         setContentView(R.layout.activity_home)
         val bottomNavigation: BottomNavigationView = findViewById(R.id.nav_view)
+
 
         bottomNavigation.setOnNavigationItemSelectedListener { item ->
             when (item.itemId) {
@@ -60,4 +65,5 @@ class HomeActivity : AppCompatActivity() {
         NavigationUI.setupActionBarWithNavController(this,navController)
         NavigationUI.setupWithNavController(binding.navView, navController)
     }
+
 }
