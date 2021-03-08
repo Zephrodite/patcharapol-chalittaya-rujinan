@@ -4,7 +4,13 @@ import android.os.Bundle
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import android.widget.TextView
+import androidx.databinding.DataBindingUtil
+import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.FragmentTransaction
+import androidx.navigation.Navigation
+import androidx.navigation.ui.NavigationUI
+import kotlinx.android.synthetic.main.activity_home.*
+import com.example.Lendy.databinding.ActivityHomeBinding
 
 class HomeActivity : AppCompatActivity() {
     lateinit var homeFragment: HomeFragment
@@ -45,5 +51,13 @@ class HomeActivity : AppCompatActivity() {
             }
             true
         }
+
+        lateinit var drawerLayout: DrawerLayout
+
+        val binding = DataBindingUtil.setContentView<ActivityHomeBinding>(this, R.layout.fragment_home)
+        drawerLayout = binding.drawerLayout
+        val navController = Navigation.findNavController(this, R.id.nav_host_fragment)
+        NavigationUI.setupActionBarWithNavController(this,navController)
+        NavigationUI.setupWithNavController(binding.navView, navController)
     }
 }

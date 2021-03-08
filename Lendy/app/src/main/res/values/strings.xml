@@ -26,4 +26,11 @@
     <string name="book_title">Book Title</string>
     <string name="book_des">Book Description Title</string>
     <string name="Book">Book</string>
+    <string name="Setting">Setting</string>
+    <string name="About">About</string>
+    <string name="sort_by">Sort By</string>
+    <string name="ranking">Ranking</string>
+    <string name="hot">Hot</string>
+    <string name="category">Category</string>
+    <string name="new_">New</string>
 </resources>

@@ -2,10 +2,10 @@ package com.example.Lendy
 
 import android.os.Bundle
 import android.view.*
+import android.widget.Toolbar
 import androidx.fragment.app.Fragment
-import androidx.appcompat.app.AppCompatActivity
-import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.RecyclerView
+import androidx.navigation.findNavController
+import androidx.navigation.ui.NavigationUI
 import kotlinx.android.synthetic.main.fragment_bookshelf.view.*
 
 private const val ARG_PARAM1 = "param1"
@@ -34,9 +34,9 @@ class BookshelfFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_bookshelf, container, false)
-
-        return view;
+        return view
     }
+
 
     companion object {
         /**
