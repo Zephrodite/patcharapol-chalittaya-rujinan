@@ -18,21 +18,14 @@
             android:background="@color/lendytext"
             tools:context=".ui.login.LoginActivity">
 
-<!--            <LinearLayout-->
-<!--                android:background="@color/lendybg"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="230dp"-->
-<!--                android:orientation="vertical"-->
-<!--                tools:ignore="MissingConstraints"/>-->
-
             <EditText
-                android:id="@+id/email"
+                android:id="@+id/username"
                 android:layout_width="330dp"
                 android:layout_height="60dp"
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="256dp"
                 android:layout_marginEnd="24dp"
-                android:hint="@string/email"
+                android:hint="@string/username"
                 android:drawableStart="@drawable/custom_email_icon"
                 android:background="@drawable/custom_input"
                 android:drawablePadding="12dp"
@@ -44,6 +37,29 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 android:drawableLeft="@drawable/custom_email_icon" />
+
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="330dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="24dp"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:drawableStart="@drawable/custom_lock_icon"
+                android:drawableLeft="@drawable/custom_lock_icon"
+                android:background="@drawable/custom_input"
+                android:drawablePadding="12dp"
+                android:hint="@string/email"
+                android:imeActionLabel="@string/action_sign_in_short"
+                android:imeOptions="actionDone"
+                android:inputType="textPassword"
+                android:selectAllOnFocus="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/username" />
+
 
             <!--            android:enabled="false"-->
             <EditText
@@ -68,9 +84,31 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/email" />
 
+            <EditText
+                android:id="@+id/confirmpassword"
+                android:layout_width="330dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="24dp"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:drawableStart="@drawable/custom_lock_icon"
+                android:drawableLeft="@drawable/custom_lock_icon"
+                android:background="@drawable/custom_input"
+                android:drawablePadding="12dp"
+                android:hint="@string/prompt_confirmpassword"
+                android:imeActionLabel="@string/action_sign_in_short"
+                android:imeOptions="actionDone"
+                android:inputType="textPassword"
+                android:selectAllOnFocus="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/password" />
+
 
             <Button
-                android:id="@+id/login"
+                android:id="@+id/registed"
                 android:layout_width="330dp"
                 android:layout_height="70dp"
                 android:layout_gravity="start"
@@ -78,15 +116,14 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="48dp"
                 android:layout_marginBottom="64dp"
-                android:enabled="false"
-                android:text="@string/action_sign_in"
+                android:text="@string/signup"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.533"
+                app:layout_constraintHorizontal_bias="0.466"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/password"
-                app:layout_constraintVertical_bias="0.049" />
+                app:layout_constraintVertical_bias="0.651" />
 
             <ProgressBar
                 android:id="@+id/loading"
@@ -104,23 +141,6 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.3" />
 
-            <TextView
-                android:id="@+id/create_acc"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:text="@string/create_acc"
-                app:layout_constraintStart_toStartOf="@+id/login"
-                app:layout_constraintTop_toBottomOf="@+id/login" />
-
-            <TextView
-                android:id="@+id/forgot_pass"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:text="@string/forgot_pass"
-                app:layout_constraintEnd_toEndOf="@+id/login"
-                app:layout_constraintTop_toBottomOf="@+id/login" />
 
             <ImageView
                 android:id="@+id/imageView"
@@ -128,22 +148,22 @@
                 android:layout_height="143dp"
                 android:layout_marginBottom="76dp"
                 android:contentDescription="TODO"
-                app:layout_constraintBottom_toTopOf="@+id/email"
+                app:layout_constraintBottom_toTopOf="@+id/username"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.498"
                 app:layout_constraintStart_toStartOf="parent"
                 app:srcCompat="@mipmap/lendy_logo_circle_foreground" />
 
             <TextView
-                android:id="@+id/lendyText"
+                android:id="@+id/createAcc"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="136dp"
-                android:text="@string/lendyText"
+                android:text="@string/create_an_acc"
                 android:textColor="@color/white"
                 android:textSize="44sp"
                 android:textStyle="bold"
-                app:layout_constraintBottom_toTopOf="@+id/email"
+                app:layout_constraintBottom_toTopOf="@+id/username"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.498"
                 app:layout_constraintStart_toStartOf="parent"
