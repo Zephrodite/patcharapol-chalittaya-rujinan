@@ -40,9 +40,35 @@ class BookshelfFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_bookshelf, container, false)
 
 
-//        setHasOptionsMenu(true)
+        setHasOptionsMenu(true)
 
         return view
+    }
+
+    private fun getShareIntent(): Intent {
+        val shareIntent = Intent(Intent.ACTION_SEND)
+        shareIntent.setType("text/plain")
+        return shareIntent
+
+    }
+
+    private fun shareInfo() {
+        startActivity(getShareIntent())
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
+        inflater.inflate(R.menu.share_menu, menu)
+        if (getShareIntent().resolveActivity(requireActivity().packageManager) == null) {
+            menu.findItem(R.id.share).isVisible = false
+        }
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.share -> shareInfo()
+        }
+        return super.onOptionsItemSelected(item)
     }
 
 //    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
