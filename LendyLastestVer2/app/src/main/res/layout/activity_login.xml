@@ -15,7 +15,7 @@
             android:id="@+id/container"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/lendytext"
+
             tools:context=".ui.login.LoginActivity">
 
 <!--            <LinearLayout-->
@@ -125,7 +125,7 @@
                 android:layout_height="19dp"
                 android:layout_marginTop="92dp"
                 android:text="@string/signup"
-                android:textColor="@color/black"
+                android:textColor="@color/lendybg"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.6"
@@ -139,7 +139,7 @@
                 android:layout_height="23dp"
                 android:layout_marginTop="48dp"
                 android:text="@string/or"
-                android:textColor="@color/black"
+                android:textColor="@color/lendybg"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.498"
@@ -175,7 +175,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="136dp"
                 android:text="@string/lendyText"
-                android:textColor="@color/white"
+                android:textColor="@color/lendytext"
                 android:textSize="44sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toTopOf="@+id/email"
@@ -183,7 +183,7 @@
                 app:layout_constraintHorizontal_bias="0.498"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.016" />
+                app:layout_constraintVertical_bias="0.212" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
