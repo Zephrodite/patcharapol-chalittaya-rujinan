@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Lendy_LoginPage">
-        <activity android:name=".SignUpActivity"></activity>
+        <activity android:name=".SignUpActivity"
+            android:theme="@style/Theme.Lendy_LoginPage2"/>
         <activity android:name=".OptionsActivity" />
         <activity
             android:name=".ui.login.LoginActivity"

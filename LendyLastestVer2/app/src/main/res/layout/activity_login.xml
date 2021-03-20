@@ -25,27 +25,29 @@
 <!--                android:orientation="vertical"-->
 <!--                tools:ignore="MissingConstraints"/>-->
 
+            <!--            android:enabled="false"-->
+
             <EditText
                 android:id="@+id/email"
                 android:layout_width="330dp"
                 android:layout_height="60dp"
                 android:layout_marginStart="24dp"
-                android:layout_marginTop="256dp"
+                android:layout_marginTop="228dp"
                 android:layout_marginEnd="24dp"
-                android:hint="@string/email"
-                android:drawableStart="@drawable/custom_email_icon"
                 android:background="@drawable/custom_input"
+                android:drawableStart="@drawable/custom_email_icon"
+                android:drawableLeft="@drawable/custom_email_icon"
                 android:drawablePadding="12dp"
+                android:hint="@string/email"
+                android:inputType="textEmailAddress"
                 android:paddingStart="12dp"
                 android:paddingEnd="12dp"
-                android:inputType="textEmailAddress"
                 android:selectAllOnFocus="true"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.484"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:drawableLeft="@drawable/custom_email_icon" />
+                app:layout_constraintTop_toTopOf="parent" />
 
-            <!--            android:enabled="false"-->
             <EditText
                 android:id="@+id/password"
                 android:layout_width="330dp"
@@ -83,10 +85,10 @@
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.533"
+                app:layout_constraintHorizontal_bias="0.466"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/password"
-                app:layout_constraintVertical_bias="0.049" />
+                app:layout_constraintVertical_bias="0.031" />
 
             <ProgressBar
                 android:id="@+id/loading"
@@ -104,14 +106,46 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.3" />
 
+
             <TextView
                 android:id="@+id/create_acc"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
+                android:layout_width="165dp"
+                android:layout_height="19dp"
+                android:layout_marginTop="92dp"
                 android:text="@string/create_acc"
-                app:layout_constraintStart_toStartOf="@+id/login"
-                app:layout_constraintTop_toBottomOf="@+id/login" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.406"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/or"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/sign_up"
+                android:layout_width="48dp"
+                android:layout_height="19dp"
+                android:layout_marginTop="92dp"
+                android:text="@string/signup"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.6"
+                app:layout_constraintStart_toStartOf="@+id/create_acc"
+                app:layout_constraintTop_toBottomOf="@+id/or"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/or"
+                android:layout_width="20dp"
+                android:layout_height="23dp"
+                android:layout_marginTop="48dp"
+                android:text="@string/or"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/login"
+                tools:ignore="MissingConstraints" />
 
             <TextView
                 android:id="@+id/forgot_pass"
@@ -126,7 +160,8 @@
                 android:id="@+id/imageView"
                 android:layout_width="138dp"
                 android:layout_height="143dp"
-                android:layout_marginBottom="76dp"
+                android:layout_marginBottom="68dp"
+
                 android:contentDescription="TODO"
                 app:layout_constraintBottom_toTopOf="@+id/email"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -148,7 +183,7 @@
                 app:layout_constraintHorizontal_bias="0.498"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.36" />
+                app:layout_constraintVertical_bias="0.016" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

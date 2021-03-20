@@ -11,13 +11,14 @@
     <string name="invalid_email">Not a valid Email Address</string>
     <string name="invalid_password">Password must contain at least 8 characters.</string>
     <string name="login_failed">"Login failed"</string>
-    <string name="create_acc">Do not have an account ?</string>
+    <string name="create_acc">Do not have an account?</string>
     <string name="create_an_acc">Create an Account</string>
     <string name="signup">Sign up</string>
-    <string name="forgot_pass">Forgot Password ?</string>
+    <string name="forgot_pass">Forgot Password?</string>
     <string name="lendyText">Lendy</string>
     <string name="app_home_name">Lendy</string>
     <string name="title_home">Home</string>
+    <string name="or">Or</string>
     <string name="title_bookshelf">Bookshelf</string>
     <string name="title_proflie">Profile</string>
     <!-- TODO: Remove or change this placeholder text -->

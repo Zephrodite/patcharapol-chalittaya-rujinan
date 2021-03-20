@@ -7,10 +7,7 @@ import android.text.Editable
 import android.text.TextWatcher
 import android.view.View
 import android.view.inputmethod.EditorInfo
-import android.widget.Button
-import android.widget.EditText
-import android.widget.ProgressBar
-import android.widget.Toast
+import android.widget.*
 import androidx.annotation.StringRes
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
@@ -18,6 +15,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.lendylastestver2.ui.login.LoginViewModelFactory
 import com.example.lendylastestver2.HomeActivity
 import com.example.lendylastestver2.R
+import com.example.lendylastestver2.SignUpActivity
 
 
 class LoginActivity : AppCompatActivity() {
@@ -33,6 +31,7 @@ class LoginActivity : AppCompatActivity() {
         val password = findViewById<EditText>(R.id.password)
         val login = findViewById<Button>(R.id.login)
         val loading = findViewById<ProgressBar>(R.id.loading)
+        val signup = findViewById<TextView>(R.id.sign_up)
 
         loginViewModel = ViewModelProvider(this, LoginViewModelFactory())
                 .get(LoginViewModel::class.java)
@@ -102,6 +101,12 @@ class LoginActivity : AppCompatActivity() {
                 val intent = Intent(this@LoginActivity, HomeActivity::class.java)
                 startActivity(intent)
             }
+
+        }
+
+        signup.setOnClickListener {
+            val intent = Intent(this@LoginActivity, SignUpActivity::class.java)
+            startActivity(intent)
         }
     }
 
