@@ -12,11 +12,19 @@ import androidx.annotation.StringRes
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import com.example.lendylastestver2.ui.login.LoginViewModelFactory
 import com.example.lendylastestver2.HomeActivity
 import com.example.lendylastestver2.R
 import com.example.lendylastestver2.SignUpActivity
+import com.google.android.gms.auth.api.signin.GoogleSignIn
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions
+import com.google.android.gms.common.SignInButton
+import com.google.android.gms.common.api.ApiException
+import com.google.android.gms.tasks.Task
+import kotlinx.android.synthetic.main.activity_login.*
 
+
+const val RC_SIGN_IN = 123
 
 class LoginActivity : AppCompatActivity() {
 
@@ -24,6 +32,25 @@ class LoginActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+
+
+//        var gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+//            .requestEmail()
+//            .build()
+//        var mGoogleSignInClient = GoogleSignIn.getClient(this, gso)
+//
+//        signin_button.visibility = View.VISIBLE
+//
+//        signin_button.setSize(SignInButton.SIZE_STANDARD)
+//        signin_button.setOnClickListener {
+//            val signInIntent = mGoogleSignInClient.signInIntent
+//            startActivityForResult(signInIntent, RC_SIGN_IN)
+//        }
+//        val acct = GoogleSignIn.getLastSignedInAccount(this)
+//        if (acct != null) {
+//            signin_button.visibility = View.VISIBLE
+//        }
 
         setContentView(R.layout.activity_login)
 
@@ -71,16 +98,16 @@ class LoginActivity : AppCompatActivity() {
 
         email.afterTextChanged {
             loginViewModel.loginDataChanged(
-                    email.text.toString(),
-                    password.text.toString()
+                email.text.toString(),
+                password.text.toString()
             )
         }
 
         password.apply {
             afterTextChanged {
                 loginViewModel.loginDataChanged(
-                        email.text.toString(),
-                        password.text.toString()
+                    email.text.toString(),
+                    password.text.toString()
                 )
             }
 
@@ -88,8 +115,8 @@ class LoginActivity : AppCompatActivity() {
                 when (actionId) {
                     EditorInfo.IME_ACTION_DONE ->
                         loginViewModel.login(
-                                email.text.toString(),
-                                password.text.toString()
+                            email.text.toString(),
+                            password.text.toString()
                         )
                 }
                 false
@@ -110,14 +137,45 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
+//    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+//        super.onActivityResult(requestCode, resultCode, data)
+//
+//        // Result returned from launching the Intent from GoogleSignInClient.getSignInIntent(...);
+//        if (requestCode == RC_SIGN_IN) {
+//            // The Task returned from this call is always completed, no need to attach
+//            // a listener.
+//            val task = GoogleSignIn.getSignedInAccountFromIntent(data)
+//            handleSignInResult(task)
+//        }
+//    }
+
+//    private fun handleSignInResult(completedTask: Task<GoogleSignInAccount>) {
+//
+//        val signin_button = findViewById<SignInButton>(R.id.signin_button)
+//
+//        try {
+//            val account = completedTask.getResult(ApiException::class.java)
+//
+//            // Signed in successfully, show authenticated UI.
+//            signin_button.visibility = View.VISIBLE
+//
+//        } catch (e: ApiException) {
+//            // The ApiException status code indicates the detailed failure reason.
+//            // Please refer to the GoogleSignInStatusCodes class reference for more information.
+//            signin_button.visibility = View.VISIBLE
+//
+//
+//        }
+//    }
+
     private fun updateUiWithUser(model: LoggedInUserView) {
         val welcome = getString(R.string.welcome)
         val displayName = model.displayName
         // TODO : initiate successful logged in experience
         Toast.makeText(
-                applicationContext,
-                "$welcome $displayName",
-                Toast.LENGTH_LONG
+            applicationContext,
+            "$welcome $displayName",
+            Toast.LENGTH_LONG
         ).show()
 
 

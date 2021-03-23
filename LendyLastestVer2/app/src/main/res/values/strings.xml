@@ -44,6 +44,9 @@
     <string name="ranking_menu">Ranking</string>
 
     <string name="share">Share</string>
+    <string name="signout">Sign Out</string>
+    <string name="showurbook">Show Your Book</string>
+    <string name="urbook">Your Book</string>
 
 
 </resources>

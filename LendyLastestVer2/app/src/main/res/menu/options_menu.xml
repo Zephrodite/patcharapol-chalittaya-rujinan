@@ -8,5 +8,8 @@
     <item
         android:id="@+id/aboutFragment"
         android:title="@string/about" />
+    <item
+        android:id="@+id/signoutFragment"
+        android:title="@string/signout" />
 
 </menu>

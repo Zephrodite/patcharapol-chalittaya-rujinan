@@ -6,6 +6,7 @@ import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
+import com.example.lendylastestver2.ui.login.LoginActivity
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -54,6 +55,13 @@ class ProfileFragment : Fragment() {
                 val `in` = Intent(getActivity(), OptionsActivity::class.java)
                 startActivity(`in`)
                 true
+
+            }
+            R.id.signoutFragment -> {
+                val `in` = Intent(getActivity(), LoginActivity::class.java)
+                startActivity(`in`)
+                true
+
             }
             else -> super.onOptionsItemSelected(item)
         }

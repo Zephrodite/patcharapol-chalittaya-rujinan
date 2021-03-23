@@ -1,11 +1,15 @@
 package com.example.lendylastestver2
 
 import android.os.Bundle
+import android.view.View
+import android.widget.TextView
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.FragmentTransaction
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
 import androidx.navigation.ui.NavigationUI
 import com.example.lendylastestver2.databinding.ActivityHomeBinding
@@ -16,11 +20,14 @@ class HomeActivity : AppCompatActivity() {
     lateinit var bookShelfFragment: BookshelfFragment
     lateinit var profileFragment: ProfileFragment
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val binding = DataBindingUtil.setContentView<ActivityHomeBinding>(this,
                 R.layout.activity_home)
 
+
+        //        setHasOptionsMenu(true)
         val bottomNavigation: BottomNavigationView = findViewById(R.id.nav_view)
         drawerLayout = binding.drawerLayout
         val navController = Navigation.findNavController(this, R.id.frame_layout)
@@ -57,6 +64,9 @@ class HomeActivity : AppCompatActivity() {
         }
 
     }
+
+
+
 
 
 }
