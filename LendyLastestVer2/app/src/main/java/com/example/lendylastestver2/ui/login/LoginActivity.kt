@@ -5,11 +5,13 @@ import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
+import android.util.Log
 import android.view.View
 import android.view.inputmethod.EditorInfo
 import android.widget.*
 import androidx.annotation.StringRes
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.AppCompatButton
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.lendylastestver2.HomeActivity
@@ -17,10 +19,13 @@ import com.example.lendylastestver2.R
 import com.example.lendylastestver2.SignUpActivity
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
+import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.common.SignInButton
 import com.google.android.gms.common.api.ApiException
 import com.google.android.gms.tasks.Task
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_login.*
 
 
@@ -28,29 +33,45 @@ const val RC_SIGN_IN = 123
 
 class LoginActivity : AppCompatActivity() {
 
+    private lateinit var mView: View
+    private lateinit var viewModel: LoginViewModel
+    private lateinit var googleSignInClient : GoogleSignInClient
     private lateinit var loginViewModel: LoginViewModel
+
+    companion object {
+        fun newInstance() = LoginActivity()
+        const val RC_SIGN_IN =202
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        viewModel = ViewModelProvider(this).get(LoginViewModel::class.java)
+        viewModel.user.observe(this, {
+            it?.let { firebaseUser ->
+                Log.d("Test login result:", firebaseUser.email ?: "There are no email")
+            }
+        })
+        //viewModel.login(requireActivity(), "test@mail.com", "12345678")
+        //viewModel.register(requireActivity(), "test2@mail.com", "12345678")
 
+        // Configure Google Sign In
+        val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+            .requestEmail()
+            .build()
 
-//        var gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-//            .requestEmail()
-//            .build()
-//        var mGoogleSignInClient = GoogleSignIn.getClient(this, gso)
-//
-//        signin_button.visibility = View.VISIBLE
-//
-//        signin_button.setSize(SignInButton.SIZE_STANDARD)
-//        signin_button.setOnClickListener {
-//            val signInIntent = mGoogleSignInClient.signInIntent
-//            startActivityForResult(signInIntent, RC_SIGN_IN)
-//        }
-//        val acct = GoogleSignIn.getLastSignedInAccount(this)
-//        if (acct != null) {
-//            signin_button.visibility = View.VISIBLE
-//        }
+        googleSignInClient = GoogleSignIn.getClient(this, gso)
+
+        mView.findViewById<SignInButton>(R.id.signin_button).setOnClickListener{
+            signIn()
+        }
+        Firebase.auth.addAuthStateListener{
+            it.currentUser?.let{firebaseUser ->
+                Log.d("Login State", firebaseUser.email ?:"There are no email but login")
+            } ?: run {
+                Log.d("Login state", "There is no user!")
+            }
+        }
 
         setContentView(R.layout.activity_login)
 
@@ -137,36 +158,25 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
-//    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-//        super.onActivityResult(requestCode, resultCode, data)
-//
-//        // Result returned from launching the Intent from GoogleSignInClient.getSignInIntent(...);
-//        if (requestCode == RC_SIGN_IN) {
-//            // The Task returned from this call is always completed, no need to attach
-//            // a listener.
-//            val task = GoogleSignIn.getSignedInAccountFromIntent(data)
-//            handleSignInResult(task)
-//        }
-//    }
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
 
-//    private fun handleSignInResult(completedTask: Task<GoogleSignInAccount>) {
-//
-//        val signin_button = findViewById<SignInButton>(R.id.signin_button)
-//
-//        try {
-//            val account = completedTask.getResult(ApiException::class.java)
-//
-//            // Signed in successfully, show authenticated UI.
-//            signin_button.visibility = View.VISIBLE
-//
-//        } catch (e: ApiException) {
-//            // The ApiException status code indicates the detailed failure reason.
-//            // Please refer to the GoogleSignInStatusCodes class reference for more information.
-//            signin_button.visibility = View.VISIBLE
-//
-//
-//        }
-//    }
+        // Result returned from launching the Intent from GoogleSignInClient.getSignInIntent(...);
+        if (requestCode == RC_SIGN_IN) {
+            val task = GoogleSignIn.getSignedInAccountFromIntent(data)
+            try {
+                // Google Sign In was successful, authenticate with Firebase
+                val account = task.getResult(ApiException::class.java)!!
+                Log.d("Test google auth", "firebaseAuthWithGoogle" + account.id)
+                account.idToken?.let {
+                    viewModel.firebaseAuthWithGoogle(this, it)
+                }
+            } catch (e: ApiException) {
+                // Google Sign In failed, update UI appropriately
+                Log.w("Test Google auth", "Google sign in failed", e)
+            }
+        }
+    }
 
     private fun updateUiWithUser(model: LoggedInUserView) {
         val welcome = getString(R.string.welcome)
@@ -183,6 +193,18 @@ class LoginActivity : AppCompatActivity() {
 
     private fun showLoginFailed(@StringRes errorString: Int) {
         Toast.makeText(applicationContext, errorString, Toast.LENGTH_SHORT).show()
+    }
+
+
+    override fun onStart() {
+        super.onStart()
+
+        val account = GoogleSignIn.getLastSignedInAccount(this)
+    }
+
+    private fun signIn() {
+        val signInIntent: Intent = googleSignInClient.getSignInIntent()
+        startActivityForResult(signInIntent, RC_SIGN_IN)
     }
 }
 
