@@ -108,7 +108,7 @@
         app:tint="@color/lendytext" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/add_book"
+        android:id="@+id/add_book_floating_button"
         android:layout_width="wrap_content"
         android:layout_height="43dp"
         android:layout_gravity="bottom|end"

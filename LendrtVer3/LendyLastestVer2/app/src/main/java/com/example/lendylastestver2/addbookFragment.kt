@@ -13,15 +13,25 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import java.io.FileNotFoundException
 import java.io.IOException
 
 
 class addbookFragment(val content: Context) : Fragment() {
 
+
     val REQUEST_GALLERY = 1
     var bitmap: Bitmap? = null
     var imageView1: ImageView? = null
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        view.findViewById<Button>(R.id.add_book_button).setOnClickListener {
+            findNavController().navigate(R.id.action_addbookFragment_to_bookshelfFragment)
+        }
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

@@ -209,13 +209,18 @@
         app:tint="@color/lendytext" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/add_book"
+        android:id="@+id/add_book_floating_button"
         android:layout_width="wrap_content"
-        android:layout_height="43dp"
+        android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
+<<<<<<< HEAD
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginBottom="100dp"
+=======
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="16dp"
+>>>>>>> c1b816fe568c2f49d1ab5a2034501f1752e5e54a
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/ic_action_home" />

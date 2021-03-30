@@ -8,7 +8,7 @@
         android:id="@+id/homeFragment"
         android:name="com.example.lendylastestver2.HomeFragment"
         android:label="@string/lendyText"
-        tools:layout="@layout/fragment_home" >
+        tools:layout="@layout/fragment_home">
         <action
             android:id="@+id/action_homeFragment_to_bookshelfFragment"
             app:destination="@id/bookshelfFragment" />
@@ -23,7 +23,7 @@
         android:id="@+id/bookshelfFragment"
         android:name="com.example.lendylastestver2.BookshelfFragment"
         android:label="@string/lendyText"
-        tools:layout="@layout/fragment_bookshelf" >
+        tools:layout="@layout/fragment_bookshelf">
         <action
             android:id="@+id/action_bookshelfFragment_to_profileFragment"
             app:destination="@id/profileFragment" />
@@ -33,12 +33,15 @@
         <action
             android:id="@+id/action_bookshelfFragment_to_lendFragment"
             app:destination="@id/lendFragment" />
+        <action
+            android:id="@+id/action_bookshelfFragment_to_addbookFragment"
+            app:destination="@id/addbookFragment" />
     </fragment>
     <fragment
         android:id="@+id/profileFragment"
         android:name="com.example.lendylastestver2.ProfileFragment"
         android:label="@string/lendyText"
-        tools:layout="@layout/fragment_profile" >
+        tools:layout="@layout/fragment_profile">
         <action
             android:id="@+id/action_profileFragment_to_bookshelfFragment"
             app:destination="@id/bookshelfFragment" />
@@ -53,7 +56,7 @@
         android:id="@+id/lendFragment"
         android:name="com.example.lendylastestver2.LendFragment"
         android:label="fragment_lend"
-        tools:layout="@layout/fragment_lend" >
+        tools:layout="@layout/fragment_lend">
         <action
             android:id="@+id/action_lendFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
@@ -64,5 +67,15 @@
             android:id="@+id/action_lendFragment_to_profileFragment"
             app:destination="@id/profileFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/addbookFragment"
+        android:name="com.example.lendylastestver2.addbookFragment"
+        android:label="fragment_addbook"
+        tools:layout="@layout/fragment_addbook" >
+        <action
+            android:id="@+id/action_addbookFragment_to_bookshelfFragment"
+            app:destination="@id/bookshelfFragment" />
+    </fragment>
+
 
 </navigation>
