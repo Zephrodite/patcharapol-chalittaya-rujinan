@@ -15,11 +15,12 @@ class HomeActivity : AppCompatActivity() {
     lateinit var homeFragment: HomeFragment
     lateinit var bookShelfFragment: BookshelfFragment
     lateinit var profileFragment: ProfileFragment
+    lateinit var lendFragment: LendFragment
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val binding = DataBindingUtil.setContentView<ActivityHomeBinding>(this,
-                R.layout.activity_home)
+            R.layout.activity_home)
 
         val bottomNavigation: BottomNavigationView = findViewById(R.id.nav_view)
         drawerLayout = binding.drawerLayout
@@ -49,6 +50,14 @@ class HomeActivity : AppCompatActivity() {
                     supportFragmentManager
                         .beginTransaction()
                         .replace(R.id.frame_layout, profileFragment)
+                        .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+                        .commit()
+                }
+                R.id.navigation_lend -> {
+                    lendFragment = LendFragment()
+                    supportFragmentManager
+                        .beginTransaction()
+                        .replace(R.id.frame_layout, lendFragment)
                         .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
                         .commit()
                 }

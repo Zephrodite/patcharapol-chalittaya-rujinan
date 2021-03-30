@@ -15,6 +15,9 @@
         <action
             android:id="@+id/action_homeFragment_to_profileFragment"
             app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_lendFragment"
+            app:destination="@id/lendFragment" />
     </fragment>
     <fragment
         android:id="@+id/bookshelfFragment"
@@ -27,6 +30,9 @@
         <action
             android:id="@+id/action_bookshelfFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_bookshelfFragment_to_lendFragment"
+            app:destination="@id/lendFragment" />
     </fragment>
     <fragment
         android:id="@+id/profileFragment"
@@ -39,6 +45,24 @@
         <action
             android:id="@+id/action_profileFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_lendFragment"
+            app:destination="@id/lendFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/lendFragment"
+        android:name="com.example.lendylastestver2.LendFragment"
+        android:label="fragment_lend"
+        tools:layout="@layout/fragment_lend" >
+        <action
+            android:id="@+id/action_lendFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_lendFragment_to_bookshelfFragment"
+            app:destination="@id/bookshelfFragment" />
+        <action
+            android:id="@+id/action_lendFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
     </fragment>
 
 </navigation>
