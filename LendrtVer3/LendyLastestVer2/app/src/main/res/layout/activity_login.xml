@@ -134,20 +134,6 @@
                 tools:ignore="MissingConstraints" />
 
             <TextView
-                android:id="@+id/or"
-                android:layout_width="20dp"
-                android:layout_height="23dp"
-                android:layout_marginTop="48dp"
-                android:text="@string/or"
-                android:textColor="@color/lendybg"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.498"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/login"
-                tools:ignore="MissingConstraints" />
-
-            <TextView
                 android:id="@+id/forgot_pass"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -185,9 +171,33 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.212" />
 
+            <TextView
+                android:id="@+id/or"
+                android:layout_width="20dp"
+                android:layout_height="23dp"
+                android:layout_marginTop="48dp"
+                android:text="@string/or"
+                android:textColor="@color/lendybg"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/login"
+                tools:ignore="MissingConstraints" />
+
+            <com.google.android.gms.common.SignInButton
+                android:id="@+id/sign_in_google_button"
+                android:layout_width="124dp"
+                android:layout_height="53dp"
+                android:layout_marginTop="76dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/login"
+                app:layout_constraintVertical_bias="0.098" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-
 
     </TableLayout>
 </ScrollView>

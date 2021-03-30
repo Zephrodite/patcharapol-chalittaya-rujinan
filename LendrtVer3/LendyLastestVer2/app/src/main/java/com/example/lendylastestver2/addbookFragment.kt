@@ -1,31 +1,57 @@
 package com.example.lendylastestver2
 
+import android.content.Context
+import android.app.Activity.RESULT_OK
+import android.content.Intent
+import android.graphics.Bitmap
+import android.net.Uri
 import android.os.Bundle
-import androidx.fragment.app.Fragment
+import android.provider.MediaStore
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.ImageView
+import androidx.fragment.app.Fragment
+import java.io.FileNotFoundException
+import java.io.IOException
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [addbookFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
-class addbookFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+class addbookFragment(val content: Context) : Fragment() {
+
+    val REQUEST_GALLERY = 1
+    var bitmap: Bitmap? = null
+    var imageView1: ImageView? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
+        imageView1 = view?.findViewById(com.example.lendylastestver2.R.id.imageView2) as ImageView
+        val buttonIntent: Button = view?.findViewById(com.example.lendylastestver2.R.id.addpic) as Button
+        buttonIntent.setOnClickListener(object : View.OnClickListener {
+            override fun onClick(v: View?) {
+                val intent = Intent(Intent.ACTION_GET_CONTENT)
+                intent.type = "image/*"
+                startActivityForResult(
+                    Intent.createChooser(
+                        intent, "Select Picture"
+                    ), REQUEST_GALLERY
+                )
+            }
+        })
+    }
+
+    @Suppress("DEPRECATION")
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        if (requestCode == REQUEST_GALLERY && resultCode == RESULT_OK) {
+            val uri: Uri? = data?.data
+            try {
+                bitmap = MediaStore.Images.Media.getBitmap(content.getContentResolver(), uri)
+                imageView1!!.setImageBitmap(bitmap)
+            } catch (e: FileNotFoundException) {
+                e.printStackTrace()
+            } catch (e: IOException) {
+                e.printStackTrace()
+            }
         }
     }
 
@@ -33,27 +59,7 @@ class addbookFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_addbook, container, false)
+        return  inflater.inflate(com.example.lendylastestver2.R.layout.fragment_addbook, container, false)
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment addbookFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            addbookFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
-    }
 }

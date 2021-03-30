@@ -41,6 +41,4 @@
             app:destination="@id/homeFragment" />
     </fragment>
 
-
-
 </navigation>
