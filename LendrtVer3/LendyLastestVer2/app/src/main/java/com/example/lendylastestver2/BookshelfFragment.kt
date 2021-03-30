@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
 import androidx.appcompat.app.AppCompatActivity
+import androidx.databinding.DataBindingUtil.setContentView
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -21,7 +22,7 @@ class BookshelfFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        view?.findViewById<FloatingActionButton>(R.id.add_book_floating_button)?.setOnClickListener {
+        view?.findViewById<FloatingActionButton>(R.id.add_book_floating_button)?.setOnClickListener { view ->
             findNavController().navigate(R.id.action_bookshelfFragment_to_addbookFragment)
         }
 

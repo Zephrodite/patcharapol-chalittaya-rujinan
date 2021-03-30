@@ -28,6 +28,10 @@
             android:gravity="center"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+<<<<<<< HEAD
+=======
+            android:background="@color/Gray"
+>>>>>>> 3e956ce0060ff7a9d2e062f4576a89aa8e4ccb0b
             android:text="Book Title"/>
 
     </LinearLayout>
