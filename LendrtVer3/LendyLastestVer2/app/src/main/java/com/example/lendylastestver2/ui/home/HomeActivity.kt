@@ -10,6 +10,7 @@ import androidx.navigation.Navigation
 import androidx.navigation.ui.NavigationUI
 import com.example.lendylastestver2.databinding.ActivityHomeBinding
 
+
 class HomeActivity : AppCompatActivity() {
     lateinit var drawerLayout: DrawerLayout
     lateinit var homeFragment: HomeFragment

@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".BookshelfFragment">
 
-
     <ImageView
         android:transitionName="containerTN"
         android:id="@+id/container"
@@ -107,6 +106,108 @@
         app:srcCompat="@drawable/ic_action_fav"
         app:tint="@color/lendytext" />
 
+
+
+    <ImageView
+        android:transitionName="containerTN"
+        android:id="@+id/container2"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:background="@color/Gray"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/container" />
+
+    <ImageView
+        android:transitionName="bookTN"
+        android:id="@+id/item_book_img2"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="10dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/container2"
+        app:layout_constraintBottom_toBottomOf="@+id/container2"
+        app:srcCompat="@mipmap/login_bg" />
+
+    <TextView
+        android:transitionName="booktitleTN"
+        android:id="@+id/item_book_title2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Lendy Book"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/item_book_img2"
+        app:layout_constraintTop_toTopOf="@+id/item_book_img2" />
+
+    <TextView
+        android:transitionName="authorTN"
+        android:id="@+id/item_book_author2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:text="By I'm Ironman"
+        app:layout_constraintStart_toEndOf="@+id/item_book_img2"
+        app:layout_constraintTop_toBottomOf="@+id/item_book_title2" />
+
+    <RatingBar
+        android:transitionName="rateTN"
+        android:id="@+id/item_book_ratingbar2"
+        style="?android:attr/ratingBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintStart_toEndOf="@+id/item_book_img2"
+        app:layout_constraintTop_toBottomOf="@+id/item_book_pagesrev2" />
+
+    <TextView
+        android:transitionName="scoreTN"
+        android:id="@+id/item_book_score2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:text="score"
+        app:layout_constraintBottom_toBottomOf="@+id/item_book_ratingbar2"
+        app:layout_constraintStart_toEndOf="@+id/item_book_ratingbar2"
+        app:layout_constraintTop_toTopOf="@+id/item_book_ratingbar2" />
+
+    <TextView
+        android:transitionName="bookpagesTN"
+        android:id="@+id/item_book_pagesrev2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:text="225 pages | 23 review"
+        app:layout_constraintStart_toEndOf="@+id/item_book_img2"
+        app:layout_constraintTop_toBottomOf="@+id/item_book_author2" />
+
+    <ImageView
+        android:id="@+id/imageoption2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/container2"
+        app:layout_constraintTop_toTopOf="@+id/container2"
+        app:srcCompat="@drawable/ic_action_fav"
+        app:tint="@color/lendytext" />
+
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/add_book"
         android:layout_width="wrap_content"
@@ -114,7 +215,7 @@
         android:layout_gravity="bottom|end"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="100dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/ic_action_home" />

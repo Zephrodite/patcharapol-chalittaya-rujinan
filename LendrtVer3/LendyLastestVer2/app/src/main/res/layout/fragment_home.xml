@@ -1,36 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/cardview_id"
-    android:clickable="true"
-    android:foreground="?android:attr/selectableItemBackground"
-    android:layout_width="120dp"
-    android:layout_height="190dp"
-    xmlns:cardview="http://schemas.android.com/apk/res-auto"
-    android:layout_margin="5dp"
-    cardview:cardCornerRadius="4dp">
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LendFragment">
 
-    <LinearLayout
-        android:orientation="vertical"
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:text="@string/hello_blank_fragment" />
 
-        <ImageView
-            android:id="@+id/book_img_id"
-            android:layout_width="match_parent"
-            android:layout_height="160dp"
-            android:scaleType="centerCrop"
-            android:src="@mipmap/login_bg"/>
-
-        <TextView
-            android:id="@+id/book_title_id"
-            android:textColor="#2d2d2d"
-            android:textSize="13sp"
-            android:gravity="center"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/Gray"
-            android:text="Book Title"/>
-
-    </LinearLayout>
-
-</androidx.cardview.widget.CardView>
+</FrameLayout>
