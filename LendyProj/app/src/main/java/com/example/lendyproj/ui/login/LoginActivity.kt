@@ -46,6 +46,7 @@ class LoginActivity : AppCompatActivity() {
         val password = findViewById<EditText>(R.id.password)
         val login = findViewById<Button>(R.id.login)
         val loading = findViewById<ProgressBar>(R.id.loading)
+        val signup = findViewById<TextView>(R.id.sign_up)
 
 
         // Configure Google Sign In
@@ -59,6 +60,11 @@ class LoginActivity : AppCompatActivity() {
 
         sign_in_button.setOnClickListener {
             signIn()
+        }
+
+        signup.setOnClickListener {
+            val intent = Intent(this@LoginActivity, SignUpActivity::class.java)
+            startActivity(intent)
         }
 
         loginViewModel = ViewModelProvider(this, LoginViewModelFactory())
