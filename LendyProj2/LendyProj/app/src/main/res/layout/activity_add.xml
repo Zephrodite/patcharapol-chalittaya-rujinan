@@ -6,168 +6,180 @@
     android:layout_height="match_parent"
     tools:context=".ui.login.AddActivity">
 
-    <View
-        android:layout_width="422dp"
-        android:layout_height="219dp"
-        android:background="@color/purple_500"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/titleAddTextView"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="Add your book"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="152dp"
+        tools:layout_editor_absoluteY="57dp">
 
-        android:textColor="@color/lendytext"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-        android:textSize="40sp"
-        app:layout_constraintBottom_toTopOf="@+id/cardView"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="16dp" />
+            <TextView
+                android:id="@+id/aad_your_book"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:text="Add your book"
+                android:textColor="@color/lendytext"
+                android:textSize="44sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/imageBook"
+                app:layout_constraintVertical_bias="0.212" />
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:cardCornerRadius="40dp"
-        app:cardElevation="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+            <ImageView
+                android:id="@+id/imageBook"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="16dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/price_book"
+                android:src="@mipmap/ic_launcher_reading_foreground" />
 
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="580dp">
+            <Button
+                android:id="@+id/buttonChoose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginRight="16dp"
+                android:backgroundTint="@color/lendybg"
+                android:text="Add Photo"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageBook" />
+
+            <EditText
+                android:id="@+id/titleEditText"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/custom_input"
+                android:drawablePadding="12dp"
+                android:hint="Title"
+                android:inputType="textEmailAddress"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:selectAllOnFocus="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.484"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/dateEditText"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/custom_input"
+                android:drawablePadding="12dp"
+                android:hint="Author"
+                android:inputType="textEmailAddress"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:selectAllOnFocus="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.484"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/descriptionEditText"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/custom_input"
+                android:drawablePadding="12dp"
+                android:hint="Description"
+                android:inputType="textEmailAddress"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:selectAllOnFocus="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.484"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/typeEditText"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/custom_input"
+                android:drawablePadding="12dp"
+                android:hint="Type"
+                android:inputType="textEmailAddress"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:selectAllOnFocus="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.484"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/priceEditText"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/custom_input"
+                android:drawablePadding="12dp"
+                android:hint="Price"
+                android:inputType="textEmailAddress"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:selectAllOnFocus="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.484"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
 
-                    <EditText
-                        android:id="@+id/titleEditText"
-                        android:layout_width="match_parent"
-                        android:layout_height="56dp"
-                        android:layout_below="@+id/buttonChoose"
-                        android:layout_alignParentStart="true"
-                        android:layout_alignParentLeft="true"
-                        android:layout_alignParentEnd="true"
-                        android:layout_alignParentRight="true"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginLeft="16dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginEnd="16dp"
-                        android:layout_marginRight="16dp"
-                        android:autofillHints="@string/name_form"
-                        android:background="@drawable/ic_field"
-                        android:ems="80"
-                        android:hint="Title"
-                        android:inputType="textAutoComplete"
-                        android:paddingLeft="16dp"
-                        android:paddingTop="8dp"
-                        android:paddingRight="16dp"
-                        android:paddingBottom="8dp" />
+            <Button
+                android:id="@+id/saveButton"
+                android:layout_width="330dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="48dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="48dp"
+                android:layout_marginBottom="16dp"
+                android:text="ADD"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.466"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/price_book"
+                app:layout_constraintVertical_bias="0.031" />
 
-                    <EditText
-                        android:id="@+id/dateEditText"
-                        android:layout_below="@+id/titleEditText"
-                        android:layout_width="match_parent"
-                        android:layout_height="56dp"
-                        android:layout_alignParentStart="true"
-                        android:layout_alignParentLeft="true"
-                        android:layout_alignParentEnd="true"
-                        android:layout_alignParentRight="true"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_marginLeft="16dp"
-                        android:layout_marginEnd="16dp"
-                        android:layout_marginRight="16dp"
-                        android:autofillHints="@string/date_form"
-                        android:background="@drawable/ic_field"
-                        android:ems="3"
-                        android:hint="Author"
-                        android:inputType="date|text"
-                        android:paddingLeft="16dp"
-                        android:paddingTop="8dp"
-                        android:paddingRight="16dp"
-                        android:paddingBottom="8dp" />
-
-                    <EditText
-                        android:id="@+id/descriptionEditText"
-                        android:layout_width="match_parent"
-                        android:layout_height="80dp"
-                        android:layout_below="@+id/dateEditText"
-                        android:layout_alignParentStart="true"
-                        android:layout_alignParentLeft="true"
-                        android:layout_alignParentEnd="true"
-                        android:layout_alignParentRight="true"
-                        android:layout_marginTop="8dp"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginLeft="16dp"
-                        android:layout_marginEnd="16dp"
-                        android:layout_marginRight="16dp"
-                        android:autofillHints="@string/description_form"
-                        android:background="@drawable/ic_field"
-                        android:ems="255"
-                        android:gravity="clip_vertical"
-                        android:hint="Description"
-                        android:inputType="textMultiLine"
-                        android:lines="6"
-                        android:maxLines="12"
-                        android:minLines="6"
-                        android:paddingLeft="16dp"
-                        android:paddingTop="8dp"
-                        android:paddingRight="16dp"
-                        android:paddingBottom="8dp" />
+        </LinearLayout>
+    </ScrollView>
 
 
-                    <Button
-                        android:id="@+id/saveButton"
-                        android:layout_width="240dp"
-                        android:layout_height="38dp"
-                        android:layout_below="@+id/descriptionEditText"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginTop="8dp"
-                        android:layout_marginBottom="16dp"
-                        android:background="@color/black"
-                        android:gravity="center"
-                        android:text="Add"
-                        android:textColor="@color/lendytext"
-                        android:textSize="20sp" />
-
-                    <Button
-                        android:id="@+id/buttonChoose"
-                        android:layout_width="114dp"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentStart="true"
-                        android:layout_alignParentLeft="true"
-                        android:layout_alignParentTop="true"
-                        android:layout_alignParentEnd="true"
-                        android:layout_alignParentRight="true"
-                        android:layout_marginStart="148dp"
-                        android:layout_marginLeft="148dp"
-                        android:layout_marginTop="177dp"
-                        android:layout_marginEnd="149dp"
-                        android:layout_marginRight="149dp"
-                        android:text="ADD PHOTO" />
-
-                    <ImageView
-                        android:id="@+id/imageBook"
-                        android:layout_width="167dp"
-                        android:layout_height="159dp"
-                        android:layout_alignParentStart="true"
-                        android:layout_alignParentLeft="true"
-                        android:layout_alignParentTop="true"
-                        android:layout_alignParentEnd="true"
-                        android:layout_alignParentRight="true"
-                        android:layout_marginStart="120dp"
-                        android:layout_marginLeft="120dp"
-                        android:layout_marginTop="12dp"
-                        android:layout_marginEnd="123dp"
-                        android:layout_marginRight="123dp"
-                        app:srcCompat="@drawable/gatsby" />
-
-                </RelativeLayout>
-
-    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
