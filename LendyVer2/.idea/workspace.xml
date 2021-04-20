@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ad0d17f5-4593-48d6-a37d-059f14e0e32b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../Lendy/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../Lendy/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lendy/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../Lendy/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lendy/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lendy/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lendy/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lendy/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lendy/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lendy/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lendy/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lendy/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lendy/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lendy/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lendy/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../Lendy/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lendy/app/proguard-rules.pro" beforeDir="false" afterPath="$PROJECT_DIR$/../Lendy/app/proguard-rules.pro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lendy/app/src/androidTest/java/com/example/Lendy/ExampleInstrumentedTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../Lendy/app/src/androidTest/java/com/example/Lendy/ExampleInstrumentedTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lendy/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lendy/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lendy/app/src/main/java/MainActivity.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lendy/app/src/main/java/com/example/Lendy/data/LoginDataSource.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../Lendy/app/src/main/java/com/example/Lendy/data/LoginDataSource.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lendy/app/src/main/java/com/example/Lendy/data/LoginRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../Lendy/app/src/main/java/com/example/Lendy/data/LoginRepository.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lendy/app/src/main/java/com/example/Lendy/data/Result.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../Lendy/app/src/main/java/com/example/Lendy/data/Result.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lendy/app/src/main/java/com/example/Lendy/data/model/LoggedInUser.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../Lendy/app/src/main/java/com/example/Lendy/data/model/LoggedInUser.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lendy/app/src/main/java/com/example/Lendy/ui/bookshelf/BookshelfFragment.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lendy/app/src/main/java/com/example/Lendy/ui/home/HomeFragment.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lendy/app/src/main/java/com/example/Lendy/ui/login/LoggedInUserView.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../Lendy/app/src/main/java/com/example/Lendy/ui/login/LoggedInUserView.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lendy/app/src/main/java/com/example/Lendy/ui/login/LoginActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../Lendy/app/src/main/java/com/example/Lendy/ui/login/LoginActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lendy/app/src/main/java/com/example/Lendy/ui/login/LoginFormState.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../Lendy/app/src/main/java/com/example/Lendy/ui/login/LoginFormState.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lendy/app/src/main/java/com/example/Lendy/ui/login/LoginResult.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../Lendy/app/src/main/java/com/example/Lendy/ui/login/LoginResult.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lendy/app/src/main/java/com/example/Lendy/ui/login/LoginViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../Lendy/app/src/main/java/com/example/Lendy/ui/login/LoginViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lendy/app/src/main/java/com/example/Lendy/ui/login/LoginViewModelFactory.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../Lendy/app/src/main/java/com/example/Lendy/ui/login/LoginViewModelFactory.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lendy/app/src/main/java/com/example/Lendy/ui/profile/ProfileFragment.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lendy/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lendy/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lendy/app/src/main/res/drawable/ic_dashboard_black_24dp.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lendy/app/src/main/res/drawable/ic_dashboard_black_24dp.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lendy/app/src/main/res/drawable/ic_home_black_24dp.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lendy/app/src/main/res/drawable/ic_home_black_24dp.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lendy/app/src/main/res/drawable/ic_launcher_background.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lendy/app/src/main/res/drawable/ic_launcher_background.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lendy/app/src/main/res/drawable/ic_notifications_black_24dp.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lendy/app/src/main/res/drawable/ic_notifications_black_24dp.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lendy/app/src/main/res/drawable/lendy_logo_background.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lendy/app/src/main/res/drawable/lendy_logo_background.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lendy/app/src/main/res/drawable/lendy_logo_circle_background.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lendy/app/src/main/res/drawable/lendy_logo_circle_background.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lendy/app/src/main/res/drawable/login_bg_background.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lendy/app/src/main/res/drawable/login_bg_background.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lendy/app/src/main/res/layout/fragment_bookshelf.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lendy/app/src/main/res/layout/fragment_bookshelf.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lendy/app/src/main/res/layout/fragment_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lendy/app/src/main/res/layout/fragment_home.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lendy/app/src/main/res/layout/fragment_login.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lendy/app/src/main/res/layout/fragment_profile.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lendy/app/src/main/res/layout/fragment_profile.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lendy/app/src/main/res/menu/bottom_nav_menu.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lendy/app/src/main/res/menu/bottom_nav_menu.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lendy/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lendy/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lendy/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lendy/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lendy/app/src/main/res/mipmap-anydpi-v26/lendy_logo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lendy/app/src/main/res/mipmap-anydpi-v26/lendy_logo.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lendy/app/src/main/res/mipmap-anydpi-v26/lendy_logo_circle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lendy/app/src/main/res/mipmap-anydpi-v26/lendy_logo_circle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lendy/app/src/main/res/mipmap-anydpi-v26/lendy_logo_circle_round.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lendy/app/src/main/res/mipmap-anydpi-v26/lendy_logo_circle_round.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lendy/app/src/main/res/mipmap-anydpi-v26/lendy_logo_round.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lendy/app/src/main/res/mipmap-anydpi-v26/lendy_logo_round.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lendy/app/src/main/res/mipmap-anydpi-v26/login_bg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lendy/app/src/main/res/mipmap-anydpi-v26/login_bg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lendy/app/src/main/res/mipmap-anydpi-v26/login_bg_round.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lendy/app/src/main/res/mipmap-anydpi-v26/login_bg_round.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lendy/app/src/main/res/navigation/nav_graph.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lendy/app/src/main/res/navigation/nav_graph.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lendy/app/src/main/res/values-night/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lendy/app/src/main/res/values-night/themes.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lendy/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lendy/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lendy/app/src/main/res/values/dimens.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lendy/app/src/main/res/values/dimens.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lendy/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lendy/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lendy/app/src/main/res/values/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lendy/app/src/main/res/values/themes.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lendy/app/src/test/java/com/example/Lendy/ExampleUnitTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../Lendy/app/src/test/java/com/example/Lendy/ExampleUnitTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lendy/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../Lendy/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lendy/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../Lendy/gradle.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lendy/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../Lendy/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lendy/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/../Lendy/gradlew" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lendy/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../Lendy/gradlew.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lendy/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../Lendy/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/example/lendyver2/ExampleInstrumentedTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/lendyver2/BookShelfFragment.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/lendyver2/HomeFragment.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/lendyver2/LoginFragment.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/lendyver2/MainActivity.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/lendyver2/ProfileFragment.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_action_book.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_action_home.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_action_profile.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/ic_action_book.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/ic_action_home.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/ic_action_profile.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_action_book.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_action_home.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_action_profile.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_action_book.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_action_home.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_action_profile.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi/ic_action_book.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi/ic_action_home.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi/ic_action_profile.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_dashboard_black_24dp.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_home_black_24dp.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_launcher_background.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_notifications_black_24dp.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/lendy_logo_background.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/lendy_logo_circle_background.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/login_bg_background.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_book_shelf.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_login.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_profile.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/menu/bottom_nav_menu.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/lendy_logo.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/lendy_logo_circle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/lendy_logo_circle_round.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/lendy_logo_round.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/login_bg.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/login_bg_round.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/lendy_logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/lendy_logo_circle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/lendy_logo_circle_foreground.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/lendy_logo_circle_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/lendy_logo_foreground.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/lendy_logo_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/login_bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/login_bg_foreground.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/login_bg_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/lendy_logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/lendy_logo_circle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/lendy_logo_circle_foreground.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/lendy_logo_circle_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/lendy_logo_foreground.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/lendy_logo_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/login_bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/login_bg_foreground.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/login_bg_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/lendy_logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/lendy_logo_circle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/lendy_logo_circle_foreground.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/lendy_logo_circle_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/lendy_logo_foreground.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/lendy_logo_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/login_bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/login_bg_foreground.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/login_bg_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/lendy_logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/lendy_logo_circle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/lendy_logo_circle_foreground.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/lendy_logo_circle_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/lendy_logo_foreground.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/lendy_logo_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/login_bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/login_bg_foreground.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/login_bg_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/lendy_logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/lendy_logo_circle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/lendy_logo_circle_foreground.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/lendy_logo_circle_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/lendy_logo_foreground.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/lendy_logo_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/login_bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/login_bg_foreground.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/login_bg_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/navigation/nav_graph.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-night/themes.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/themes.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/java/com/example/lendyver2/ExampleUnitTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[]" />
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1p6jri0soAZh0K2hc64ZcwzzfUu" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/A.MobileApps/patcharapol-chalittaya-rujinan-master/Lendy" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\user\Desktop\A.MobileApps\patcharapol-chalittaya-rujinan-master\Lendy\app\src\main\res" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
+      <module name="Lendy.app" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ad0d17f5-4593-48d6-a37d-059f14e0e32b" name="Default Changelist" comment="" />
+      <created>1614510635054</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1614510635054</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1027" y="278" key="AndroidCreateResourceDirectoryDialog" timestamp="1614624871983">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1027" y="278" key="AndroidCreateResourceDirectoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1614624871983" />
+    <state x="260" y="278" key="FileChooserDialogImpl" timestamp="1614625809668">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="260" y="278" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1614625809668" />
+    <state width="399" height="204" key="javadoc.popup.new" timestamp="1614625056466">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="399" height="204" key="javadoc.popup.new/0.0.1920.1040@0.0.1920.1040" timestamp="1614625056466" />
+  </component>
+</project>

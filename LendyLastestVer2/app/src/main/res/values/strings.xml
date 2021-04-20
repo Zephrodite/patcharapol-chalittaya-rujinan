@@ -1,0 +1,52 @@
+<resources>
+    <string name="app_name">Lendy</string>
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="username">Username</string>
+    <string name="prompt_password">Passwords</string>
+    <string name="prompt_confirmpassword">Confirm Passwords</string>
+    <string name="action_sign_in">Sign In</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">Welcome !</string>
+    <string name="invalid_email">Not a valid Email Address</string>
+    <string name="invalid_password">Password must contain at least 8 characters.</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="create_acc">Do not have an account?</string>
+    <string name="create_an_acc">Create an Account</string>
+    <string name="signup">Sign up</string>
+    <string name="forgot_pass">Forgot Password?</string>
+    <string name="lendyText">Lendy</string>
+    <string name="app_home_name">Lendy</string>
+    <string name="title_home">Home</string>
+    <string name="or">Or</string>
+    <string name="title_bookshelf">Bookshelf</string>
+    <string name="title_proflie">Profile</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="about_descrip">About this app ...</string>
+    <string name="about">About Lendy</string>
+    <string name="settings">Settings</string>
+    <string name="email">Email Address</string>
+
+
+    <string name="shr_search_title">Search</string>
+    <string name="shr_product_title">Title</string>
+    <string name="shr_product_description">Secondary text</string>
+
+    <string name="book_title">Book Title</string>
+    <string name="book_des">Book Description Title</string>
+    <string name="Book">Book</string>
+
+    <string name="hot_menu">Hot</string>
+    <string name="new_menu">New</string>
+    <string name="category_menu">Cataegory</string>
+    <string name="ranking_menu">Ranking</string>
+
+    <string name="share">Share</string>
+    <string name="signout">Sign Out</string>
+    <string name="showurbook">Show Your Book</string>
+    <string name="urbook">Your Book</string>
+
+
+</resources>
