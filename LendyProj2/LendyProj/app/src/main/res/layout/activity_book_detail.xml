@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/purple_500"
+    android:background="@color/Pink"
     tools:context=".ui.login.BookDetail">
 
     <ImageView
@@ -26,7 +26,6 @@
         android:layout_marginTop="-8dp"
         android:layout_marginLeft="-8dp"
         android:layout_marginStart="-8dp"
-        android:background="@drawable/ic_bg"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -38,7 +37,7 @@
         android:layout_height="wrap_content"
         app:cardMaxElevation="0dp"
         app:cardCornerRadius="16dp"
-        app:cardBackgroundColor="@color/purple_500"
+        app:cardBackgroundColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
@@ -59,7 +58,7 @@
                 android:layout_marginRight="180dp"
                 android:layout_marginBottom="32dp"
                 android:text="@string/name"
-                android:textColor="@color/teal_700"
+                android:textStyle="bold"
                 android:textSize="24sp" />
 
             <TextView
@@ -71,9 +70,9 @@
                 android:layout_marginTop="15dp"
                 android:layout_marginEnd="20dp"
                 android:layout_marginRight="20dp"
+                android:textStyle="bold"
                 android:layout_marginBottom="40dp"
-                android:text="Elon Musk"
-                android:textColor="@color/teal_200" />
+                android:text="Elon Musk" />
 
             <TextView
                 android:id="@+id/authorTVLabel"
@@ -85,8 +84,8 @@
                 android:layout_marginEnd="340dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginBottom="40dp"
-                android:text="Author :"
-                android:textColor="@color/teal_200" />
+                android:textStyle="bold"
+                android:text="Author :" />
 
             <ScrollView
                 android:layout_width="wrap_content"
@@ -109,8 +108,8 @@
                         android:layout_marginEnd="20dp"
                         android:layout_marginRight="20dp"
                         android:layout_marginBottom="40dp"
-                        android:text="@string/description"
-                        android:textColor="@color/teal_200" />
+                        android:textStyle="bold"
+                        android:text="@string/description" />
                 </LinearLayout>
             </ScrollView>
 

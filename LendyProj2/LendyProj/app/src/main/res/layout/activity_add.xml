@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/Pink"
     tools:context=".ui.login.AddActivity">
 
     <ScrollView
@@ -24,7 +25,7 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="16dp"
                 android:text="Add your book"
-                android:textColor="@color/lendytext"
+                android:textColor="@color/lendybg"
                 android:textSize="44sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"

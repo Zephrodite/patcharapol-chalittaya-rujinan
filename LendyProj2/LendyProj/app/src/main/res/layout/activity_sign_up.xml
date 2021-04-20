@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/Pink"
     android:fillViewport="true">
 
     <TableLayout
@@ -164,7 +165,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="136dp"
                 android:text="@string/create_an_acc"
-                android:textColor="@color/lendytext"
+                android:textColor="@color/lendybg"
                 android:textSize="44sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toTopOf="@+id/username"
