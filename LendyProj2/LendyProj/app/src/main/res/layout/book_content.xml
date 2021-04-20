@@ -36,7 +36,7 @@
 
     <TextView
         android:transitionName="booktitleTN"
-        android:id="@+id/item_book_title"
+        android:id="@+id/titleTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -48,16 +48,28 @@
         app:layout_constraintTop_toTopOf="@+id/item_book_img" />
 
     <TextView
-        android:transitionName="authorTN"
-        android:id="@+id/item_book_author"
+        android:id="@+id/dateTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginLeft="44dp"
         android:layout_marginTop="8dp"
         android:text="By I'm Ironman"
+        android:transitionName="authorTN"
         app:layout_constraintStart_toEndOf="@+id/item_book_img"
-        app:layout_constraintTop_toBottomOf="@+id/item_book_title" />
+        app:layout_constraintTop_toBottomOf="@+id/titleTextView" />
+
+    <TextView
+        android:id="@+id/dateTextView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginLeft="44dp"
+        android:layout_marginTop="8dp"
+        android:text="By I'm Ironman"
+        android:transitionName="authorTN"
+        app:layout_constraintStart_toEndOf="@+id/item_book_img"
+        app:layout_constraintTop_toBottomOf="@+id/titleTextView" />
 
     <RatingBar
         android:transitionName="rateTN"
@@ -93,7 +105,7 @@
         android:layout_marginTop="8dp"
         android:text="225 pages | 23 review"
         app:layout_constraintStart_toEndOf="@+id/item_book_img"
-        app:layout_constraintTop_toBottomOf="@+id/item_book_author" />
+        app:layout_constraintTop_toBottomOf="@+id/dateTextView" />
 
     <ImageView
         android:id="@+id/imageView3"
