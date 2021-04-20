@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#27283a"
+    android:background="@color/white"
     tools:context=".BookshelfFragment">
 
     <RelativeLayout
@@ -28,7 +28,7 @@
             android:layout_marginBottom="20dp"
             android:fontFamily="sans-serif"
             android:text="BookShelf"
-            android:textColor="@color/white"
+            android:textColor="@color/lendybg"
             android:textSize="24sp" />
 
 
