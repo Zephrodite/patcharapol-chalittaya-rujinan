@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context=".BookshelfFragment">
+    tools:context=".LendFragment">
 
 
     <ImageView
@@ -12,6 +12,18 @@
         android:layout_width="0dp"
         android:layout_height="150dp"
         android:background="@color/Gray"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/container2"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="@color/lendybg"
         android:layout_marginTop="16dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
@@ -41,6 +53,7 @@
         android:layout_marginTop="16dp"
         android:text="Ironman Book"
         android:textStyle="bold"
+        android:textSize="25sp"
         app:layout_constraintStart_toEndOf="@+id/posterImgeView"
         app:layout_constraintTop_toTopOf="@+id/posterImgeView" />
 
@@ -54,6 +67,7 @@
         android:text="By I'm Ironman"
         app:layout_constraintStart_toEndOf="@+id/posterImgeView"
         app:layout_constraintTop_toBottomOf="@+id/titleTextView" />
+
     <TextView
         android:id="@+id/item_book_pagesrev"
         android:layout_width="wrap_content"
@@ -61,7 +75,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="8dp"
-        android:text="price : 10 thb"
+        android:text="price : 5 thb"
         app:layout_constraintStart_toEndOf="@+id/posterImgeView"
         app:layout_constraintTop_toBottomOf="@+id/dateTextView" />
 

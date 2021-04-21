@@ -51,4 +51,8 @@ class BookDetail : AppCompatActivity() {
             .load(url)
             .into(backgroundImageView)
     }
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
+    }
 }

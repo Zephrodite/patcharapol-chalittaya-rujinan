@@ -9,7 +9,7 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="300dp"
-        android:background="@color/purple_500"
+        android:background="@color/Pink"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -20,8 +20,9 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="Edit book"
-        android:textColor="@color/lendytext"
-        android:textSize="32sp"
+        android:textColor="@color/lendybg"
+        android:textSize="40sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/cardView"
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="16dp" />

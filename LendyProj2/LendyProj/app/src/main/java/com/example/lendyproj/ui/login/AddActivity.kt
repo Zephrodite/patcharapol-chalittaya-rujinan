@@ -1,5 +1,6 @@
 package com.example.lendyproj.ui.login
 
+import android.app.ActionBar
 import android.app.Activity
 import android.app.ProgressDialog
 import android.content.Intent
@@ -7,7 +8,9 @@ import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.MediaStore
+import android.widget.TextView
 import android.widget.Toast
+import android.widget.Toolbar
 import com.example.lendyproj.R
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
@@ -23,13 +26,18 @@ class AddActivity : AppCompatActivity() {
     private var filepath: Uri? = null
     internal var storage:FirebaseStorage?=null
     internal var storageReference: StorageReference?=null
+    private lateinit var myToolbar: Toolbar
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add)
+        getSupportActionBar()?.setDisplayHomeAsUpEnabled (true)
+
 
         val myRef = database.getReference("book")
+
 
         storage = FirebaseStorage.getInstance()
         storageReference = storage!!.reference
@@ -100,5 +108,11 @@ class AddActivity : AppCompatActivity() {
             imageBook.setImageBitmap(bitmap)
 
         }
+    }
+
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
     }
 }

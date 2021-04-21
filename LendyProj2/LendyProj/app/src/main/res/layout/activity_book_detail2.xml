@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/Pink"
-    tools:context=".ui.login.BookDetail">
+    tools:context=".Bookdetail2Activity">
 
     <ImageView
         android:id="@+id/backgroundImageView"
@@ -135,9 +135,9 @@
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="10dp"
                 android:layout_gravity="bottom"
-                android:background="@color/lendytext"
-                android:textColor="@color/lendybg"
-                android:text="Edit" />
+                android:backgroundTint="@color/lendybg"
+                android:textColor="@color/lendytext"
+                android:text="Lend" />
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
