@@ -44,53 +44,16 @@
         app:layout_constraintStart_toEndOf="@+id/posterImgeView"
         app:layout_constraintTop_toTopOf="@+id/posterImgeView" />
 
-
-    <TextView
-        android:id="@+id/dateTextView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="8dp"
-        android:text="By"
-        android:transitionName="authorTN"
-        app:layout_constraintStart_toEndOf="@+id/posterImgeView"
-        app:layout_constraintTop_toBottomOf="@+id/titleTextView" />
-
     <TextView
         android:id="@+id/dateTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
-        android:layout_marginLeft="36dp"
-        android:layout_marginTop="8dp"
-        android:text="I'm Ironman"
-        android:transitionName="authorTN"
-        app:layout_constraintStart_toEndOf="@+id/posterImgeView"
-        app:layout_constraintTop_toBottomOf="@+id/titleTextView" />
-
-    <RatingBar
-        android:id="@+id/item_book_ratingbar"
-        style="?android:attr/ratingBarStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:text="By I'm Ironman"
         app:layout_constraintStart_toEndOf="@+id/posterImgeView"
-        app:layout_constraintTop_toBottomOf="@+id/item_book_pagesrev" />
-
-    <TextView
-        android:id="@+id/item_book_score"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:text="score"
-        app:layout_constraintBottom_toBottomOf="@+id/item_book_ratingbar"
-        app:layout_constraintStart_toEndOf="@+id/item_book_ratingbar"
-        app:layout_constraintTop_toTopOf="@+id/item_book_ratingbar" />
-
+        app:layout_constraintTop_toBottomOf="@+id/titleTextView" />
     <TextView
         android:id="@+id/item_book_pagesrev"
         android:layout_width="wrap_content"
@@ -98,7 +61,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="8dp"
-        android:text="225 pages | 23 review"
+        android:text="price : 10 thb"
         app:layout_constraintStart_toEndOf="@+id/posterImgeView"
         app:layout_constraintTop_toBottomOf="@+id/dateTextView" />
 
@@ -113,4 +76,5 @@
         app:layout_constraintTop_toTopOf="@+id/container"
         app:srcCompat="@drawable/ic_action_fav"
         app:tint="@color/lendytext" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
