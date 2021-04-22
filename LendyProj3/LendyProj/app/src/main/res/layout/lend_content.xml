@@ -20,7 +20,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/container2"
+        android:id="@+id/container3"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:background="@color/lendybg"
@@ -32,7 +32,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/posterImgeView"
+        android:id="@+id/posterImgeView2"
         android:layout_width="100dp"
         android:layout_height="150dp"
         android:layout_marginStart="32dp"
@@ -45,7 +45,7 @@
         app:srcCompat="@mipmap/ic_launcher_ironman2_foreground" />
 
     <TextView
-        android:id="@+id/titleTextView"
+        android:id="@+id/titleTextView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -55,40 +55,50 @@
         android:textStyle="bold"
         android:textSize="25sp"
         android:textColor="@color/white"
-        app:layout_constraintStart_toEndOf="@+id/posterImgeView"
-        app:layout_constraintTop_toTopOf="@+id/posterImgeView" />
+        app:layout_constraintStart_toEndOf="@+id/posterImgeView2"
+        app:layout_constraintTop_toTopOf="@+id/posterImgeView2" />
 
     <TextView
-        android:id="@+id/dateTextView"
+        android:id="@+id/dateTextView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="8dp"
         android:text="By I'm Ironman"
-        app:layout_constraintStart_toEndOf="@+id/posterImgeView"
-        app:layout_constraintTop_toBottomOf="@+id/titleTextView" />
+        app:layout_constraintStart_toEndOf="@+id/posterImgeView2"
+        app:layout_constraintTop_toBottomOf="@+id/titleTextView2" />
 
     <TextView
-        android:id="@+id/item_book_pagesrev"
+        android:id="@+id/item_book_price2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="8dp"
         android:text="price : 5 thb"
-        app:layout_constraintStart_toEndOf="@+id/posterImgeView"
-        app:layout_constraintTop_toBottomOf="@+id/dateTextView" />
+        app:layout_constraintStart_toEndOf="@+id/posterImgeView2"
+        app:layout_constraintTop_toBottomOf="@+id/dateTextView2" />
+    <TextView
+        android:id="@+id/item_book_return2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:text="return : 30/4/65"
+        app:layout_constraintStart_toEndOf="@+id/posterImgeView2"
+        app:layout_constraintTop_toBottomOf="@+id/item_book_price2" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/imageView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
-        app:layout_constraintEnd_toEndOf="@+id/container"
-        app:layout_constraintTop_toTopOf="@+id/container"
+        app:layout_constraintEnd_toEndOf="@+id/container3"
+        app:layout_constraintTop_toTopOf="@+id/container3"
         app:srcCompat="@drawable/ic_action_fav"
         app:tint="@color/lendytext" />
 

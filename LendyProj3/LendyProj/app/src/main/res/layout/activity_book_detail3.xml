@@ -8,7 +8,7 @@
     tools:context=".Bookdetail2Activity">
 
     <ImageView
-        android:id="@+id/backgroundImageView2"
+        android:id="@+id/backgroundImageView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:contentDescription="@string/all"
@@ -32,7 +32,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cardView3"
+        android:id="@+id/cardView4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:cardMaxElevation="0dp"
@@ -48,7 +48,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/titleTextView2"
+                android:id="@+id/titleTextView3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
@@ -62,7 +62,7 @@
                 android:textSize="24sp" />
 
             <TextView
-                android:id="@+id/dateTextView2"
+                android:id="@+id/dateTextView3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
@@ -101,7 +101,7 @@
                 </LinearLayout>
             </ScrollView>
             <TextView
-                android:id="@+id/TypeTextView2"
+                android:id="@+id/TypeTextView3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
@@ -113,7 +113,7 @@
                 android:layout_marginBottom="10dp"
                 android:text="Type : " />
             <TextView
-                android:id="@+id/PriceTextView2"
+                android:id="@+id/PriceTextView3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
@@ -126,7 +126,7 @@
                 android:text="Price : " />
 
             <Button
-                android:id="@+id/lend_button"
+                android:id="@+id/return_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -137,7 +137,7 @@
                 android:layout_gravity="bottom"
                 android:backgroundTint="@color/lendytext"
                 android:textColor="@color/lendybg"
-                android:text="Lend" />
+                android:text="Return" />
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
@@ -149,9 +149,9 @@
         android:layout_marginRight="20dp"
         app:cardMaxElevation="0dp"
         app:cardCornerRadius="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/cardView3"
+        app:layout_constraintBottom_toTopOf="@+id/cardView4"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/cardView3">
+        app:layout_constraintTop_toTopOf="@+id/cardView4">
 
         <ImageView
             android:id="@+id/posterImgeView"
