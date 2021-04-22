@@ -47,8 +47,8 @@ class BookDetail : AppCompatActivity() {
             .load(url)
             .into(posterImgeView)
 
-        Glide.with(this)
-            .load(url)
-            .into(backgroundImageView)
+//        Glide.with(this)
+//            .load(url)
+//            .into(backgroundImageView)
     }
 }

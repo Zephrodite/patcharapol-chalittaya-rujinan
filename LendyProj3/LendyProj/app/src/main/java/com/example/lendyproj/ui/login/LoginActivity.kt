@@ -28,6 +28,7 @@ import com.google.firebase.auth.GoogleAuthProvider
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_login.*
+import kotlinx.android.synthetic.main.fragment_profile.view.*
 
 
 class LoginActivity : AppCompatActivity() {
@@ -71,6 +72,17 @@ class LoginActivity : AppCompatActivity() {
         signup.setOnClickListener {
             val intent = Intent(this@LoginActivity, SignUpActivity::class.java)
             startActivity(intent)
+        }
+
+        sign_out_btn.setOnClickListener {
+            mAuth = FirebaseAuth.getInstance()
+            Firebase.auth.signOut()
+            mAuth.signOut()
+            googleSignInClient.signOut().addOnCompleteListener{
+                val `in` = Intent(this, LoginActivity::class.java)
+                startActivity(`in`)
+            }
+
         }
 
 
