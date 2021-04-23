@@ -45,6 +45,7 @@ class HomeFragment : Fragment(), MemberListener {
     }
 
 
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -77,8 +78,8 @@ class HomeFragment : Fragment(), MemberListener {
     }
 
     override fun onItemClick() {
-//        val `in` = Intent(getActivity(), BookDetailActivity::class.java)
-//        startActivity(`in`)
+        val `in` = Intent(getActivity(), Bookdetail2Activity::class.java)
+        startActivity(`in`)
     }
 
 

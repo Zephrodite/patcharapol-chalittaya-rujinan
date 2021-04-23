@@ -38,7 +38,7 @@ class AddActivity : AppCompatActivity() {
             val intent = Intent()
             intent.setType("image/*")
             intent.setAction(Intent.ACTION_GET_CONTENT)
-            startActivityForResult(Intent.createChooser(intent, "SELECT PICURE"), 111)
+            startActivityForResult(Intent.createChooser(intent, "SELECT PICTURE"), 111)
         }
 
         val title=titleEditText.text
