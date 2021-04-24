@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Lendy_LoginPage">
-        <activity android:name=".LendbookActivity"></activity>
+        <activity android:name=".WatchlistActivity"></activity>
+        <activity android:name=".LendbookActivity" />
         <activity android:name=".Bookdetail3Activity" />
         <activity android:name=".Bookdetail2Activity" />
         <activity

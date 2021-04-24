@@ -5,10 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".LendFragment">
+    tools:context=".WatchlistActivity">
 
     <RelativeLayout
-        android:id="@+id/linearLayout2"
+        android:id="@+id/linearLayout3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -17,7 +17,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/textView3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
@@ -27,7 +27,7 @@
             android:layout_marginRight="16dp"
             android:layout_marginBottom="20dp"
             android:fontFamily="sans-serif"
-            android:text="Lend"
+            android:text="Watlist"
             android:textColor="@color/lendybg"
             android:textSize="24sp" />
 
@@ -45,9 +45,9 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
         app:layout_constraintVertical_bias="0.0"
         tools:context=".MainActivity"
-        tools:listitem="@layout/lend_content" />
+        tools:listitem="@layout/watchlist_content" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
