@@ -6,7 +6,7 @@
         android:title="@string/title_home"/>
     <item
         android:id="@+id/lendFragment"
-        android:icon="@drawable/ic_action_lend2"
+        android:icon="@drawable/ic_action_chat"
         android:title="Lend"/>
 
     <item
