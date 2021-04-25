@@ -5,9 +5,9 @@
         android:icon="@drawable/ic_action_home"
         android:title="@string/title_home"/>
     <item
-        android:id="@+id/lendFragment"
-        android:icon="@drawable/ic_action_lend2"
-        android:title="Lend"/>
+        android:id="@+id/chatFragment"
+        android:icon="@drawable/ic_action_chat"
+        android:title="Chat"/>
 
     <item
         android:id="@+id/bookshelfFragment"

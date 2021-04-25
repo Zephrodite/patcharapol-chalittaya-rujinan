@@ -70,9 +70,10 @@ class BookshelfFragment : Fragment()  {
 
         setHasOptionsMenu(true)
 
-
         return view
     }
+
+
 
     private fun setupRecyclerView(recyclerView: RecyclerView) {
 

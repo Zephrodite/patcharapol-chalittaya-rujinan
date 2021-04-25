@@ -1,11 +1,15 @@
 package com.example.lendyproj.ui.login
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
 import com.example.lendyproj.R
+import com.example.lendyproj.chat.ChatLogActivity
+//import com.example.lendyproj.chat.ChatLogActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.DataSnapshot
@@ -41,6 +45,15 @@ class BookDetail : AppCompatActivity() {
                         watchListRef.child(book.bookId.toString()).setValue(watchlist)
                         Toast.makeText(this@BookDetail, "Book added to Watchlist", Toast.LENGTH_LONG).show()
                     }
+
+                    var chatButton = findViewById<Button>(R.id.contact_button)
+                    chatButton.setOnClickListener{ v ->
+                        val intent = Intent(this@BookDetail, ChatLogActivity::class.java)
+                        intent.putExtra("username", book.currentUid.toString())
+                        startActivity(intent)
+                        finish()
+                    }
+
 
                     titleTextView.text = book.title.toString()
                     dateTextView.text = book.date.toString()

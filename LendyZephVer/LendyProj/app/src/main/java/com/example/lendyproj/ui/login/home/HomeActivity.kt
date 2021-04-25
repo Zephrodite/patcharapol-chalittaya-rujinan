@@ -22,7 +22,7 @@ class HomeActivity : AppCompatActivity() {
     lateinit var homeFragment: HomeFragment
     lateinit var bookShelfFragment: BookshelfFragment
     lateinit var profileFragment: ProfileFragment
-    lateinit var lendFragment: LendFragment
+    lateinit var chatFragment: ChatFragment
     var t = true
 
     override fun onCreate(savedInstanceState: Bundle?) {

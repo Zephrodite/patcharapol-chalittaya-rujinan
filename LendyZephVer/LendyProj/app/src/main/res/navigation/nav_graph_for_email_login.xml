@@ -16,8 +16,8 @@
             android:id="@+id/action_homeFragment2_to_profileFragment2"
             app:destination="@id/profileFragment2" />
         <action
-            android:id="@+id/action_homeFragment2_to_lendFragment2"
-            app:destination="@id/lendFragment2" />
+            android:id="@+id/action_homeFragment2_to_chatFragment2"
+            app:destination="@id/chatFragment2" />
     </fragment>
     <fragment
         android:id="@+id/bookshelfFragment2"
@@ -31,8 +31,8 @@
             android:id="@+id/action_bookshelfFragment2_to_homeFragment2"
             app:destination="@id/homeFragment2" />
         <action
-            android:id="@+id/action_bookshelfFragment2_to_lendFragment2"
-            app:destination="@id/lendFragment2" />
+            android:id="@+id/action_bookshelfFragment2_to_chatFragment2"
+            app:destination="@id/chatFragment2" />
 
     </fragment>
     <fragment
@@ -47,22 +47,22 @@
             android:id="@+id/action_profileFragment2_to_homeFragment2"
             app:destination="@id/homeFragment2" />
         <action
-            android:id="@+id/action_profileFragment2_to_lendFragment2"
-            app:destination="@id/lendFragment2" />
+            android:id="@+id/action_profileFragment2_to_chatFragment2"
+            app:destination="@id/chatFragment2" />
     </fragment>
     <fragment
-        android:id="@+id/lendFragment2"
-        android:name="com.example.lendyproj.LendFragment2"
-        android:label="fragment_lend2"
-        tools:layout="@layout/fragment_lend2">
+        android:id="@+id/chatFragment2"
+        android:name="com.example.lendyproj.ChatFragment2"
+        android:label="fragment_chat2"
+        tools:layout="@layout/fragment_chat2">
         <action
-            android:id="@+id/action_lendFragment2_to_homeFragment2"
+            android:id="@+id/action_chatFragment2_to_homeFragment2"
             app:destination="@id/homeFragment2" />
         <action
-            android:id="@+id/action_lendFragment2_to_bookshelfFragment2"
+            android:id="@+id/action_chatFragment2_to_bookshelfFragment2"
             app:destination="@id/bookshelfFragment2" />
         <action
-            android:id="@+id/action_lendFragment2_to_profileFragment2"
+            android:id="@+id/action_chatFragment2_to_profileFragment2"
             app:destination="@id/profileFragment2" />
     </fragment>
 

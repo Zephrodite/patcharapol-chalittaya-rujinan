@@ -114,7 +114,43 @@
                         android:textStyle="bold" />
                 </LinearLayout>
             </ScrollView>
-
+            <TextView
+                android:id="@+id/TypeTextView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp"
+                android:text="Type : " />
+            <TextView
+                android:id="@+id/PriceTextView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp"
+                android:text="Price : " />
+            <Button
+                android:id="@+id/contact_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="bottom"
+                android:backgroundTint="@color/lendytext"
+                android:textColor="@color/lendybg"
+                android:text="Contact" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 

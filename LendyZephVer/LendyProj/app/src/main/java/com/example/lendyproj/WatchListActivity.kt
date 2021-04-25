@@ -22,7 +22,9 @@ import com.google.firebase.database.ktx.getValue
 import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_watch_list.*
 import kotlinx.android.synthetic.main.book_content.view.*
+import kotlinx.android.synthetic.main.book_content.view.dateTextView2
 import kotlinx.android.synthetic.main.fragment_bookshelf.view.*
+import kotlinx.android.synthetic.main.watchlist_content.view.*
 
 class WatchListActivity : AppCompatActivity() {
 
@@ -106,9 +108,9 @@ class WatchListActivity : AppCompatActivity() {
         override fun getItemCount() = values.size
 
         inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-            val mTitleTextView: TextView = view.titleTextView
-            val mDateTextView: TextView = view.dateTextView
-            val mPosterImgeView: ImageView? = view.posterImgeView
+            val mTitleTextView: TextView = view.titleTextView2
+            val mDateTextView: TextView = view.dateTextView2
+            val mPosterImgeView: ImageView? = view.posterImgeView2
         }
     }
 

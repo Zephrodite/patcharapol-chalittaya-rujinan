@@ -7,11 +7,12 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/lendy_logo_circle_foreground"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/lendy_logo_circle_foreground"
         android:supportsRtl="true"
         android:theme="@style/Theme.Lendy_LoginPage">
+        <activity android:name=".chat.ChatLogActivity"></activity>
         <activity android:name=".EditProfile2"></activity>
         <activity
             android:name=".EditProfile"
