@@ -13,7 +13,7 @@ class Bookdetail2Activity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_book_detail2)
 
-        var lendButton = findViewById<Button>(R.id.lend_button)
+        var lendButton = findViewById<Button>(R.id.contact_button)
         lendButton.setOnClickListener{ v ->
             val intent = Intent(this@Bookdetail2Activity, LendbookActivity::class.java)
             startActivity(intent)

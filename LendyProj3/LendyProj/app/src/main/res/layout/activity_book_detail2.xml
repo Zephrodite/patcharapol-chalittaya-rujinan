@@ -127,7 +127,7 @@
                 android:text="Price : " />
 
             <Button
-                android:id="@+id/lend_button"
+                android:id="@+id/contact_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -138,7 +138,7 @@
                 android:layout_gravity="bottom"
                 android:backgroundTint="@color/lendytext"
                 android:textColor="@color/lendybg"
-                android:text="Lend" />
+                android:text="Contact" />
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>

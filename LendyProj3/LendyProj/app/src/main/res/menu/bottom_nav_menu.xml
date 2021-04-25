@@ -7,7 +7,7 @@
     <item
         android:id="@+id/lendFragment"
         android:icon="@drawable/ic_action_chat"
-        android:title="Lend"/>
+        android:title="Chat"/>
 
     <item
         android:id="@+id/bookshelfFragment"
