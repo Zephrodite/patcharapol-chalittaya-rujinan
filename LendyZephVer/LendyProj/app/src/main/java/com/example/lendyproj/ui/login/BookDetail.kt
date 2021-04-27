@@ -20,6 +20,7 @@ import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_book_detail.*
 
 class BookDetail : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_book_detail)
@@ -38,12 +39,20 @@ class BookDetail : AppCompatActivity() {
         myRef.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
 
+                val userId:UserId? = dataSnapshot.getValue(UserId::class.java)
                 val book:Book? = dataSnapshot.getValue(Book::class.java)
+
                 if (book != null) {
                     addtoWatchlistButton.setOnClickListener{
                         val watchlist = WatchList(book.title.toString(), book.date.toString(), book.description.toString(), book.downloadUri.toString(), currentUid, book.bookId.toString())
                         watchListRef.child(book.bookId.toString()).setValue(watchlist)
                         Toast.makeText(this@BookDetail, "Book added to Watchlist", Toast.LENGTH_LONG).show()
+                    }
+
+                    shareButton.setOnClickListener {
+                        val myIntent = Intent(Intent.ACTION_SEND)
+                        myIntent.setType("type/plain").putExtra(Intent.EXTRA_TEXT, book.title + " by " + book.date + "\n description: " + book.description)
+                        startActivity(myIntent)
                     }
 
                     var chatButton = findViewById<Button>(R.id.contact_button)
@@ -68,8 +77,8 @@ class BookDetail : AppCompatActivity() {
             }
         })
 
-
     }
+
 
     fun images(url: String){
         Glide.with(applicationContext)

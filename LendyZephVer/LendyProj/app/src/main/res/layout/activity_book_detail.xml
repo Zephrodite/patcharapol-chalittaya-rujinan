@@ -13,12 +13,24 @@
         android:layout_height="42dp"
         android:layout_marginTop="16dp"
         android:backgroundTint="@color/lendytext"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/shareButton"
         app:layout_constraintHorizontal_bias="0.122"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/cardView3"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_action_fav"
         app:tint="@color/lendybg" />
+
+    <ImageButton
+        android:id="@+id/shareButton"
+        android:layout_width="51dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/lendytext"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.122"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/share"
+        app:tint="@color/lendybg"
+        tools:ignore="VectorDrawableCompat" />
 
     <View
         android:id="@+id/view"
