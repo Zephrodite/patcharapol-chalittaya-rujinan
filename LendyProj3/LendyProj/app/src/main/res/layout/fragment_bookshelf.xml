@@ -27,7 +27,7 @@
             android:layout_marginRight="16dp"
             android:layout_marginBottom="20dp"
             android:fontFamily="sans-serif"
-            android:text="BookShelf"
+            android:text="@string/bookshelf"
             android:textColor="@color/lendybg"
             android:textSize="24sp" />
 

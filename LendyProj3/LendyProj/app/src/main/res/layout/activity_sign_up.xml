@@ -157,7 +157,9 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.498"
                 app:layout_constraintStart_toStartOf="parent"
-                app:srcCompat="@mipmap/lendy_logo_circle_foreground" />
+                app:srcCompat="@mipmap/lendy_logo_circle_foreground">
+
+            </ImageView>
 
             <TextView
                 android:id="@+id/createAcc"
