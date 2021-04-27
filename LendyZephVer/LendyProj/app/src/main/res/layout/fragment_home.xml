@@ -35,11 +35,12 @@
             android:layout_marginEnd="80dp"
             android:layout_marginRight="80dp"
             android:layout_marginBottom="20dp"
-            android:background="@drawable/searchbar"
+            android:background="@drawable/searchbar5"
+            android:drawableRight="@drawable/loupe"
             android:fontFamily="sans-serif"
             android:focusableInTouchMode="true"
             android:focusable="true"
-            android:hint="    Search"
+            android:hint="Search"
             android:textColor="@color/lendybg"
             android:textSize="16dp" />
 
