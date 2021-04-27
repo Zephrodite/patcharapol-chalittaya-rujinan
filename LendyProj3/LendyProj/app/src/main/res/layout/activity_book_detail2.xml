@@ -112,7 +112,7 @@
                 android:layout_marginRight="20dp"
                 android:textStyle="bold"
                 android:layout_marginBottom="10dp"
-                android:text="Type : " />
+                android:text="@string/add_type" />
             <TextView
                 android:id="@+id/PriceTextView2"
                 android:layout_width="match_parent"
@@ -124,7 +124,7 @@
                 android:layout_marginRight="20dp"
                 android:textStyle="bold"
                 android:layout_marginBottom="10dp"
-                android:text="Price : " />
+                android:text="@string/add_price" />
 
             <Button
                 android:id="@+id/contact_button"
@@ -138,7 +138,7 @@
                 android:layout_gravity="bottom"
                 android:backgroundTint="@color/lendytext"
                 android:textColor="@color/lendybg"
-                android:text="Contact" />
+                android:text="@string/contact_button" />
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>

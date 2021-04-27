@@ -61,6 +61,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="MissingConstraints" />
+
         <LinearLayout
             android:id="@+id/helpcenter"
             android:layout_width="match_parent"
@@ -79,7 +80,7 @@
                 android:layout_height="60dp"
                 android:gravity="center_vertical"
                 android:paddingLeft="16dp"
-                android:text="Help center"
+                android:text="@string/help_center"
                 android:textSize="20sp"
                 android:textStyle="bold">
             </TextView>
@@ -102,7 +103,7 @@
                 android:layout_height="60dp"
                 android:gravity="center_vertical"
                 android:paddingLeft="16dp"
-                android:text="About us!"
+                android:text="@string/about_us"
                 android:textSize="20sp"
                 android:textStyle="bold">
             </TextView>
@@ -125,7 +126,7 @@
                 android:layout_height="60dp"
                 android:gravity="center_vertical"
                 android:paddingLeft="16dp"
-                android:text="Log out"
+                android:text="@string/log_out"
                 android:textSize="20sp"
                 android:textStyle="bold">
             </TextView>
