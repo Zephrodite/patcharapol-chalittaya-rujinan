@@ -51,6 +51,11 @@ class BookDetail : AppCompatActivity() {
 
     }
 
+
+    companion object {
+        val USER_KEY = "USER_KEY"
+    }
+
     private  fun images(url: String){
         Glide.with(this)
             .load(url)

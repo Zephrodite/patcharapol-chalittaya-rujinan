@@ -43,8 +43,13 @@ android {
 
 dependencies {
 
+<<<<<<< HEAD
     compile 'de.hdodenhof:circleimageview:2.2.0'
 
+=======
+    implementation 'com.xwray:groupie:2.1.0'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+>>>>>>> a95ceb3e1db59a732cebbd14c1051431d84eca27
     implementation 'com.firebaseui:firebase-ui-auth:4.3.2'
     implementation 'com.google.android.gms:play-services-auth:19.0.0'
     implementation 'com.google.firebase:firebase-auth-ktx'
