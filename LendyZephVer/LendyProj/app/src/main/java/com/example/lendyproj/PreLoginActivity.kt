@@ -23,6 +23,7 @@ import android.view.View
 import android.view.inputmethod.EditorInfo
 import android.widget.*
 import androidx.annotation.StringRes
+import androidx.core.content.ContextCompat.startActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.lendyproj.ui.login.LoginViewModelFactory
@@ -72,7 +73,7 @@ class PreLoginActivity : AppCompatActivity() {
         sign_out_btn.setOnClickListener {
             mAuth = FirebaseAuth.getInstance()
             Firebase.auth.signOut()
-            mAuth.signOut()
+        mAuth.signOut()
             googleSignInClient.signOut().addOnCompleteListener{
                 val `in` = Intent(this, PreLoginActivity::class.java)
                 startActivity(`in`)

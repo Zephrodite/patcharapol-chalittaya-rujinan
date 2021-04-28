@@ -99,7 +99,7 @@
                 android:layout_marginRight="20dp"
                 android:layout_marginBottom="40dp"
                 android:textStyle="bold"
-                android:text="Author :" />
+                android:text="@string/add_author" />
 
             <ScrollView
                 android:layout_width="match_parent"
@@ -137,7 +137,7 @@
                 android:layout_marginRight="20dp"
                 android:textStyle="bold"
                 android:layout_marginBottom="10dp"
-                android:text="Type : " />
+                android:text="@string/add_type" />
             <TextView
                 android:id="@+id/PriceTextView2"
                 android:layout_width="match_parent"
@@ -149,7 +149,7 @@
                 android:layout_marginRight="20dp"
                 android:textStyle="bold"
                 android:layout_marginBottom="10dp"
-                android:text="Price : " />
+                android:text="@string/add_price" />
             <Button
                 android:id="@+id/contact_button"
                 android:layout_width="match_parent"

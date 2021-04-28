@@ -28,7 +28,7 @@
             android:layout_marginRight="24dp"
             android:layout_marginBottom="20dp"
             android:fontFamily="sans-serif"
-            android:text="BookShelf"
+            android:text="@string/bookshelf"
             android:textColor="@color/lendybg"
             android:textSize="24sp"
             android:gravity="center_horizontal" />
@@ -62,6 +62,7 @@
         android:contentDescription="@string/all"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/bookRecyclerView"
-        app:srcCompat="@drawable/ic_plus"
+        app:srcCompat="@android:drawable/ic_input_add"
         tools:ignore="VectorDrawableCompat" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -24,7 +24,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="16dp"
-                android:text="Edit your Profile"
+                android:text="@string/edit_your_profile"
                 android:textColor="@color/lendybg"
                 android:textSize="44sp"
                 android:textStyle="bold"
@@ -35,7 +35,7 @@
                 app:layout_constraintBottom_toTopOf="@+id/imageBook"
                 app:layout_constraintVertical_bias="0.212" />
 
-            <ImageView
+            <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/imageEditProfile"
                 android:layout_width="200dp"
                 android:layout_height="200dp"
@@ -57,7 +57,7 @@
                 android:layout_marginTop="0dp"
                 android:layout_marginRight="16dp"
                 android:backgroundTint="@color/lendybg"
-                android:text="Add Photo"
+                android:text="@string/add_photo"
                 android:textColor="@color/black"
                 android:textStyle="bold"
                 app:layout_constraintLeft_toLeftOf="parent"
@@ -74,7 +74,7 @@
                 android:layout_marginEnd="24dp"
                 android:background="@drawable/custom_input"
                 android:drawablePadding="12dp"
-                android:hint="Username"
+                android:hint="@string/username"
                 android:inputType="textEmailAddress"
                 android:paddingStart="12dp"
                 android:paddingEnd="12dp"
@@ -95,7 +95,7 @@
                 android:layout_marginBottom="16dp"
                 android:backgroundTint="@color/lendybg"
                 android:textColor="@color/black"
-                android:text="UPDATE"
+                android:text="@string/update_button"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"

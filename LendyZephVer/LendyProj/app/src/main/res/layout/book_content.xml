@@ -68,9 +68,9 @@
         app:layout_constraintStart_toEndOf="@+id/posterImgeView"
         app:layout_constraintTop_toBottomOf="@+id/titleTextView" />
 
-    <RatingBar
+    <TextView
         android:id="@+id/item_book_ratingbar"
-        style="?android:attr/ratingBarStyleSmall"
+       android:text="@string/add_price"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -79,16 +79,6 @@
         app:layout_constraintStart_toEndOf="@+id/posterImgeView"
         app:layout_constraintTop_toBottomOf="@+id/item_book_pagesrev" />
 
-    <TextView
-        android:id="@+id/item_book_score"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:text="score"
-        app:layout_constraintBottom_toBottomOf="@+id/item_book_ratingbar"
-        app:layout_constraintStart_toEndOf="@+id/item_book_ratingbar"
-        app:layout_constraintTop_toTopOf="@+id/item_book_ratingbar" />
 
     <TextView
         android:id="@+id/item_book_pagesrev"
@@ -97,7 +87,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="8dp"
-        android:text="225 pages | 23 review"
+        android:text="@string/add_type"
         app:layout_constraintStart_toEndOf="@+id/posterImgeView"
         app:layout_constraintTop_toBottomOf="@+id/dateTextView" />
 

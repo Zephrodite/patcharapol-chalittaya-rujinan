@@ -36,7 +36,7 @@
                 android:layout_width="330dp"
                 android:layout_height="60dp"
                 android:layout_marginStart="24dp"
-                android:layout_marginTop="228dp"
+                android:layout_marginTop="310dp"
                 android:layout_marginEnd="24dp"
                 android:background="@drawable/custom_input"
                 android:drawableStart="@drawable/custom_email_icon"
@@ -114,21 +114,10 @@
                 android:id="@+id/create_acc"
                 android:layout_width="165dp"
                 android:layout_height="19dp"
-                android:layout_marginTop="36dp"
+                android:layout_marginTop="45dp"
                 android:text="@string/create_acc"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.406"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/or"
-                tools:ignore="MissingConstraints" />
-
-            <TextView
-                android:id="@+id/or"
-                android:layout_width="21dp"
-                android:layout_height="22dp"
-                android:layout_marginTop="64dp"
-                android:text="OR"
-                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.43"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/login"
                 tools:ignore="MissingConstraints" />
@@ -137,14 +126,14 @@
                 android:id="@+id/sign_up"
                 android:layout_width="48dp"
                 android:layout_height="19dp"
-                android:layout_marginTop="36dp"
+                android:layout_marginTop="45dp"
                 android:text="@string/signup"
                 android:textColor="@color/lendybg"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.6"
-                app:layout_constraintStart_toStartOf="@+id/create_acc"
-                app:layout_constraintTop_toBottomOf="@+id/or"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toEndOf="@+id/create_acc"
+                app:layout_constraintTop_toBottomOf="@+id/login"
                 tools:ignore="MissingConstraints" />
 
             <TextView
@@ -167,6 +156,21 @@
                 app:layout_constraintHorizontal_bias="0.498"
                 app:layout_constraintStart_toStartOf="parent"
                 app:srcCompat="@mipmap/lendy_logo_circle_foreground" />
+
+            <TextView
+                android:id="@+id/sign_in"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:text="@string/sign_in"
+                android:textColor="@color/lendybg"
+                android:textSize="44sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView"
+                tools:ignore="MissingConstraints" />
+
 
 
 

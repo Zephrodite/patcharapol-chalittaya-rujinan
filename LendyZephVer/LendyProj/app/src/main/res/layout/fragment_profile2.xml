@@ -17,7 +17,7 @@
             android:layout_height="280dp"
             android:orientation="vertical">
 
-            <ImageView
+            <de.hdodenhof.circleimageview.CircleImageView
                 xmlns:app="http://schemas.android.com/apk/res-auto"
                 android:id="@+id/profile_image"
                 android:layout_width="150dp"
@@ -26,7 +26,7 @@
                 android:layout_gravity="center_horizontal"
                 android:src="@mipmap/lendy_logo_circle_foreground">
 
-            </ImageView>
+            </de.hdodenhof.circleimageview.CircleImageView>
 
 
             <TextView
