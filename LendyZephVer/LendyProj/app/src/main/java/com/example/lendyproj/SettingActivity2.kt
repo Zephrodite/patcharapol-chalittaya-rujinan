@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.google.firebase.auth.FirebaseAuth
+import kotlinx.android.synthetic.main.activity_setting.*
 import kotlinx.android.synthetic.main.activity_setting2.*
 
 class SettingActivity2 : AppCompatActivity() {
@@ -20,7 +21,5 @@ class SettingActivity2 : AppCompatActivity() {
             firebaseAuth.signOut()
             startActivity(Intent(this, PreLoginActivity::class.java))
         }
-
-
     }
 }

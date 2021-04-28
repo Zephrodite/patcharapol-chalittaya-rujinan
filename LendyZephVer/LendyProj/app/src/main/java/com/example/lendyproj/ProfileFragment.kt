@@ -36,8 +36,7 @@ class ProfileFragment : Fragment() {
         mAuth = FirebaseAuth.getInstance()
         val currentUser = mAuth.currentUser
 
-        view.name_txt.text = "Name: " + currentUser.displayName
-        view.email_txt.text = "Email: " + currentUser.email
+        view.name_txt.text = currentUser.displayName
 
         Glide.with(this).load(currentUser?.photoUrl).into(view.profile_image)
 

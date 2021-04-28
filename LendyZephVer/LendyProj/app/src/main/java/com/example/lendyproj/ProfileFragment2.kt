@@ -69,7 +69,6 @@ class ProfileFragment2 : Fragment() {
         val usernameRef = usersRef.child("username")
         val imageRef = usersRef.child("profileImageUri")
         val currentUserid = Firebase.auth.currentUser!!.uid
-        view.email_txt_2.text  =Firebase.auth.currentUser!!.email
 
         view.watchlist_button1.setOnClickListener {
             val `in` = Intent(getActivity(), WatchListActivity::class.java)
@@ -128,7 +127,7 @@ class ProfileFragment2 : Fragment() {
     }
 
     fun images(url: String) {
-        Glide.with(this)
+        Glide.with(requireActivity().applicationContext)
             .load(url)
             .into(profile_image)
     }

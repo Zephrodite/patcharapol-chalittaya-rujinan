@@ -11,6 +11,7 @@ import android.text.Editable
 import android.util.Log
 import android.widget.Toast
 import com.bumptech.glide.Glide
+import com.example.lendyproj.ui.login.Book
 import com.example.lendyproj.ui.login.UserId
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
@@ -20,6 +21,10 @@ import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
+import kotlinx.android.synthetic.main.activity_edit.*
+import kotlinx.android.synthetic.main.activity_edit.imageEditBook
+import kotlinx.android.synthetic.main.activity_edit.saveButton
+import kotlinx.android.synthetic.main.activity_edit.titleEditText
 import kotlinx.android.synthetic.main.activity_edit_profile2.*
 import java.util.*
 
@@ -33,7 +38,7 @@ class EditProfile2 : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_edit_profile)
+        setContentView(R.layout.activity_edit_profile2)
         val currentUserid = intent.getStringExtra("currentUserid")
         val database = Firebase.database
         @Suppress("NULLABILITY_MISMATCH_BASED_ON_JAVA_ANNOTATIONS") val myRef = database.getReference("uid").child(
@@ -57,8 +62,11 @@ class EditProfile2 : AppCompatActivity() {
                     if (Editable.Factory.getInstance().newEditable(userid.profileImageUri).toString() != "No image"){
                         images(Editable.Factory.getInstance().newEditable(userid.profileImageUri).toString())
                     }
+
                     usernameEditText1.text = Editable.Factory.getInstance().newEditable(userid.username)
+
                 }
+
             }
 
             override fun onCancelled(error: DatabaseError) {
@@ -68,16 +76,20 @@ class EditProfile2 : AppCompatActivity() {
 
 
         saveButtonGoogle.setOnClickListener { v ->
+
             if(filepath!=null) {
                 val pd = ProgressDialog(this)
                 pd.setTitle("Updating...")
                 pd.show()
+
+
                 val imageRef = storageReference!!.child("profileImages/" + UUID.randomUUID().toString())
                 val uploadTask = imageRef.putFile(filepath!!)
                     .addOnSuccessListener {
                         pd.dismiss()
 //                            val generatedFilePath = taskSnapShot.storage.downloadUrl.toString()
 //                           val generatedFilePath = imageUrl.getResult().toString()
+
                     }
                     .addOnFailureListener {
                         pd.dismiss()
@@ -110,7 +122,9 @@ class EditProfile2 : AppCompatActivity() {
                     }
                 }
             } else {
+
                 val username: String = usernameEditText1.text.toString()
+
                 myRef.child("username").setValue(username)
                 finish()
             }
