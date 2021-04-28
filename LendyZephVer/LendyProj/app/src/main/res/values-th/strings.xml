@@ -1,0 +1,96 @@
+<resources>
+    <string name="app_name">Lendy</string>
+    <!-- Strings related to login -->
+    <string name="prompt_email">อีเมล</string>
+    <string name="username">ชื่อผู้ใช้</string>
+    <string name="prompt_password">รหัสผ่าน</string>
+    <string name="prompt_confirmpassword">ยืนยันรหัสผ่าน</string>
+    <string name="action_sign_in">เข้าสู่ระบบ</string>
+    <string name="action_sign_in_short">เข้าสู่ระบบ</string>
+    <string name="welcome">ยินดีต้อนรับ!</string>
+    <string name="invalid_email">ไม่พบอีเมลนี้</string>
+    <string name="invalid_password">รหัสผ่านต้องมีมากกว่า 8 ตัวขึ้นไป</string>
+    <string name="login_failed">"เข้าสู่ระบบผิดพลาด"</string>
+    <string name="create_acc">ยังไม่มีบัญชีใช่หรือไม่? </string>
+    <string name="create_an_acc">สร้างบัญชี</string>
+    <string name="signup">ลงทะเบียน</string>
+    <string name="forgot_pass">ลืมรหัสผ่าน</string>
+    <string name="lendyText">Lendy</string>
+    <string name="app_home_name">Lendy</string>
+    <string name="title_home">หน้าแรก</string>
+    <string name="or">หรือ</string>
+    <string name="title_bookshelf">ชั้นหนังสือ</string>
+    <string name="title_proflie">ข้อมูลส่วนตัว</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="about_descrip">เกี่ยวกับแอพนี้ ...</string>
+    <string name="about">เกี่ยวกับ Lendy</string>
+    <string name="settings">ตั้งค่า</string>
+    <string name="email">อีเมล</string>
+
+
+    <string name="shr_search_title">ค้นหา</string>
+    <string name="shr_product_title">ชื่อหนังสือ</string>
+    <string name="shr_product_description">Secondary text</string>
+
+    <string name="book_title">ชื่อหนังสือ</string>
+    <string name="book_des">คำอธิบายหนังสือ</string>
+    <string name="Book">หนังสือ</string>
+
+    <string name="hot_menu">มาแรง</string>
+    <string name="new_menu">ใหม่</string>
+    <string name="category_menu">ประเภท</string>
+    <string name="ranking_menu">อันดับ</string>
+    <string name="name">ชื่อ</string>
+    <string name="example">ตัวอย่าง</string>
+
+    <string name="share">แชร์</string>
+    <string name="signout">ออกจากระบบ</string>
+    <string name="showurbook">แสดงหนังสือ</string>
+    <string name="urbook">หนังสือของคุณ</string>
+    <string name="lend">ยืม</string>
+    <string name="lorem_text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever
+        since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+        but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets
+        containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</string>
+    <string name="all">TODO</string>
+    <string name="date">2 de marzo de 2020</string>
+    <string name="title_activity_main">Videjuegos</string>
+    <string name="subtitle_activity_main">2020</string>
+    <string name="title_activity_add">Nuevo videojuego</string>
+    <string name="title_activity_edit">Datos del videojuego</string>
+    <string name="name_form">Nombre</string>
+    <string name="date_form">Fecha</string>
+    <string name="url_form">Url imagen</string>
+    <string name="description_form">Descripción</string>
+    <string name="save">Guardar</string>
+    <string name="description">Final Fantasy es una franquicia de medios creada por Hironobu Sakaguchi y desarrollada por Square Enix. La franquicia se centra en una serie de fantasía y ciencia ficción de videojuegos RPG.</string>
+
+    <string name="add_your_book">เพิ่มหนังสือ</string>
+    <string name="add_photo">เพิ่มรูปภาพ</string>
+    <string name="add_title">ชื่อหนังสือ</string>
+    <string name="add_author">ชื่อผู้แต่ง</string>
+    <string name="add_description">คำอธิบาย</string>
+    <string name="add_type">ประเภท</string>
+    <string name="add_button">เพิ่ม</string>
+    <string name="add_price">ราคา</string>
+    <string name="edit_button">แก้ไข</string>
+    <string name="contact_button">ติดต่อ</string>
+    <string name="update_button">อัปเดต</string>
+    <string name="help_center">ศูนย์ช่วยเหลือ</string>
+    <string name="about_us">About us!</string>
+    <string name="log_out">ออกจากระบบ</string>
+    <string name="watchlist">Watchlist</string>
+    <string name="bookshelf">ชั้นหนังสือ</string>
+    <string name="history">ประวัติ</string>
+    <string name="setting">ตั้งค่า</string>
+    <string name="edit_profile">แก้ไขข้อมูลส่วนตัว</string>
+    <string name="edit_your_book">แก้ไขหนังสือ</string>
+    <string name="edit_your_profile">แก้ไขข้อมูลส่วนตัว</string>
+    <string name="forget_your_password">ลืมรหัสผ่าน</string>
+    <string name="reset_password">กู้คืนรหัสผ่าน</string>
+    <string name="sign_in">เข้าสู่ระบบ</string>
+    <string name="signin_with_email">เข้าสู่ระบบผ่านอีเมล</string>
+    <string name="chat">แชท</string>
+</resources>

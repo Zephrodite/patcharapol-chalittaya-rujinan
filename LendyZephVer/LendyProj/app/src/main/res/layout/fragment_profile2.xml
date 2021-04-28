@@ -36,7 +36,7 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="12dp"
                 android:layout_marginBottom="3dp"
-                android:text="Username"
+                android:text="@string/username"
                 android:textColor="@color/black"
                 android:textSize="18sp"
                 android:textStyle="bold"
@@ -76,6 +76,7 @@
         android:background="@color/Gray">
         <androidx.cardview.widget.CardView
             android:layout_height="0dp"
+            android:backgroundTint="@color/lendytext"
             android:layout_width="0dp"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
@@ -99,7 +100,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="History"
+                    android:text="@string/history"
                     android:layout_gravity="center"
                     android:textColor="@color/black"
                     android:textSize="20dp"
@@ -110,6 +111,7 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/settingProfileButton"
             android:layout_height="0dp"
+            android:backgroundTint="@color/lendytext"
             android:layout_width="0dp"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
@@ -133,7 +135,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Setting"
+                    android:text="@string/setting"
                     android:layout_gravity="center"
                     android:textColor="@color/black"
                     android:textSize="20dp"
@@ -145,6 +147,7 @@
             android:id="@+id/watchlist_button1"
             android:layout_height="0dp"
             android:layout_width="0dp"
+            android:backgroundTint="@color/lendytext"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
             android:layout_marginBottom="16dp"
@@ -179,6 +182,7 @@
             android:id="@+id/logoutButton"
             android:layout_height="0dp"
             android:layout_width="0dp"
+            android:backgroundTint="@color/lendytext"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
             android:layout_marginBottom="16dp"
@@ -197,14 +201,15 @@
                 <ImageView
                     android:layout_width="75dp"
                     android:layout_height="75dp"
-                    android:src="@drawable/ic_action_logout"
+                    android:src="@drawable/ic_action_editprofile2"
                     android:layout_gravity="center_horizontal"/>
 
                 <TextView
                     android:layout_width="75dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="Log out"
+                    android:gravity="center"
+                    android:text="@string/edit_profile"
                     android:textColor="@color/black"
                     android:textSize="20dp"
                     android:textStyle="bold" />
