@@ -12,7 +12,7 @@
         android:layout_height="wrap_content">
 
         <LinearLayout
-            android:background="@color/white"
+            android:background="@color/lendytext"
             android:layout_width="match_parent"
             android:layout_height="260dp"
             android:orientation="vertical">
@@ -37,7 +37,6 @@
                 android:text="@string/example"
                 android:textColor="@color/black"
                 android:textSize="18sp"
-                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.498"
                 app:layout_constraintStart_toStartOf="parent"
@@ -52,7 +51,6 @@
                 android:text="@string/example"
                 android:textColor="@color/black"
                 android:textSize="18sp"
-                android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.498"
@@ -72,9 +70,8 @@
         android:alignmentMode="alignMargins"
         android:columnOrderPreserved="false"
         android:layout_weight="8"
-        android:padding="20dp"
-        android:background="@color/lendytext">
-
+        android:padding="55dp"
+        android:background="@color/white">
         <androidx.cardview.widget.CardView
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -82,12 +79,12 @@
             android:layout_rowWeight="1"
             android:layout_column="0"
             android:layout_columnWeight="1"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginBottom="0dp"
             android:backgroundTint="@color/white"
-            app:cardCornerRadius="20dp"
-            >
+            android:foreground="@drawable/bordertopleft"
+            app:cardCornerRadius="0dp">
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -98,10 +95,10 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="75dp"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
                     android:layout_gravity="center_horizontal"
-                    android:src="@drawable/ic_action_history" />
+                    android:src="@drawable/ic_action_history"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -109,8 +106,7 @@
                     android:layout_gravity="center"
                     android:text="@string/history"
                     android:textColor="@color/black"
-                    android:textSize="20dp"
-                    android:textStyle="bold" />
+                    android:textSize="15dp" />
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
@@ -121,12 +117,12 @@
             android:layout_width="0dp"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
-            android:layout_marginBottom="16dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
+            android:layout_marginBottom="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
             android:backgroundTint="@color/white"
-
-            app:cardCornerRadius="20dp">
+            android:foreground="@drawable/bordertopright"
+            app:cardCornerRadius="0dp">
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -135,8 +131,8 @@
                 android:layout_margin="16dp"
                 android:layout_gravity="center_horizontal|center_vertical">
                 <ImageView
-                    android:layout_width="75dp"
-                    android:layout_height="75dp"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
                     android:src="@drawable/ic_action_setting"
                     android:layout_gravity="center_horizontal"/>
                 <TextView
@@ -145,8 +141,7 @@
                     android:text="@string/setting"
                     android:layout_gravity="center"
                     android:textColor="@color/black"
-                    android:textSize="20dp"
-                    android:textStyle="bold"/>
+                    android:textSize="15dp" />
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
@@ -156,11 +151,12 @@
             android:layout_width="0dp"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
-            android:layout_marginBottom="16dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
+            android:layout_marginBottom="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
             android:backgroundTint="@color/white"
-            app:cardCornerRadius="20dp">
+            android:foreground="@drawable/borderbottomleft"
+            app:cardCornerRadius="0dp">
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -169,8 +165,8 @@
                 android:layout_margin="16dp"
                 android:layout_gravity="center_horizontal|center_vertical">
                 <ImageView
-                    android:layout_width="75dp"
-                    android:layout_height="75dp"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
                     android:src="@drawable/ic_action_fav2"
                     android:layout_gravity="center_horizontal"/>
                 <TextView
@@ -179,8 +175,7 @@
                     android:text="@string/watchlist"
                     android:layout_gravity="center"
                     android:textColor="@color/black"
-                    android:textSize="20dp"
-                    android:textStyle="bold"/>
+                    android:textSize="15dp"/>
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
@@ -190,11 +185,12 @@
             android:layout_width="0dp"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
-            android:layout_marginBottom="16dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
+            android:layout_marginBottom="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
             android:backgroundTint="@color/white"
-            app:cardCornerRadius="20dp">
+            android:foreground="@drawable/borderbottomright"
+            app:cardCornerRadius="0dp">
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -203,8 +199,8 @@
                 android:layout_margin="16dp"
                 android:layout_gravity="center_horizontal|center_vertical">
                 <ImageView
-                    android:layout_width="75dp"
-                    android:layout_height="75dp"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
                     android:src="@drawable/ic_action_editprofile2"
                     android:layout_gravity="center_horizontal"/>
 
@@ -215,8 +211,7 @@
                     android:text="@string/edit_profile"
                     android:gravity="center"
                     android:textColor="@color/black"
-                    android:textSize="20dp"
-                    android:textStyle="bold" />
+                    android:textSize="15dp"/>
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
