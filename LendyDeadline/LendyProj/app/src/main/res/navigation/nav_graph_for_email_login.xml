@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_for_email_login"
+    app:startDestination="@id/homeFragment2">
+    <fragment
+        android:id="@+id/homeFragment2"
+        android:name="com.example.lendyproj.HomeFragment2"
+        android:label="@string/lendyText"
+        tools:layout="@layout/fragment_home2">
+        <action
+            android:id="@+id/action_homeFragment2_to_bookshelfFragment2"
+            app:destination="@id/bookshelfFragment2" />
+        <action
+            android:id="@+id/action_homeFragment2_to_profileFragment2"
+            app:destination="@id/profileFragment2" />
+        <action
+            android:id="@+id/action_homeFragment2_to_lendFragment2"
+            app:destination="@id/lendFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/bookshelfFragment2"
+        android:name="com.example.lendyproj.BookshelfFragment2"
+        android:label="@string/lendyText"
+        tools:layout="@layout/fragment_bookshelf2">
+        <action
+            android:id="@+id/action_bookshelfFragment2_to_profileFragment2"
+            app:destination="@id/profileFragment2" />
+        <action
+            android:id="@+id/action_bookshelfFragment2_to_homeFragment2"
+            app:destination="@id/homeFragment2" />
+        <action
+            android:id="@+id/action_bookshelfFragment2_to_lendFragment2"
+            app:destination="@id/lendFragment2" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment2"
+        android:name="com.example.lendyproj.ProfileFragment2"
+        android:label="@string/lendyText"
+        tools:layout="@layout/fragment_profile2">
+        <action
+            android:id="@+id/action_profileFragment2_to_bookshelfFragment2"
+            app:destination="@id/bookshelfFragment2" />
+        <action
+            android:id="@+id/action_profileFragment2_to_homeFragment2"
+            app:destination="@id/homeFragment2" />
+        <action
+            android:id="@+id/action_profileFragment2_to_lendFragment2"
+            app:destination="@id/lendFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/lendFragment2"
+        android:name="com.example.lendyproj.LendFragment2"
+        android:label="fragment_lend2"
+        tools:layout="@layout/fragment_lend2">
+        <action
+            android:id="@+id/action_lendFragment2_to_homeFragment2"
+            app:destination="@id/homeFragment2" />
+        <action
+            android:id="@+id/action_lendFragment2_to_bookshelfFragment2"
+            app:destination="@id/bookshelfFragment2" />
+        <action
+            android:id="@+id/action_lendFragment2_to_profileFragment2"
+            app:destination="@id/profileFragment2" />
+    </fragment>
+
+
+
+</navigation>

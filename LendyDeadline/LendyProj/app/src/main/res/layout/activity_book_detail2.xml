@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Pink"
+    tools:context=".ui.login.BookDetail2">
+
+    <ImageButton
+        android:id="@+id/addtoContactButton2"
+        android:layout_width="51dp"
+        android:layout_height="42dp"
+        android:backgroundTint="@color/lendytext"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.366"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cardView"
+        app:srcCompat="@drawable/ic_action_fav"
+        app:tint="@color/black" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardMaxElevation="0dp"
+        app:cardCornerRadius="16dp"
+        app:cardBackgroundColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="540dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/titleTextView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="200dp"
+                android:layout_marginRight="180dp"
+                android:layout_marginBottom="32dp"
+                android:text="@string/name"
+                android:textStyle="bold"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/dateTextView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="75dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                android:textStyle="bold"
+                android:layout_marginBottom="40dp"
+                android:text="Elon Musk" />
+
+            <TextView
+                android:id="@+id/authorTVLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="-59.7dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginEnd="340dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="40dp"
+                android:textStyle="bold"
+                android:text="Author :" />
+
+            <ScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="300dp"
+                android:layout_marginTop="-10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- things to scroll -->
+                    <TextView
+                        android:id="@+id/descriptionTextView1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="40dp"
+                        android:text="@string/description"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </ScrollView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="-8dp"
+                android:layout_marginLeft="-8dp"
+                android:layout_marginTop="-8dp"
+                android:layout_marginBottom="40dp" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="140dp"
+        android:layout_height="200dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        app:cardCornerRadius="8dp"
+        app:cardMaxElevation="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/cardView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cardView2">
+
+        <ImageView
+            android:id="@+id/posterImgeView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/all"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/final_fantasy" />
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
