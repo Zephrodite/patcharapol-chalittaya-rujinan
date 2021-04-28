@@ -85,6 +85,7 @@
             android:layout_marginBottom="16dp"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
+            android:backgroundTint="@color/lendytext"
             app:cardElevation="15dp"
             app:cardCornerRadius="50dp">
             <LinearLayout
@@ -102,7 +103,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="History"
+                    android:text="@string/history"
                     android:layout_gravity="center"
                     android:textColor="@color/black"
                     android:textSize="20dp"
@@ -119,6 +120,7 @@
             android:layout_marginBottom="16dp"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
+            android:backgroundTint="@color/lendytext"
             app:cardElevation="15dp"
             app:cardCornerRadius="50dp">
             <LinearLayout
@@ -136,7 +138,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Setting"
+                    android:text="@string/setting"
                     android:layout_gravity="center"
                     android:textColor="@color/black"
                     android:textSize="20dp"
@@ -153,6 +155,7 @@
             android:layout_marginBottom="16dp"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
+            android:backgroundTint="@color/lendytext"
             app:cardElevation="15dp"
             app:cardCornerRadius="50dp">
             <LinearLayout
@@ -170,7 +173,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Watchlist"
+                    android:text="@string/watchlist"
                     android:layout_gravity="center"
                     android:textColor="@color/black"
                     android:textSize="20dp"
@@ -187,7 +190,7 @@
             android:layout_marginBottom="16dp"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
-
+            android:backgroundTint="@color/lendytext"
             app:cardElevation="15dp"
             app:cardCornerRadius="50dp">
             <LinearLayout
@@ -200,14 +203,15 @@
                 <ImageView
                     android:layout_width="75dp"
                     android:layout_height="75dp"
-                    android:src="@drawable/ic_action_logout"
+                    android:src="@drawable/ic_action_editprofile2"
                     android:layout_gravity="center_horizontal"/>
 
                 <TextView
                     android:layout_width="75dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="Log out"
+                    android:text="@string/edit_profile"
+                    android:gravity="center"
                     android:textColor="@color/black"
                     android:textSize="20dp"
                     android:textStyle="bold" />
