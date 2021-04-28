@@ -9,6 +9,7 @@ import android.os.Bundle
 import android.provider.MediaStore
 import android.text.Editable
 import android.util.Log
+import android.widget.Button
 import android.widget.Toast
 import com.bumptech.glide.Glide
 import com.example.lendyproj.ui.login.Book
@@ -46,6 +47,8 @@ class EditProfile : AppCompatActivity() {
 
         storage = FirebaseStorage.getInstance()
         storageReference = storage!!.reference
+
+        val buttonProfileChoose = findViewById<Button>(R.id.buttonProfileChoose)
 
         buttonProfileChoose.setOnClickListener{ v ->
             val intent = Intent()
@@ -93,7 +96,7 @@ class EditProfile : AppCompatActivity() {
                     }
                     .addOnFailureListener {
                         pd.dismiss()
-                        Toast.makeText(applicationContext, "Failed", Toast.LENGTH_LONG).show()
+                        Toast.makeText(applicationContext, "Failed", Toast.LENGTH_SHORT).show()
                     }
                     .addOnProgressListener { taskSnapShot ->
                         val progress =

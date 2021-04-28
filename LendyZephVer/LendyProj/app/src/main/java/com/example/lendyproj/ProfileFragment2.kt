@@ -60,17 +60,8 @@ class ProfileFragment2 : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_profile2, container, false)
 
-
-
         firebaseAuth = FirebaseAuth.getInstance()
         val databaseReference = FirebaseDatabase.getInstance().getReference("uid")
-
-
-
-        view.logoutButton.setOnClickListener {
-            firebaseAuth.signOut()
-            startActivity(Intent(requireActivity(), PreLoginActivity::class.java))
-        }
 
         val uid2 = Firebase.auth.currentUser!!.uid
         val rootRef = FirebaseDatabase.getInstance().getReference("uid")
@@ -86,9 +77,14 @@ class ProfileFragment2 : Fragment() {
 
         }
 
-        view.settingProfileButton.setOnClickListener {
-            val intent = Intent(requireActivity(), EditProfile::class.java)
+        view.edit_profile_button2.setOnClickListener {
+            val intent = Intent(requireActivity(), EditProfile2::class.java)
             intent.putExtra("currentUserid", currentUserid)
+            requireActivity()?.startActivity(intent)
+        }
+
+        view.settingProfileButton2.setOnClickListener{
+            val intent = Intent(requireActivity(), SettingActivity2::class.java)
             requireActivity()?.startActivity(intent)
         }
 

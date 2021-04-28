@@ -12,9 +12,9 @@
         android:layout_height="wrap_content">
 
         <LinearLayout
-            android:background="@color/lendybg"
+            android:background="@color/white"
             android:layout_width="match_parent"
-            android:layout_height="280dp"
+            android:layout_height="260dp"
             android:orientation="vertical">
 
             <de.hdodenhof.circleimageview.CircleImageView
@@ -22,7 +22,7 @@
                 android:id="@+id/profile_image"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                android:layout_marginTop="?attr/actionBarSize"
+                android:layout_marginTop="20dp"
                 android:layout_gravity="center_horizontal"
                 android:src="@mipmap/lendy_logo_circle_foreground">
 
@@ -60,9 +60,6 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.736" />
 
-            <ListView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
         </LinearLayout>
     </RelativeLayout>
     <GridLayout
@@ -70,49 +67,56 @@
         android:layout_height="match_parent"
         android:columnCount="2"
         android:rowCount="2"
-        android:layout_marginTop="280dp"
+        android:layout_marginTop="250dp"
         android:layout_marginBottom="35dp"
         android:alignmentMode="alignMargins"
         android:columnOrderPreserved="false"
         android:layout_weight="8"
         android:padding="20dp"
-        android:background="@color/Gray">
+        android:background="@color/lendytext">
+
         <androidx.cardview.widget.CardView
-            android:layout_height="0dp"
             android:layout_width="0dp"
-            android:layout_columnWeight="1"
+            android:layout_height="0dp"
+            android:layout_row="0"
             android:layout_rowWeight="1"
-            android:layout_marginBottom="16dp"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
-            android:backgroundTint="@color/lendytext"
-            app:cardElevation="15dp"
-            app:cardCornerRadius="50dp">
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="@color/white"
+            app:cardCornerRadius="20dp"
+            >
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:orientation="vertical"
+                android:layout_gravity="center_horizontal|center_vertical"
                 android:layout_margin="16dp"
-                android:layout_gravity="center_horizontal|center_vertical">
+                android:gravity="center"
+                android:orientation="vertical">
+
                 <ImageView
-                    android:layout_width="75dp"
+                    android:layout_width="match_parent"
                     android:layout_height="75dp"
-                    android:src="@drawable/ic_action_history"
-                    android:layout_gravity="center_horizontal"/>
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/ic_action_history" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/history"
                     android:layout_gravity="center"
+                    android:text="@string/history"
                     android:textColor="@color/black"
                     android:textSize="20dp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
+
         <androidx.cardview.widget.CardView
-            android:id="@+id/profileEditbuttonGoogle"
+            android:id="@+id/settingProfileButton"
             android:layout_height="0dp"
             android:layout_width="0dp"
             android:layout_columnWeight="1"
@@ -120,9 +124,9 @@
             android:layout_marginBottom="16dp"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
-            android:backgroundTint="@color/lendytext"
-            app:cardElevation="15dp"
-            app:cardCornerRadius="50dp">
+            android:backgroundTint="@color/white"
+
+            app:cardCornerRadius="20dp">
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -155,9 +159,8 @@
             android:layout_marginBottom="16dp"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
-            android:backgroundTint="@color/lendytext"
-            app:cardElevation="15dp"
-            app:cardCornerRadius="50dp">
+            android:backgroundTint="@color/white"
+            app:cardCornerRadius="20dp">
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -182,7 +185,7 @@
 
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
-            android:id="@+id/sign_out_btn"
+            android:id="@+id/edit_profile_button"
             android:layout_height="0dp"
             android:layout_width="0dp"
             android:layout_columnWeight="1"
@@ -190,9 +193,8 @@
             android:layout_marginBottom="16dp"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
-            android:backgroundTint="@color/lendytext"
-            app:cardElevation="15dp"
-            app:cardCornerRadius="50dp">
+            android:backgroundTint="@color/white"
+            app:cardCornerRadius="20dp">
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

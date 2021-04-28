@@ -98,7 +98,6 @@ class LendFragment : Fragment() {
             }
         }
 
-
         contactReference.addValueEventListener(messagesListener)
     }
 

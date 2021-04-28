@@ -93,4 +93,16 @@
     <string name="sign_in">เข้าสู่ระบบ</string>
     <string name="signin_with_email">เข้าสู่ระบบผ่านอีเมล</string>
     <string name="chat">แชท</string>
+    <string name="enter_name">ชื่อ</string>
+    <string name="enter_email">อีเมล</string>
+    <string name="type_message">พิมพ์ข้อความ</string>
+    <string name="label_sign_up">ลงทะเบียน</string>
+    <string name="btn_sign_up">ลงทะเบียน</string>
+    <string name="btn_login">เข้าสู่ระบบ</string>
+    <string name="btn_save">บันทึก</string>
+    <string name="label_sign_in">เข้าสู่ระบบ</string>
+    <string name="label_message">ข้อความ</string>
+    <string name="label_profile">ข้อมูลส่วนตัว</string>
+    <string name="enter_password">รหัสผ่าน</string>
+    <string name="enter_confirm_password">ยืนยันรหัสผ่าน</string>
 </resources>

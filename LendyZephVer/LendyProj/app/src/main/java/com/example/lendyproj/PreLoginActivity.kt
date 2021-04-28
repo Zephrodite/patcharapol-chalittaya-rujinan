@@ -70,16 +70,6 @@ class PreLoginActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        sign_out_btn.setOnClickListener {
-            mAuth = FirebaseAuth.getInstance()
-            Firebase.auth.signOut()
-        mAuth.signOut()
-            googleSignInClient.signOut().addOnCompleteListener{
-                val `in` = Intent(this, PreLoginActivity::class.java)
-                startActivity(`in`)
-            }
-
-        }
     }
 
     private fun signIn() {

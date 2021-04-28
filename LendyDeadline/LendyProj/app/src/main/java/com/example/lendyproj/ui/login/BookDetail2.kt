@@ -48,16 +48,6 @@ class BookDetail2 : AppCompatActivity() {
                     contactRef.addValueEventListener(object : ValueEventListener {
                         override fun onDataChange(datasnapshot: DataSnapshot) {
                             addtoContactButton2.setOnClickListener{
-                                datasnapshot.children.forEach { child ->
-                                    if(child.child("userId").getValue(String::class.java) == userIdCompare
-                                        && child.child("currentUid").getValue(String::class.java) == currentUid
-                                        && child.child("bookId").getValue(String::class.java) == bookId) {
-                                        i = false
-                                        Toast.makeText(this@BookDetail2,
-                                            "This person are in your chat",
-                                            Toast.LENGTH_SHORT).show()
-                                    }
-                                }
 
                                 if ( i == true ) {
                                     val allowedChars = ('A'..'Z') + ('a'..'z') + ('0'..'9')

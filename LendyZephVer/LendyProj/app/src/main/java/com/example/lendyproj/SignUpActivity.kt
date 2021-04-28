@@ -54,13 +54,13 @@ class SignUpActivity : AppCompatActivity() {
         val email= emailInput.text
         val password= passwordInput.text
         val emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+"
-        val usernamePattern = "[a-zA-Z0-9._]+(?<![_.])\$"
+        val usernamePattern = "[a-zA-Z0-9._]+(?<![.])\$"
 
         profilebuttonChoose.setOnClickListener{ v ->
             val intent = Intent()
             intent.setType("image/*")
-            intent.setAction(Intent.ACTION_GET_CONTENT)
-            startActivityForResult(Intent.createChooser(intent, "SELECT PICURE"), 111)
+            intent.setAction(Intent.ACTION_PICK)
+            startActivityForResult(Intent.createChooser(intent, "SELECT PICURE"), 0)
         }
 
         registerButton.setOnClickListener {
@@ -110,7 +110,7 @@ class SignUpActivity : AppCompatActivity() {
                                         pd.dismiss()
                                         Toast.makeText(applicationContext,
                                             "Failed",
-                                            Toast.LENGTH_LONG).show()
+                                            Toast.LENGTH_SHORT).show()
                                     }
                                     .addOnProgressListener { taskSnapShot ->
                                         val progress =
@@ -131,9 +131,7 @@ class SignUpActivity : AppCompatActivity() {
                                         val pfImageUri = ImageUri.toString()
 //                                        val keyId = myRefOfid.push().key.toString()
                                         val uniqId = Firebase.auth.uid
-                                        val uId = UserId(username.toString(),
-                                            email.toString(),
-                                            pfImageUri)
+                                        val uId = UserId(username.toString(), email.toString(), pfImageUri, uniqId.toString())
                                         myRefOfid.child(uniqId.toString()).setValue(uId)
 
                                         finish()
@@ -164,10 +162,11 @@ class SignUpActivity : AppCompatActivity() {
     }
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-        if(requestCode==111 && resultCode == Activity.RESULT_OK && data != null) {
+        if(requestCode==0 && resultCode == Activity.RESULT_OK && data != null) {
             filepath = data.data!!
             var bitmap = MediaStore.Images.Media.getBitmap(contentResolver,filepath)
             profileImage.setImageBitmap(bitmap)
+
 
         }
     }

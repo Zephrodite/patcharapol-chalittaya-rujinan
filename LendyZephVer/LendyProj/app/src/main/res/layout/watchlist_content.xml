@@ -24,7 +24,7 @@
         android:layout_height="50dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:background="@color/lendybg"
+        android:background="@color/lendytext"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/posterImgeView2" />
@@ -51,8 +51,8 @@
         android:layout_marginTop="16dp"
         android:text="Ironman Book"
         android:textStyle="bold"
-        android:textSize="25sp"
-        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textColor="@color/black"
         app:layout_constraintStart_toEndOf="@+id/posterImgeView2"
         app:layout_constraintTop_toTopOf="@+id/posterImgeView2" />
 

@@ -12,21 +12,41 @@
         android:roundIcon="@mipmap/lendy_logo_circle_foreground"
         android:supportsRtl="true"
         android:theme="@style/Theme.Lendy_LoginPage">
-        <activity android:name=".SettingActivity"></activity>
-        <activity android:name=".chat.ChatLogActivity" />
-        <activity android:name=".EditProfile2" />
+
+        <activity android:name=".SettingActivity"
+            android:theme="@style/Theme.Lendy_LoginPage2" />
+        <activity android:name=".SettingActivity2"
+            android:theme="@style/Theme.Lendy_LoginPage2" />
+
+        <activity
+            android:name=".ChatActivity3"
+            android:theme="@style/Theme.Lendy_LoginPage2" />
+        <activity
+            android:name=".ChatActivity2"
+            android:theme="@style/Theme.Lendy_LoginPage2" />
+        <activity
+            android:name=".ChatActivity"
+            android:theme="@style/Theme.Lendy_LoginPage2" />
+
+        <activity
+            android:name=".EditProfile2"
+            android:theme="@style/Theme.Lendy_LoginPage2" />
         <activity
             android:name=".EditProfile"
             android:theme="@style/Theme.Lendy_LoginPage2" />
+
         <activity
             android:name=".WatchListActivity"
             android:theme="@style/Theme.Lendy_LoginPage2" />
+
         <activity
             android:name=".ForgotPassword"
             android:theme="@style/Theme.Lendy_LoginPage2" />
+
         <activity
             android:name=".ui.login.BookDetail2"
             android:theme="@style/Theme.DetailActivity" />
+
         <activity
             android:name=".HomeActivity2"
             android:theme="@style/Theme.Lendy_LoginPage2" />

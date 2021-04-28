@@ -57,9 +57,9 @@ class HomeFragment : Fragment()  {
         view.inputSearch.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable?) {
                 if (s.toString()!=null) {
-                    setupRecyclerView1(view.bookRecyclerView1, s.toString())
+                    setupRecyclerView1(view.bookRecyclerView, s.toString())
                 } else {
-                    setupRecyclerView1(view.bookRecyclerView1, "")
+                    setupRecyclerView1(view.bookRecyclerView, "")
                 }
             }
 
@@ -69,11 +69,11 @@ class HomeFragment : Fragment()  {
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
             }
         })
-        
+
 
 
         listBooks1.clear()
-        setupRecyclerView(view.bookRecyclerView1)
+        setupRecyclerView(view.bookRecyclerView)
         setHasOptionsMenu(true)
 
 
@@ -96,6 +96,7 @@ class HomeFragment : Fragment()  {
                             child.key)
                     book1?.let { listBooks1.add(it) }
                 }
+
                 recyclerView1.adapter = bookViewAdapter1(listBooks1)
             }
 
@@ -109,25 +110,26 @@ class HomeFragment : Fragment()  {
     private fun setupRecyclerView(recyclerView1: RecyclerView) {
         val uid = Firebase.auth.currentUser!!.uid
 
-         messagesListener1 = object : ValueEventListener {
-             override fun onDataChange(snapshot: DataSnapshot) {
-                 listBooks1.clear()
-                 snapshot.children.forEach { child ->
-                     if(child.child("currentUid").getValue(String::class.java) != uid) {
-                         val book1: Book? =
-                             Book(child.child("title").getValue<String>(),
-                                 child.child("date").getValue<String>(),
-                                 child.child("description").getValue<String>(),
-                                 child.child("downloadUri").getValue<String>(),
-                                 child.child("bookId").getValue<String>(),
-                                 child.key)
-                         book1?.let { listBooks1.add(it) }
-                     }
-                     recyclerView1.adapter = HomeFragment.bookViewAdapter1(listBooks1)
+        messagesListener1 = object : ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
+                listBooks1.clear()
+                snapshot.children.forEach { child ->
+                    if(child.child("currentUid").getValue(String::class.java) != uid) {
+                        val book1: Book? =
+                            Book(child.child("title").getValue<String>(),
+                                child.child("date").getValue<String>(),
+                                child.child("description").getValue<String>(),
+                                child.child("downloadUri").getValue<String>(),
+                                child.child("currentUid").getValue<String>(),
+                                child.child("bookId").getValue<String>(),
+                                child.key)
+                        book1?.let { listBooks1.add(it) }
+                    }
+                    recyclerView1.adapter = HomeFragment.bookViewAdapter1(listBooks1)
 
-                 }
+                }
 
-             }
+            }
 
             override fun onCancelled(error: DatabaseError) {
                 Log.e("TAG", "messages:onCancelled: ${error.message}")
@@ -158,6 +160,7 @@ class HomeFragment : Fragment()  {
             holder.itemView.setOnClickListener { v ->
                 val intent1 = Intent(v.context, BookDetail::class.java).apply {
                     putExtra("bookId", book.bookId)
+                    putExtra("userId", book.currentUid)
 
                 }
                 v.context.startActivity(intent1)

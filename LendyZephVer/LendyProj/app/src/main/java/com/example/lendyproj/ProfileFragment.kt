@@ -13,6 +13,8 @@ import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.fragment_profile.view.*
+import kotlinx.android.synthetic.main.fragment_profile.view.profile_image
+import kotlinx.android.synthetic.main.fragment_profile2.view.*
 
 class ProfileFragment : Fragment() {
     lateinit var aboutFragment: AboutFragment
@@ -52,22 +54,16 @@ class ProfileFragment : Fragment() {
 
         }
 
-        view.profileEditbuttonGoogle.setOnClickListener {
-            val intent = Intent(requireActivity(), EditProfile2::class.java)
+        view.edit_profile_button.setOnClickListener {
+            val intent = Intent(requireActivity(), EditProfile::class.java)
             intent.putExtra("currentUserid", currentUser)
             requireActivity()?.startActivity(intent)
         }
 
-        view.sign_out_btn.setOnClickListener {
-            mAuth = FirebaseAuth.getInstance()
-            Firebase.auth.signOut()
-            mAuth.signOut()
-            googleSignInClient.signOut().addOnCompleteListener{
-                val `in` = Intent(getActivity(), PreLoginActivity::class.java)
-                startActivity(`in`)
-            }
+        view.settingProfileButton.setOnClickListener{
+            val intent = Intent(requireActivity(), SettingActivity::class.java)
+            requireActivity()?.startActivity(intent)
         }
-
         setHasOptionsMenu(true)
 
         return view

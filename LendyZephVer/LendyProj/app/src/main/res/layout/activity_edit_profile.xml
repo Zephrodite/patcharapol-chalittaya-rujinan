@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/Pink"
     tools:context=".EditProfile">
 
     <ScrollView
@@ -24,7 +23,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="16dp"
-                android:text="@string/edit_your_profile"
+                android:text="Edit your Profile"
                 android:textColor="@color/lendybg"
                 android:textSize="44sp"
                 android:textStyle="bold"
@@ -35,7 +34,7 @@
                 app:layout_constraintBottom_toTopOf="@+id/imageBook"
                 app:layout_constraintVertical_bias="0.212" />
 
-            <de.hdodenhof.circleimageview.CircleImageView
+            <ImageView
                 android:id="@+id/imageEditProfile"
                 android:layout_width="200dp"
                 android:layout_height="200dp"
@@ -56,8 +55,8 @@
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="0dp"
                 android:layout_marginRight="16dp"
-                android:backgroundTint="@color/lendybg"
-                android:text="@string/add_photo"
+                android:backgroundTint="@color/lendytext"
+                android:text="Add Photo"
                 android:textColor="@color/black"
                 android:textStyle="bold"
                 app:layout_constraintLeft_toLeftOf="parent"
@@ -73,8 +72,9 @@
                 android:layout_marginTop="22dp"
                 android:layout_marginEnd="24dp"
                 android:background="@drawable/custom_input"
+                android:backgroundTint="@color/lendytext"
                 android:drawablePadding="12dp"
-                android:hint="@string/username"
+                android:hint="Username"
                 android:inputType="textEmailAddress"
                 android:paddingStart="12dp"
                 android:paddingEnd="12dp"
@@ -93,9 +93,9 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="48dp"
                 android:layout_marginBottom="16dp"
-                android:backgroundTint="@color/lendybg"
+                android:backgroundTint="@color/lendytext"
                 android:textColor="@color/black"
-                android:text="@string/update_button"
+                android:text="UPDATE"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
