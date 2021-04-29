@@ -13,4 +13,4 @@ Lab 6 :
 password : 55555555
 </br>or
 </br>email : jack@gmail.com
-</br>password : 11111111
+password : 11111111
