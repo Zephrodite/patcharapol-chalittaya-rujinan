@@ -54,7 +54,7 @@ class BookDetail2 : AppCompatActivity() {
 
                     contactRef.addValueEventListener(object : ValueEventListener {
                         override fun onDataChange(datasnapshot: DataSnapshot) {
-                            addtoContactButton.setOnClickListener{
+                            addtoContactButton1.setOnClickListener{
 
                                 if ( i == true ) {
                                     val allowedChars = ('A'..'Z') + ('a'..'z') + ('0'..'9')
@@ -107,7 +107,7 @@ class BookDetail2 : AppCompatActivity() {
     fun images(url: String){
         Glide.with(applicationContext)
             .load(url)
-            .into(posterImgeView)
+            .into(posterImgeView1)
 
 //        Glide.with(this)
 //            .load(url)
