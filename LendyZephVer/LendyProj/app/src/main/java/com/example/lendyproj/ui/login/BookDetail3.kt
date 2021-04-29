@@ -20,10 +20,10 @@ import kotlinx.android.synthetic.main.activity_book_detail.*
 import kotlinx.android.synthetic.main.activity_book_detail.posterImgeView
 import kotlinx.android.synthetic.main.activity_book_detail.titleTextView
 
-class BookDetail : AppCompatActivity() {
+class BookDetail3 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_book_detail)
+        setContentView(R.layout.activity_book_detail3)
 
         val userId = intent.getStringExtra("userId")
         val bookId = intent.getStringExtra("bookId")
@@ -144,7 +144,7 @@ class BookDetail : AppCompatActivity() {
 
                                             }
 
-                                            val intent = Intent(this@BookDetail, ChatActivity::class.java)
+                                            val intent = Intent(this@BookDetail3, ChatActivity::class.java)
                                             intent.putExtra("userId", userid.userId.toString())
                                             intent.putExtra("userName", userid.username.toString())
                                             intent.putExtra("imageUri", userid.profileImageUri.toString())
@@ -202,7 +202,7 @@ class BookDetail : AppCompatActivity() {
                                 datasnapshot.children.forEach { child ->
                                     if(child.child("bookId").getValue(String::class.java) == bookIdCompare && child.child("currentUid").getValue(String::class.java) == currentUid) {
                                         j = false
-                                        Toast.makeText(this@BookDetail,
+                                        Toast.makeText(this@BookDetail3,
                                             "This book are in your watchlist",
                                             Toast.LENGTH_SHORT).show()
                                     }
@@ -216,7 +216,7 @@ class BookDetail : AppCompatActivity() {
                                     val watchlist = WatchList(book.title.toString(), book.author.toString(), book.description.toString(), book.downloadUri.toString()
                                         , currentUid, watchListId, book.type.toString(), book.price.toString() , book.bookId.toString())
                                     watchListRef.child(watchListId).setValue(watchlist)
-                                    Toast.makeText(this@BookDetail,
+                                    Toast.makeText(this@BookDetail3,
                                         "Book added to Watchlist",
                                         Toast.LENGTH_SHORT).show()
 
@@ -234,8 +234,6 @@ class BookDetail : AppCompatActivity() {
                     titleTextView.text = book.title.toString()
                     authorTextView.text = book.author.toString()
                     descriptionTextView.text = book.description.toString()
-                    typeTextView.text = book.type.toString()
-                    priceTextView.text = book.price.toString()
                     images(book.downloadUri.toString())
 
                 }

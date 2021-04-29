@@ -65,6 +65,7 @@ class PreLoginActivity : AppCompatActivity() {
         sign_in_button.setOnClickListener {
             signIn()
         }
+
         login_with_email_btn.setOnClickListener {
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)

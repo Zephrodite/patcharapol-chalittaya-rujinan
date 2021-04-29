@@ -64,7 +64,7 @@ class EditActivity : AppCompatActivity() {
                 val book:Book? = dataSnapshot.getValue(Book::class.java)
                 if (book != null) {
                     titleEditText.text = Editable.Factory.getInstance().newEditable(book.title)
-                    dateEditText.text = Editable.Factory.getInstance().newEditable(book.date)
+                    dateEditText.text = Editable.Factory.getInstance().newEditable(book.author)
                     descriptionEditText.text = Editable.Factory.getInstance().newEditable(book.description)
                     images(Editable.Factory.getInstance().newEditable(book.downloadUri).toString())
                 }
@@ -95,7 +95,7 @@ class EditActivity : AppCompatActivity() {
                     }
                     .addOnFailureListener {
                         pd.dismiss()
-                        Toast.makeText(applicationContext, "Failed", Toast.LENGTH_LONG).show()
+                        Toast.makeText(applicationContext, "Failed", Toast.LENGTH_SHORT).show()
                     }
                     .addOnProgressListener { taskSnapShot ->
                         val progress =

@@ -21,8 +21,7 @@ import com.google.firebase.database.ktx.database
 import com.google.firebase.database.ktx.getValue
 import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_watch_list.*
-import kotlinx.android.synthetic.main.book_content.view.*
-import kotlinx.android.synthetic.main.book_content.view.dateTextView2
+
 import kotlinx.android.synthetic.main.fragment_bookshelf.view.*
 import kotlinx.android.synthetic.main.watchlist_content.view.*
 
@@ -47,17 +46,21 @@ class WatchListActivity : AppCompatActivity() {
 
         messagesListener = object : ValueEventListener {
 
+
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 listBooks.clear()
                 dataSnapshot.children.forEach { child ->
                     if(child.child("currentUid").getValue(String::class.java) == uid) {
                         val watchlist: WatchList? =
                             WatchList(child.child("title").getValue<String>(),
-                                child.child("date").getValue<String>(),
+                                child.child("author").getValue<String>(),
                                 child.child("description").getValue<String>(),
                                 child.child("downloadUri").getValue<String>(),
                                 child.child("currentUid").getValue<String>(),
                                 child.child("watchListId").getValue<String>(),
+                                child.child("type").getValue<String>(),
+                                child.child("price").getValue<String>(),
+                                child.child("bookId").getValue<String>(),
                                 child.key)
                         watchlist?.let { listBooks.add(it) }
 
@@ -89,7 +92,7 @@ class WatchListActivity : AppCompatActivity() {
         override fun onBindViewHolder(holder: ViewHolder, position: Int) {
             val book = values[position]
             holder.mTitleTextView.text = book.title
-            holder.mDateTextView.text = book.date
+            holder.mAuthorTextView.text = book.author
             holder.mPosterImgeView?.let {
                 Glide.with(holder.itemView.context)
                     .load(book.downloadUri)
@@ -99,6 +102,8 @@ class WatchListActivity : AppCompatActivity() {
             holder.itemView.setOnClickListener { v ->
                 val intent = Intent(v.context, BookDetail2::class.java).apply {
                     putExtra("watchListId", book.watchListId)
+                    putExtra("userId", book.currentUid)
+                    putExtra("bookId", book.bookId)
                 }
                 v.context.startActivity(intent)
             }
@@ -109,7 +114,7 @@ class WatchListActivity : AppCompatActivity() {
 
         inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
             val mTitleTextView: TextView = view.titleTextView2
-            val mDateTextView: TextView = view.dateTextView2
+            val mAuthorTextView: TextView = view.authorTextView2
             val mPosterImgeView: ImageView? = view.posterImgeView2
         }
     }

@@ -24,16 +24,12 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.lendyproj.ui.login.*
 import com.google.firebase.auth.ktx.auth
-import com.google.firebase.database.DataSnapshot
-import com.google.firebase.database.DatabaseError
-import com.google.firebase.database.FirebaseDatabase
-import com.google.firebase.database.ValueEventListener
+import com.google.firebase.database.*
 import com.google.firebase.database.ktx.database
 import com.google.firebase.database.ktx.getValue
 import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_add.view.*
 import kotlinx.android.synthetic.main.book_content.view.*
-import kotlinx.android.synthetic.main.book_content.view.dateTextView
 import kotlinx.android.synthetic.main.book_content.view.titleTextView
 
 
@@ -56,8 +52,8 @@ class BookshelfFragment : Fragment()  {
         val view = inflater.inflate(R.layout.fragment_bookshelf, container, false)
 
 //        view.add_book_floating_button.setOnClickListener {
-//            val `in` = Intent(getActivity(), AddBookActivity::class.java)
-//            startActivity(`in`)
+//            val in = Intent(getActivity(), AddBookActivity::class.java)
+//            startActivity(in)
 //        }
 
         view.newFloatingActionButton.setOnClickListener { v ->
@@ -70,10 +66,9 @@ class BookshelfFragment : Fragment()  {
 
         setHasOptionsMenu(true)
 
+
         return view
     }
-
-
 
     private fun setupRecyclerView(recyclerView: RecyclerView) {
 
@@ -81,17 +76,21 @@ class BookshelfFragment : Fragment()  {
 
         messagesListener = object : ValueEventListener {
 
+
+
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 listBooks.clear()
                 dataSnapshot.children.forEach { child ->
                     if(child.child("currentUid").getValue(String::class.java) == uid) {
                         val book: Book? =
                             Book(child.child("title").getValue<String>(),
-                                child.child("date").getValue<String>(),
+                                child.child("author").getValue<String>(),
                                 child.child("description").getValue<String>(),
                                 child.child("downloadUri").getValue<String>(),
                                 child.child("currentUid").getValue<String>(),
                                 child.child("bookId").getValue<String>(),
+                                child.child("type").getValue<String>(),
+                                child.child("price").getValue<String>(),
                                 child.key)
                         book?.let { listBooks.add(it) }
 
@@ -123,7 +122,9 @@ class BookshelfFragment : Fragment()  {
         override fun onBindViewHolder(holder: ViewHolder, position: Int) {
             val book = values[position]
             holder.mTitleTextView.text = book.title
-            holder.mDateTextView.text = book.date
+            holder.mAuthorTextView.text = book.author
+            holder.mTypeTextView.text = book.type
+            holder.mPriceTextView.text = book.price
             holder.mPosterImgeView?.let {
                 Glide.with(holder.itemView.context)
                     .load(book.downloadUri)
@@ -151,12 +152,14 @@ class BookshelfFragment : Fragment()  {
 
         inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
             val mTitleTextView: TextView = view.titleTextView
-            val mDateTextView: TextView = view.dateTextView
+            val mAuthorTextView: TextView = view.authorTextView
             val mPosterImgeView: ImageView? = view.posterImgeView
+            val mTypeTextView: TextView = view.typeTextView
+            val mPriceTextView: TextView = view.priceTextView
         }
     }
 
-    private fun deleteSwipe(recyclerView: RecyclerView){
+    private fun deleteSwipe(recyclerView: RecyclerView) {
         val touchHelperCallback: ItemTouchHelper.SimpleCallback = object : ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.LEFT or ItemTouchHelper.RIGHT) {
             override fun onMove(recyclerView: RecyclerView, viewHolder: RecyclerView.ViewHolder, target: RecyclerView.ViewHolder): Boolean {
                 return false
@@ -200,7 +203,4 @@ class BookshelfFragment : Fragment()  {
         return super.onOptionsItemSelected(item)
     }
 
-
-
 }
-

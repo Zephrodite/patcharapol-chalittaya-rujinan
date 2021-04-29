@@ -1,5 +1,6 @@
 package com.example.lendyproj
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
@@ -21,6 +22,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.Exclude
 import com.google.firebase.database.ValueEventListener
 import com.google.firebase.database.ktx.database
 import com.google.firebase.database.ktx.getValue
@@ -87,12 +89,16 @@ class HomeFragment : Fragment()  {
                 listBooks1.clear()
                 snapshot.children.forEach { child ->
 
+
                     val book1: Book? =
                         Book(child.child("title").getValue<String>(),
-                            child.child("date").getValue<String>(),
+                            child.child("author").getValue<String>(),
                             child.child("description").getValue<String>(),
                             child.child("downloadUri").getValue<String>(),
+                            child.child("currentUid").getValue<String>(),
                             child.child("bookId").getValue<String>(),
+                            child.child("type").getValue<String>(),
+                            child.child("price").getValue<String>(),
                             child.key)
                     book1?.let { listBooks1.add(it) }
                 }
@@ -117,11 +123,13 @@ class HomeFragment : Fragment()  {
                     if(child.child("currentUid").getValue(String::class.java) != uid) {
                         val book1: Book? =
                             Book(child.child("title").getValue<String>(),
-                                child.child("date").getValue<String>(),
+                                child.child("author").getValue<String>(),
                                 child.child("description").getValue<String>(),
                                 child.child("downloadUri").getValue<String>(),
                                 child.child("currentUid").getValue<String>(),
                                 child.child("bookId").getValue<String>(),
+                                child.child("type").getValue<String>(),
+                                child.child("price").getValue<String>(),
                                 child.key)
                         book1?.let { listBooks1.add(it) }
                     }
@@ -147,10 +155,13 @@ class HomeFragment : Fragment()  {
             return ViewHolder(view)
         }
 
+        @SuppressLint("ResourceAsColor")
         override fun onBindViewHolder(holder: ViewHolder, position1: Int) {
             val book = values1[position1]
             holder.mTitleTextView1.text = book.title
-            holder.mDateTextView1.text = book.date
+            holder.mAuthorTextView1.text = book.author
+            holder.mTypeTextView1!!.text   = book.type
+            holder.mPriceTextView1!!.text = book.price
             holder.mPosterImgeView1?.let {
                 Glide.with(holder.itemView.context)
                     .load(book.downloadUri)
@@ -173,11 +184,12 @@ class HomeFragment : Fragment()  {
 
         inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
             val mTitleTextView1: TextView = view.titleTextView
-            val mDateTextView1: TextView = view.dateTextView
+            val mAuthorTextView1: TextView = view.authorTextView
             val mPosterImgeView1: ImageView? = view.posterImgeView
+            val mTypeTextView1: TextView? = view.typeTextView
+            val mPriceTextView1: TextView? = view.priceTextView
         }
     }
-
 
 
     private fun getShareIntent(): Intent {

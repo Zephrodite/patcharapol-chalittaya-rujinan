@@ -10,6 +10,7 @@ import android.provider.MediaStore
 import android.widget.Toast
 import com.example.lendyproj.R
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.Exclude
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.FirebaseStorage
@@ -43,8 +44,10 @@ class AddActivity : AppCompatActivity() {
         }
 
         val title=titleEditText.text
-        val date= dateEditText.text
+        val date= authorEditText.text
         val description=descriptionEditText.text
+        val type = typeEditText.text
+        val price = priceEditText.text
 
         mAuth = FirebaseAuth.getInstance()
         val currentUser = mAuth.currentUser
@@ -56,23 +59,22 @@ class AddActivity : AppCompatActivity() {
                 pd.setTitle("Adding")
                 pd.show()
 
-
                 val imageRef = storageReference!!.child("images/" + UUID.randomUUID().toString())
                 val uploadTask = imageRef.putFile(filepath!!)
-                        .addOnSuccessListener {
-                            pd.dismiss()
+                    .addOnSuccessListener {
+                        pd.dismiss()
 //                            val generatedFilePath = taskSnapShot.storage.downloadUrl.toString()
 //                           val generatedFilePath = imageUrl.getResult().toString()
 
-                        }
-                        .addOnFailureListener {
-                            pd.dismiss()
-                            Toast.makeText(applicationContext, "Failed", Toast.LENGTH_LONG).show()
-                        }
-                        .addOnProgressListener { taskSnapShot ->
-                            val progress = (100.0 * taskSnapShot.bytesTransferred) / taskSnapShot.totalByteCount
-                            pd.setMessage("uploaded " +progress.toInt() + "%...")
-                        }
+                    }
+                    .addOnFailureListener {
+                        pd.dismiss()
+                        Toast.makeText(applicationContext, "Failed", Toast.LENGTH_SHORT).show()
+                    }
+                    .addOnProgressListener { taskSnapShot ->
+                        val progress = (100.0 * taskSnapShot.bytesTransferred) / taskSnapShot.totalByteCount
+                        pd.setMessage(" " +progress.toInt() + "%...")
+                    }
 
                 val urlTask = uploadTask.continueWithTask { task ->
                     if (!task.isSuccessful) {
@@ -80,13 +82,16 @@ class AddActivity : AppCompatActivity() {
                             throw it
                         }
                     }
+
                     imageRef.downloadUrl
                 }.addOnCompleteListener { task ->
                     if (task.isSuccessful) {
                         val allowedChars = ('A'..'Z') + ('a'..'z') + ('0'..'9')
-                        val bookId = (1..30).map { allowedChars.random() }.joinToString("")
+                        val bookId = (1..40).map { allowedChars.random() }.joinToString("")
                         val downloadUri = task.result
-                        val book = Book(title.toString(), date.toString(), description.toString(), downloadUri.toString(), currentUid, bookId)
+
+                        val book = Book(title.toString(), date.toString(), description.toString(), downloadUri.toString()
+                            , currentUid, bookId, type.toString(), price.toString())
                         myRef.child(bookId).setValue(book)
                         finish()
                     } else {

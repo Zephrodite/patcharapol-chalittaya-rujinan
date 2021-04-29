@@ -57,7 +57,7 @@
         app:layout_constraintTop_toTopOf="@+id/posterImgeView2" />
 
     <TextView
-        android:id="@+id/dateTextView2"
+        android:id="@+id/authorTextView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -68,7 +68,7 @@
         app:layout_constraintTop_toBottomOf="@+id/titleTextView2" />
 
     <TextView
-        android:id="@+id/item_book_price2"
+        android:id="@+id/typeTextView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -76,9 +76,10 @@
         android:layout_marginTop="8dp"
         android:text="@string/add_type"
         app:layout_constraintStart_toEndOf="@+id/posterImgeView2"
-        app:layout_constraintTop_toBottomOf="@+id/dateTextView2" />
+        app:layout_constraintTop_toBottomOf="@+id/authorTextView2" />
+
     <TextView
-        android:id="@+id/item_book_return2"
+        android:id="@+id/priceTextView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -86,7 +87,7 @@
         android:layout_marginTop="8dp"
         android:text="@string/add_price"
         app:layout_constraintStart_toEndOf="@+id/posterImgeView2"
-        app:layout_constraintTop_toBottomOf="@+id/item_book_price2" />
+        app:layout_constraintTop_toBottomOf="@+id/typeTextView2" />
 
     <ImageView
         android:id="@+id/imageView2"
