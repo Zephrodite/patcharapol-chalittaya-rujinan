@@ -8,14 +8,9 @@ Lab 6 :
 </br>Patcharapol Pansakdanon 063-9 Update options menu
 </br> Rujinan Thima 221-7 Update up bar
 </br> Chalittaya Nimpattanawong 174-0 Update Navigation drawer
-</br>
-</br>
-
-
-User test login
+</br>User test login
 </br>email : yo@gmail.com  
 </br>password : 55555555
-</br>
 </br>or
 </br>email : jack@gmail.com
 </br>password : 11111111
