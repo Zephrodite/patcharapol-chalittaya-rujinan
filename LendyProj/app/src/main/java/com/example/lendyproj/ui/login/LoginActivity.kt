@@ -1,9 +1,11 @@
 package com.example.lendyproj.ui.login
 
+import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
+import android.text.TextUtils
 import android.text.TextWatcher
 import android.util.Log
 import android.view.View
@@ -11,35 +13,48 @@ import android.view.inputmethod.EditorInfo
 import android.widget.*
 import androidx.annotation.StringRes
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import com.example.lendyproj.*
 import com.example.lendyproj.ui.login.LoginViewModelFactory
-import com.example.lendyproj.HomeActivity
-import com.example.lendyproj.R
-import com.example.lendyproj.SignUpActivity
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.common.api.ApiException
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.GoogleAuthProvider
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
+import com.google.firebase.database.ktx.database
+import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_login.*
+import kotlinx.android.synthetic.main.activity_sign_up.*
+import kotlinx.android.synthetic.main.fragment_profile.view.*
 
 
 class LoginActivity : AppCompatActivity() {
 
 
     companion object {
-        private const val RC_SIGN_IN = 120
+        const val RC_SIGN_IN = 202
     }
 
     private lateinit var loginViewModel: LoginViewModel
-    private lateinit var mAuth: FirebaseAuth
+    lateinit var viewModel: LoginViewModel
     private lateinit var googleSignInClient: GoogleSignInClient
+    val user = MutableLiveData<FirebaseUser>()
+    lateinit var auth: FirebaseAuth
+    private val database = Firebase.database
 
+    @SuppressLint("RestrictedApi")
     override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
 
+        super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
         val email = findViewById<EditText>(R.id.email)
@@ -48,18 +63,16 @@ class LoginActivity : AppCompatActivity() {
         val loading = findViewById<ProgressBar>(R.id.loading)
         val signup = findViewById<TextView>(R.id.sign_up)
 
+        auth = FirebaseAuth.getInstance()
 
-        // Configure Google Sign In
-        val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-            .requestIdToken(getString(R.string.default_web_client_id))
-            .requestEmail()
-            .build()
-        googleSignInClient = GoogleSignIn.getClient(this, gso)
-        //Firebase Auth instance
-        mAuth = FirebaseAuth.getInstance()
-
-        sign_in_button.setOnClickListener {
-            signIn()
+        val currentuser = auth.currentUser
+//        if(currentuser != null) {
+//            startActivity(Intent(this@LoginActivity, HomeActivity2::class.java))
+//            finish()
+//        }
+        forgot_pass.setOnClickListener {
+            val intent = Intent(this@LoginActivity, ForgotPassword::class.java)
+            startActivity(intent)
         }
 
         signup.setOnClickListener {
@@ -67,8 +80,10 @@ class LoginActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+
+
         loginViewModel = ViewModelProvider(this, LoginViewModelFactory())
-                .get(LoginViewModel::class.java)
+            .get(LoginViewModel::class.java)
 
         loginViewModel.loginFormState.observe(this@LoginActivity, Observer {
             val loginState = it ?: return@Observer
@@ -105,16 +120,16 @@ class LoginActivity : AppCompatActivity() {
 
         email.afterTextChanged {
             loginViewModel.loginDataChanged(
-                    email.text.toString(),
-                    password.text.toString()
+                email.text.toString(),
+                password.text.toString()
             )
         }
 
         password.apply {
             afterTextChanged {
                 loginViewModel.loginDataChanged(
-                        email.text.toString(),
-                        password.text.toString()
+                    email.text.toString(),
+                    password.text.toString()
                 )
             }
 
@@ -122,77 +137,42 @@ class LoginActivity : AppCompatActivity() {
                 when (actionId) {
                     EditorInfo.IME_ACTION_DONE ->
                         loginViewModel.login(
-                                email.text.toString(),
-                                password.text.toString()
+                            email.text.toString(),
+                            password.text.toString()
                         )
                 }
                 false
             }
 
             login.setOnClickListener {
-                loading.visibility = View.VISIBLE
-                loginViewModel.login(email.text.toString(), password.text.toString())
-                val intent = Intent(this@LoginActivity, HomeActivity::class.java)
-                startActivity(intent)
+
+                Firebase.auth.signInWithEmailAndPassword(email.text.toString(), password.text.toString())
+                    .addOnCompleteListener {
+                        if(it.isSuccessful) {
+                            val intent = Intent(this@LoginActivity, HomeActivity2::class.java)
+                            startActivity(intent)
+                        } else {
+                            Toast.makeText(this@LoginActivity, "Login failed, please try again! ", Toast.LENGTH_SHORT).show()
+                        }
+                    }
+
+
+
             }
 
         }
 
     }
 
-    private fun signIn() {
-        val signInIntent = googleSignInClient.signInIntent
-        startActivityForResult(signInIntent, RC_SIGN_IN)
-    }
-
-
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-
-        // Result returned from launching the Intent from GoogleSignInApi.getSignInIntent(...);
-        if (requestCode == RC_SIGN_IN) {
-            val task = GoogleSignIn.getSignedInAccountFromIntent(data)
-            val exception = task.exception
-            if (task.isSuccessful) {
-                try {
-                    // Google Sign In was successful, authenticate with Firebase
-                    val account = task.getResult(ApiException::class.java)!!
-                    Log.d("SignInActivity", "firebaseAuthWithGoogle:" + account.id)
-                    firebaseAuthWithGoogle(account.idToken!!)
-                } catch (e: ApiException) {
-                    // Google Sign In failed, update UI appropriately
-                    Log.w("SignInActivity", "Google sign in failed", e)
-                }
-            } else {
-                Log.w("SignInActivity", exception.toString())
-            }
-        }
-    }
-
-    private fun firebaseAuthWithGoogle(idToken: String) {
-        val credential = GoogleAuthProvider.getCredential(idToken, null)
-        mAuth.signInWithCredential(credential)
-            .addOnCompleteListener(this) { task ->
-                if (task.isSuccessful) {
-                    // Sign in success, update UI with the signed-in user's information
-                    Log.d("SignInActivity", "signInWithCredential:success")
-                    val intent = Intent(this, HomeActivity::class.java)
-                    startActivity(intent)
-                } else {
-                    // If sign in fails, display a message to the user.
-                    Log.d("SignInActivity", "signInWithCredential:failure")
-                }
-            }
-    }
 
     private fun updateUiWithUser(model: LoggedInUserView) {
         val welcome = getString(R.string.welcome)
         val displayName = model.displayName
         // TODO : initiate successful logged in experience
         Toast.makeText(
-                applicationContext,
-                "$welcome $displayName",
-                Toast.LENGTH_LONG
+            applicationContext,
+            "$welcome $displayName",
+            Toast.LENGTH_SHORT
         ).show()
 
 

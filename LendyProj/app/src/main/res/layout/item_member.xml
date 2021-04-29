@@ -9,29 +9,29 @@
     android:background="@color/lendytext">
 
     <ImageView
-        android:id="@+id/imgMember"
+        android:id="@+id/imgBook"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_margin="8dp"
         android:layout_gravity="center"/>
 
     <TextView
-        android:id="@+id/textMemberNickName"
+        android:id="@+id/textTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:text="Cherprang"
+        android:text="Title"
         android:textSize="18dp"
         android:textColor="@color/black"
         android:layout_marginLeft="16dp" />
 
 
     <TextView
-        android:id="@+id/textMemberName"
+        android:id="@+id/textAuthor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:text="Cherprang Areekul"
+        android:text="Author"
         android:textSize="12dp"
         android:textColor="@color/black"
         android:maxLines="2"

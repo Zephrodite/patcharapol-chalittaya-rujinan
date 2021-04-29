@@ -4,26 +4,30 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/Pink"
     android:fillViewport="true">
 
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:stretchColumns="1">
+        android:stretchColumns="1"
+        android:focusableInTouchMode="true"
+        android:focusable="true">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/container"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-
+            android:focusableInTouchMode="true"
+            android:focusable="true"
             tools:context=".ui.login.LoginActivity">
 
-<!--            <LinearLayout-->
-<!--                android:background="@color/lendybg"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="230dp"-->
-<!--                android:orientation="vertical"-->
-<!--                tools:ignore="MissingConstraints"/>-->
+            <!--            <LinearLayout-->
+            <!--                android:background="@color/lendybg"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="230dp"-->
+            <!--                android:orientation="vertical"-->
+            <!--                tools:ignore="MissingConstraints"/>-->
 
             <!--            android:enabled="false"-->
 
@@ -32,7 +36,7 @@
                 android:layout_width="330dp"
                 android:layout_height="60dp"
                 android:layout_marginStart="24dp"
-                android:layout_marginTop="228dp"
+                android:layout_marginTop="310dp"
                 android:layout_marginEnd="24dp"
                 android:background="@drawable/custom_input"
                 android:drawableStart="@drawable/custom_email_icon"
@@ -69,7 +73,6 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/email" />
-
 
             <Button
                 android:id="@+id/login"
@@ -111,26 +114,26 @@
                 android:id="@+id/create_acc"
                 android:layout_width="165dp"
                 android:layout_height="19dp"
-                android:layout_marginTop="92dp"
+                android:layout_marginTop="45dp"
                 android:text="@string/create_acc"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.406"
+                app:layout_constraintHorizontal_bias="0.43"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/or"
+                app:layout_constraintTop_toBottomOf="@+id/login"
                 tools:ignore="MissingConstraints" />
 
             <TextView
                 android:id="@+id/sign_up"
                 android:layout_width="48dp"
                 android:layout_height="19dp"
-                android:layout_marginTop="92dp"
+                android:layout_marginTop="45dp"
                 android:text="@string/signup"
                 android:textColor="@color/lendybg"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.6"
-                app:layout_constraintStart_toStartOf="@+id/create_acc"
-                app:layout_constraintTop_toBottomOf="@+id/or"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toEndOf="@+id/create_acc"
+                app:layout_constraintTop_toBottomOf="@+id/login"
                 tools:ignore="MissingConstraints" />
 
             <TextView
@@ -147,7 +150,6 @@
                 android:layout_width="138dp"
                 android:layout_height="143dp"
                 android:layout_marginBottom="68dp"
-
                 android:contentDescription="TODO"
                 app:layout_constraintBottom_toTopOf="@+id/email"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -156,47 +158,23 @@
                 app:srcCompat="@mipmap/lendy_logo_circle_foreground" />
 
             <TextView
-                android:id="@+id/lendyText"
+                android:id="@+id/sign_in"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="136dp"
-                android:text="@string/lendyText"
-                android:textColor="@color/lendytext"
+                android:layout_marginTop="0dp"
+                android:text="@string/sign_in"
+                android:textColor="@color/lendybg"
                 android:textSize="44sp"
                 android:textStyle="bold"
-                app:layout_constraintBottom_toTopOf="@+id/email"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.498"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.212" />
-
-            <TextView
-                android:id="@+id/or"
-                android:layout_width="20dp"
-                android:layout_height="23dp"
-                android:layout_marginTop="48dp"
-                android:text="@string/or"
-                android:textColor="@color/lendybg"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.498"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/login"
+                app:layout_constraintTop_toBottomOf="@+id/imageView"
                 tools:ignore="MissingConstraints" />
 
-            <com.google.android.gms.common.SignInButton
-                android:id="@+id/sign_in_button"
-                android:layout_width="124dp"
-                android:layout_height="53dp"
-                android:layout_marginTop="76dp"
-                android:layout_marginBottom="72dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.498"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/login"
-                app:layout_constraintVertical_bias="0.185" />
+
+
+
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

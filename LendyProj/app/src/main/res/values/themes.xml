@@ -34,4 +34,41 @@
         <item name="popupTheme">@style/ThemeOverlay.AppCompat.Light</item>
     </style>
 
+    <style name="Theme.FormActivity" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimaryDark">@color/purple_500</item>
+        <!-- Secondary brand color. -->
+        <item name="colorAccent">@color/teal_200</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">@color/purple_500</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="Theme.DetailActivity" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimaryDark">@color/lendytext</item>
+        <!-- Secondary brand color. -->
+        <item name="colorAccent">@color/teal_200</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">@color/lendytext</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="Theme.MainActivity" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimaryDark">@color/purple_500</item>
+        <!-- Secondary brand color. -->
+        <item name="colorAccent">@color/teal_200</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">@color/purple_500</item>
+        <!-- Customize your theme here. -->
+    </style>
+    <style name="Theme.Lendy_LoginPage.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="Theme.Lendy_LoginPage.AppBarOverlay"
+        parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="Theme.Lendy_LoginPage.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
 </resources>

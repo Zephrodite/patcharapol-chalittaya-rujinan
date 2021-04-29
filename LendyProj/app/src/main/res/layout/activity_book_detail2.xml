@@ -5,19 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/Pink"
-    tools:context=".ui.login.BookDetail">
-
-    <ImageButton
-        android:id="@+id/addtoWatchlistButton"
-        android:layout_width="51dp"
-        android:layout_height="42dp"
-        android:layout_marginTop="16dp"
-        android:backgroundTint="@color/lendytext"
-        app:layout_constraintEnd_toStartOf="@id/shareButton"
-        app:layout_constraintHorizontal_bias="0.122"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_action_fav"
-        app:tint="@color/lendybg" />
+    tools:context=".ui.login.BookDetail2">
 
     <ImageButton
         android:id="@+id/shareButton"
@@ -62,7 +50,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/titleTextView"
+                android:id="@+id/titleTextView2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
@@ -78,7 +66,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/authorTextView"
+                android:id="@+id/authorTextView2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
@@ -90,7 +78,7 @@
                 android:text="Elon Musk"
                 android:textStyle="bold"
                 app:layout_constraintStart_toEndOf="@id/authorTVLabel"
-                app:layout_constraintTop_toBottomOf="@+id/titleTextView" />
+                app:layout_constraintTop_toBottomOf="@+id/titleTextView2" />
 
             <TextView
                 android:id="@+id/authorTVLabel"
@@ -102,7 +90,7 @@
                 android:text="@string/add_author"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/titleTextView" />
+                app:layout_constraintTop_toBottomOf="@+id/titleTextView2" />
 
             <ScrollView
                 android:id="@+id/descripe"
@@ -118,7 +106,7 @@
 
                     <!-- things to scroll -->
                     <TextView
-                        android:id="@+id/descriptionTextView"
+                        android:id="@+id/descriptionTextView2"
                         android:layout_width="wrap_content"
                         android:layout_height="180dp"
                         android:layout_marginStart="20dp"
@@ -133,7 +121,7 @@
             </ScrollView>
 
             <TextView
-                android:id="@+id/typeTextView"
+                android:id="@+id/typeTextView5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
@@ -147,7 +135,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/descripe" />
 
             <TextView
-                android:id="@+id/priceTextView"
+                android:id="@+id/priceTextView5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
@@ -158,10 +146,10 @@
                 android:layout_marginBottom="10dp"
                 android:text="@string/add_price"
                 android:textStyle="bold"
-                app:layout_constraintTop_toBottomOf="@id/typeTextView" />
+                app:layout_constraintTop_toBottomOf="@id/typeTextView5" />
 
             <Button
-                android:id="@+id/addtoContactButton"
+                android:id="@+id/addtoContactButton2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom"
@@ -173,7 +161,7 @@
                 android:backgroundTint="@color/lendytext"
                 android:text="Contact"
                 android:textColor="@color/lendybg"
-                app:layout_constraintTop_toBottomOf="@id/priceTextView" />
+                app:layout_constraintTop_toBottomOf="@id/priceTextView5" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 
@@ -191,7 +179,7 @@
 
 
         <ImageView
-            android:id="@+id/posterImgeView"
+            android:id="@+id/posterImgeView1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:contentDescription="@string/all"

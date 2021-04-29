@@ -1,6 +1,5 @@
 package com.example.lendyproj
 
-import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
@@ -22,20 +21,20 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
-import com.google.firebase.database.Exclude
 import com.google.firebase.database.ValueEventListener
 import com.google.firebase.database.ktx.database
 import com.google.firebase.database.ktx.getValue
 import com.google.firebase.ktx.Firebase
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
-import kotlinx.android.synthetic.main.activity_book_detail2.*
 import kotlinx.android.synthetic.main.activity_login.*
 import kotlinx.android.synthetic.main.book_content.view.*
 import kotlinx.android.synthetic.main.fragment_home.view.*
+import kotlinx.android.synthetic.main.fragment_home.view.inputSearch
+import kotlinx.android.synthetic.main.fragment_home2.view.*
 
 
-class HomeFragment : Fragment()  {
+class HomeFragment2 : Fragment()  {
 
     private val database1 = Firebase.database
     private lateinit var messagesListener1: ValueEventListener
@@ -51,7 +50,7 @@ class HomeFragment : Fragment()  {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val view = inflater.inflate(R.layout.fragment_home, container, false)
+        val view = inflater.inflate(R.layout.fragment_home2, container, false)
 
 //        view.add_book_floating_button.setOnClickListener {
 //            val `in` = Intent(getActivity(), AddBookActivity::class.java)
@@ -60,9 +59,9 @@ class HomeFragment : Fragment()  {
         view.inputSearch.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable?) {
                 if (s.toString()!=null) {
-                    setupRecyclerView1(view.bookRecyclerView, s.toString())
+                    setupRecyclerView1(view.bookRecyclerView1, s.toString())
                 } else {
-                    setupRecyclerView1(view.bookRecyclerView, "")
+                    setupRecyclerView1(view.bookRecyclerView1, "")
                 }
             }
 
@@ -76,7 +75,7 @@ class HomeFragment : Fragment()  {
 
 
         listBooks1.clear()
-        setupRecyclerView(view.bookRecyclerView)
+        setupRecyclerView(view.bookRecyclerView1)
         setHasOptionsMenu(true)
 
 
@@ -89,6 +88,7 @@ class HomeFragment : Fragment()  {
             override fun onDataChange(snapshot: DataSnapshot) {
                 listBooks1.clear()
                 snapshot.children.forEach { child ->
+
                     val book1: Book? =
                         Book(child.child("title").getValue<String>(),
                             child.child("author").getValue<String>(),
@@ -154,13 +154,11 @@ class HomeFragment : Fragment()  {
             return ViewHolder(view)
         }
 
-        @SuppressLint("ResourceAsColor")
         override fun onBindViewHolder(holder: ViewHolder, position1: Int) {
             val book = values1[position1]
-
             holder.mTitleTextView1.text = book.title
             holder.mAuthorTextView1.text = book.author
-            holder.mTypeTextView1!!.text   =   "Type : " + book.type
+            holder.mTypeTextView1!!.text   = "Type : " + book.type
             holder.mPriceTextView1!!.text = "Price : " + book.price + " ฿"
             holder.mPosterImgeView1?.let {
                 Glide.with(holder.itemView.context)
@@ -190,6 +188,7 @@ class HomeFragment : Fragment()  {
             val mPriceTextView1: TextView? = view.priceTextView
         }
     }
+
 
 
     private fun getShareIntent(): Intent {

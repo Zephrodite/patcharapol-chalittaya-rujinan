@@ -24,7 +24,10 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.lendyproj.ui.login.*
 import com.google.firebase.auth.ktx.auth
-import com.google.firebase.database.*
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.Exclude
+import com.google.firebase.database.ValueEventListener
 import com.google.firebase.database.ktx.database
 import com.google.firebase.database.ktx.getValue
 import com.google.firebase.ktx.Firebase
@@ -33,12 +36,13 @@ import kotlinx.android.synthetic.main.book_content.view.*
 import kotlinx.android.synthetic.main.book_content.view.titleTextView
 
 
-class BookshelfFragment : Fragment()  {
+class BookshelfFragment2 : Fragment()  {
 
     private val database = Firebase.database
     private lateinit var messagesListener: ValueEventListener
     private val listBooks:MutableList<Book> = ArrayList()
     val myRef = database.getReference("book")
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -49,7 +53,7 @@ class BookshelfFragment : Fragment()  {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val view = inflater.inflate(R.layout.fragment_bookshelf, container, false)
+        val view = inflater.inflate(R.layout.fragment_bookshelf2, container, false)
 
 //        view.add_book_floating_button.setOnClickListener {
 //            val in = Intent(getActivity(), AddBookActivity::class.java)
@@ -63,12 +67,12 @@ class BookshelfFragment : Fragment()  {
 
         listBooks.clear()
         setupRecyclerView(view.bookRecyclerView)
-
         setHasOptionsMenu(true)
 
 
         return view
     }
+
 
     private fun setupRecyclerView(recyclerView: RecyclerView) {
 
@@ -76,10 +80,10 @@ class BookshelfFragment : Fragment()  {
 
         messagesListener = object : ValueEventListener {
 
-
-
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 listBooks.clear()
+
+
                 dataSnapshot.children.forEach { child ->
                     if(child.child("currentUid").getValue(String::class.java) == uid) {
                         val book: Book? =
@@ -97,7 +101,7 @@ class BookshelfFragment : Fragment()  {
                     }
                 }
 
-                recyclerView.adapter = bookViewAdapter(listBooks)
+                recyclerView.adapter = BookshelfFragment.bookViewAdapter(listBooks)
             }
 
             override fun onCancelled(error: DatabaseError) {
@@ -159,7 +163,7 @@ class BookshelfFragment : Fragment()  {
         }
     }
 
-    private fun deleteSwipe(recyclerView: RecyclerView) {
+    private fun deleteSwipe(recyclerView: RecyclerView){
         val touchHelperCallback: ItemTouchHelper.SimpleCallback = object : ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.LEFT or ItemTouchHelper.RIGHT) {
             override fun onMove(recyclerView: RecyclerView, viewHolder: RecyclerView.ViewHolder, target: RecyclerView.ViewHolder): Boolean {
                 return false
@@ -202,5 +206,7 @@ class BookshelfFragment : Fragment()  {
         }
         return super.onOptionsItemSelected(item)
     }
+
+
 
 }

@@ -1,13 +1,20 @@
 package com.example.lendyproj
 
 import android.os.Bundle
+import android.view.View
+import android.view.View.GONE
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.isVisible
 import androidx.databinding.DataBindingUtil
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.FragmentTransaction
 import androidx.navigation.Navigation
+import androidx.navigation.findNavController
+import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI
+import androidx.navigation.ui.setupActionBarWithNavController
+import androidx.navigation.ui.setupWithNavController
 import com.example.lendyproj.databinding.ActivityHomeBinding
 
 class HomeActivity : AppCompatActivity() {
@@ -15,58 +22,27 @@ class HomeActivity : AppCompatActivity() {
     lateinit var homeFragment: HomeFragment
     lateinit var bookShelfFragment: BookshelfFragment
     lateinit var profileFragment: ProfileFragment
-    lateinit var lendFragment: LendFragment
+    lateinit var chatFragment: ChatFragment
+    var t = true
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val binding = DataBindingUtil.setContentView<ActivityHomeBinding>(this,
             R.layout.activity_home)
 
-
-        val bottomNavigation: BottomNavigationView = findViewById(R.id.nav_view)
+        val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottomNavigation)
         drawerLayout = binding.drawerLayout
-        val navController = Navigation.findNavController(this, R.id.frame_layout)
+        val navController = findNavController(R.id.fragment)
+
+//        val appBarConfiguration = AppBarConfiguration(setOf(R.id.homeFragment, R.id.bookshelfFragment, R.id.lendFragment, R.id.profileFragment))
+//        setupActionBarWithNavController(navController, appBarConfiguration)
+
+        bottomNavigationView.setupWithNavController(navController)
         NavigationUI.setupWithNavController(binding.navView, navController)
 
-        bottomNavigation.setOnNavigationItemSelectedListener { item ->
-            when (item.itemId) {
-                R.id.navigation_home -> {
-                    homeFragment = HomeFragment()
-                    supportFragmentManager
-                        .beginTransaction()
-                        .replace(R.id.frame_layout, homeFragment)
-                        .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
-                        .commit()
-                }
-                R.id.navigation_bookshelf -> {
-                    bookShelfFragment = BookshelfFragment()
-                    supportFragmentManager
-                        .beginTransaction()
-                        .replace(R.id.frame_layout, bookShelfFragment)
-                        .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
-                        .commit()
-                }
-                R.id.navigation_profile -> {
-                    profileFragment = ProfileFragment()
-                    supportFragmentManager
-                        .beginTransaction()
-                        .replace(R.id.frame_layout, profileFragment)
-                        .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
-                        .commit()
-                }
-                R.id.navigation_lend -> {
-                    lendFragment = LendFragment()
-                    supportFragmentManager
-                        .beginTransaction()
-                        .replace(R.id.frame_layout, lendFragment)
-                        .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
-                        .commit()
-                }
-            }
-            true
-        }
 
     }
+
 
 
 }

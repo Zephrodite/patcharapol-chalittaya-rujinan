@@ -12,6 +12,7 @@ import com.example.lendyproj.data.Result
 
 import com.example.lendyproj.R
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.GoogleAuthProvider
 import com.google.firebase.auth.ktx.auth
@@ -21,9 +22,10 @@ class LoginViewModel(private val loginRepository: LoginRepository) : ViewModel()
 
     private val _loginForm = MutableLiveData<LoginFormState>()
     val loginFormState: LiveData<LoginFormState> = _loginForm
-
+    val user = MutableLiveData<FirebaseUser>()
     private val _loginResult = MutableLiveData<LoginResult>()
     val loginResult: LiveData<LoginResult> = _loginResult
+
 
     fun login(email: String, password: String) {
         // can be launched in a separate asynchronous job
@@ -60,54 +62,40 @@ class LoginViewModel(private val loginRepository: LoginRepository) : ViewModel()
         return password.length >= 8
     }
 
-    val user = MutableLiveData<FirebaseUser>()
 
-    fun login(activity: Activity, email:String, password: String){
-        Firebase.auth.signInWithEmailAndPassword(email, password)
+//    fun login(activity: Activity, email: String, password: String) {
+//        FirebaseAuth.getInstance().signInWithEmailAndPassword(email, password)
+//            .addOnCompleteListener(activity) { task ->
+//                if (task.isSuccessful) {
+//                    // Sign in success, update UI with the signed-in user's information
+//                    Log.d("Test: Task", "ok")
+//                    task.result?.let {
+//                        user.value = it.user
+//                    }
+//                } else {
+//                    Log.w("Test Task login", "singInWithEmail:failure", task.exception)
+//                    Toast.makeText(activity, "Authentication failed.", Toast.LENGTH_SHORT).show()
+//                }
+//
+//            }
+//    }
+
+    fun register(activity: Activity, email: String, password: String, username: String) {
+        Firebase.auth.createUserWithEmailAndPassword(email, password)
             .addOnCompleteListener(activity) { task ->
                 if (task.isSuccessful) {
-                    // Sign in success, update UI with the signed-in user's information
-                    Log.d("Test Task;","ok")
-                    task.result?.let{
-                        user.value = task.result?.user
-                    }
-                }else{
-                    Log.w("Test task login","singInWithEmail:Failure", task.exception)
-                    Toast.makeText(activity,"Authemtication failed",
-                        Toast.LENGTH_SHORT).show()
-                }
-            }
-    }
-    fun register (activity: Activity, email: String, password: String){
-        Firebase.auth.createUserWithEmailAndPassword(email,password)
-            .addOnCompleteListener(activity){task ->
-                if(task.isSuccessful){
                     task.result?.let {
-                        Log.w("Test Register Success",it.user?.email ?: "")
-                    }
-                }else{
-                    Log.w("Test Register Error:","signUpWithEmail:failure", task.exception)
-                }
-            }
-    }
-
-    fun firebaseAuthWithGoogle(activity: Activity, IDToken: String){
-        val credential = GoogleAuthProvider.getCredential(IDToken, null)
-        Firebase.auth.signInWithCredential(credential)
-            .addOnCompleteListener(activity) { task ->
-                if (task.isSuccessful) {
-                    // Sign in success, update UI with the signed-in user's information
-                    Log.d("Test google auth", "signInWithCredential:succes")
-                    task.result?.let{
-                        user.value = it.user
+                        Log.d("Test Register Success!", it.user?.email ?: "")
                     }
                 } else {
-                    // If sign in fails, display a message to the user.
-                    Log.w("Test google auth", "signInWithCredential:failure",task.exception)
+                    Log.w("Test Register Error!", "singUpWithEmail:failure", task.exception)
                 }
             }
+
     }
-    fun firebaseSignOut(googleSignInClient: GoogleSignInClient){
+
+
+    fun firebaseSignOut(googleSignInClient: GoogleSignInClient) {
         Firebase.auth.signOut()
         googleSignInClient.signOut()
     }

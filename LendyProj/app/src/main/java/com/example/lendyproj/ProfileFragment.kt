@@ -5,17 +5,21 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment
-import androidx.navigation.findNavController
-import androidx.navigation.ui.NavigationUI
-import com.example.lendyproj.ui.login.LoginActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.bumptech.glide.Glide
+import com.google.android.gms.auth.api.signin.GoogleSignIn
+import com.google.android.gms.auth.api.signin.GoogleSignInClient
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.fragment_profile.view.*
+import kotlinx.android.synthetic.main.fragment_profile.view.profile_image
+import kotlinx.android.synthetic.main.fragment_profile2.view.*
 
 class ProfileFragment : Fragment() {
     lateinit var aboutFragment: AboutFragment
     private lateinit var mAuth: FirebaseAuth
-
+    lateinit var googleSignInClient: GoogleSignInClient
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -32,17 +36,33 @@ class ProfileFragment : Fragment() {
         mAuth = FirebaseAuth.getInstance()
         val currentUser = mAuth.currentUser
 
-        view.name_txt.text = "Name: " + currentUser.displayName
-        view.email_txt.text = "Email: " + currentUser.email
+        view.name_txt.text = currentUser.displayName
 
         Glide.with(this).load(currentUser?.photoUrl).into(view.profile_image)
 
-        view.sign_out_btn.setOnClickListener {
-            mAuth.signOut()
-            val `in` = Intent(getActivity(), LoginActivity::class.java)
+        val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+            .requestIdToken(getString(R.string.default_web_client_id))
+            .requestEmail()
+            .build()
+
+        googleSignInClient = GoogleSignIn.getClient(requireActivity(), gso)
+
+        view.watchlist_button.setOnClickListener {
+            val `in` = Intent(getActivity(), WatchListActivity::class.java)
             startActivity(`in`)
+
         }
 
+        view.edit_profile_button.setOnClickListener {
+            val intent = Intent(requireActivity(), EditProfile::class.java)
+            intent.putExtra("currentUserid", currentUser)
+            requireActivity()?.startActivity(intent)
+        }
+
+        view.settingProfileButton.setOnClickListener{
+            val intent = Intent(requireActivity(), SettingActivity::class.java)
+            requireActivity()?.startActivity(intent)
+        }
         setHasOptionsMenu(true)
 
         return view

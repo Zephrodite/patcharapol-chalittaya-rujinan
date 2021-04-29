@@ -40,7 +40,7 @@
 
     <string name="hot_menu">Hot</string>
     <string name="new_menu">New</string>
-    <string name="category_menu">Cataegory</string>
+    <string name="category_menu">Category</string>
     <string name="ranking_menu">Ranking</string>
     <string name="name">Name</string>
     <string name="example">Example</string>
@@ -50,6 +50,69 @@
     <string name="showurbook">Show Your Book</string>
     <string name="urbook">Your Book</string>
     <string name="lend">Lend</string>
-    <string name="lorem_text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</string>
+    <string name="lorem_text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever
+        since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+        but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets
+        containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</string>
+    <string name="all">TODO</string>
+    <string name="date">2 de marzo de 2020</string>
+    <string name="title_activity_main">Videjuegos</string>
+    <string name="subtitle_activity_main">2020</string>
+    <string name="title_activity_add">Nuevo videojuego</string>
+    <string name="title_activity_edit">Datos del videojuego</string>
+    <string name="name_form">Nombre</string>
+    <string name="date_form">Fecha</string>
+    <string name="url_form">Url imagen</string>
+    <string name="description_form">Descripción</string>
+    <string name="save">Guardar</string>
+    <string name="description">Final Fantasy es una franquicia de medios creada por Hironobu Sakaguchi y desarrollada por Square Enix. La franquicia se centra en una serie de fantasía y ciencia ficción de videojuegos RPG.</string>
+
+    <string name="add_your_book">Add your book</string>
+    <string name="add_photo">ADD PHOTO</string>
+    <string name="add_title">Title</string>
+    <string name="add_author">Author :</string>
+    <string name="add_description">Description</string>
+    <string name="add_type">Type</string>
+    <string name="add_button">ADD</string>
+    <string name="add_price">Price</string>
+    <string name="edit_button">EDIT</string>
+    <string name="contact_button">CONTACT</string>
+    <string name="update_button">UPDATE</string>
+    <string name="help_center">Help center</string>
+    <string name="about_us">About us!</string>
+    <string name="log_out">Log out</string>
+    <string name="watchlist">Watchlist</string>
+    <string name="bookshelf">Bookshelf</string>
+    <string name="history">History</string>
+    <string name="setting">Setting</string>
+    <string name="edit_profile">Edit profile</string>
+    <string name="edit_your_book">Edit your book</string>
+    <string name="edit_your_profile">Edit your profile</string>
+    <string name="forget_your_password">Forget your passwoed?</string>
+    <string name="reset_password">RESET PASSWORD</string>
+    <string name="sign_in">Sign in</string>
+    <string name="signin_with_email">SIGN IN with email</string>
+    <string name="chat">Chat</string>
+    <string name="enter_name">Enter Name</string>
+    <string name="enter_email">Enter Email</string>
+    <string name="type_message">Type Message</string>
+    <string name="label_sign_up">Sign Up</string>
+    <string name="btn_sign_up">Sign Up</string>
+    <string name="btn_login">Login</string>
+    <string name="btn_save">Save</string>
+    <string name="label_sign_in">Sign In</string>
+    <string name="label_message">Message</string>
+    <string name="label_profile">Profile</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="enter_confirm_password">Enter Confirm Password</string>
+    <string name="title_activity_book_detail3">BookDetail3</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
 
 </resources>
