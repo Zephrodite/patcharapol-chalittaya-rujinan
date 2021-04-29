@@ -27,6 +27,7 @@ import de.hdodenhof.circleimageview.CircleImageView
 import kotlinx.android.synthetic.main.fragment_chat.view.*
 
 class ChatFragment : Fragment() {
+
     private var param1: String? = null
     private var param2: String? = null
     lateinit var homeFragment: HomeFragment

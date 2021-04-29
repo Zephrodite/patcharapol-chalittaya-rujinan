@@ -57,111 +57,8 @@ class BookDetail3 : AppCompatActivity() {
 
                     contactRef.addValueEventListener(object : ValueEventListener {
                         override fun onDataChange(datasnapshoT: DataSnapshot) {
-                            addtoContactButton.setOnClickListener{
-//                                datasnapshoT.children.forEach { child ->
-//                                    if(child.child("userId").getValue(String::class.java) == userIdCompare
-//                                        && child.child("currentUid").getValue(String::class.java) == currentUid){
-//                                        i = false
-//                                        Toast.makeText(this@BookDetail,
-//                                            "This person are in your chat",
-//                                            Toast.LENGTH_SHORT).show()
-//                                    }
-//                                }
 
-                                if ( i == true ) {
-                                    val currentUserid1 = Firebase.auth.currentUser!!.uid
-
-                                    uidRef.addValueEventListener(object : ValueEventListener {
-                                        @Suppress("NAME_SHADOWING")
-                                        override fun onDataChange(datasnapshot: DataSnapshot) {
-                                            datasnapshot.children.forEach { child ->
-                                                if (child.child("userId")
-                                                        .getValue(String::class.java) == currentUserid1
-                                                ) {
-                                                    val allowedChars =
-                                                        ('A'..'Z') + ('a'..'z') + ('0'..'9')
-                                                    val contactId =
-                                                        (1..40).map { allowedChars.random() }
-                                                            .joinToString("")
-                                                    val contactId2 =
-                                                        (1..40).map { allowedChars.random() }
-                                                            .joinToString("")
-                                                    val secUsername = child.child("username").getValue(String::class.java)
-                                                    val secImageUri = child.child("profileImageUri").getValue(String::class.java)
-                                                    val contactid =
-                                                        ContactId(userid.username.toString(),
-                                                            userid.email.toString(),
-                                                            userid.profileImageUri.toString(),
-                                                            userid.userId.toString(),
-                                                            currentUid,
-                                                            contactId,
-                                                            bookId, secUsername.toString(), secImageUri.toString())
-                                                    val contactid2 =
-                                                        ContactId(secUsername.toString(),
-                                                            currentEmail,
-                                                            secImageUri.toString(),
-                                                            currentUid,
-                                                            userid.userId.toString(),
-                                                            contactId2,
-                                                            bookId, userid.username.toString(), userid.profileImageUri.toString())
-
-                                                    val chatuser =
-                                                        ChatUser(userid.username.toString(),
-                                                            userid.profileImageUri.toString(),
-                                                            userid.userId.toString())
-
-                                                    val chatuser2 =
-                                                        ChatUser(secUsername.toString(),
-                                                            secImageUri.toString(),
-                                                            currentUid)
-
-
-                                                    if (datasnapshoT.hasChild(currentUid)) {
-
-                                                        contactRef.child(currentUid)
-                                                            .child("userId").child(userid.userId.toString())
-                                                            .setValue(chatuser)
-                                                        contactRef.child(userid.userId.toString())
-                                                            .child("userId").child(currentUid)
-                                                            .setValue(chatuser2)
-
-
-                                                    } else {
-                                                        contactRef.child(currentUid).setValue(contactid)
-                                                        contactRef.child(userid.userId.toString()).setValue(contactid2)
-                                                        contactRef.child(currentUid)
-                                                            .child("userId").child(userid.userId.toString())
-                                                            .setValue(chatuser)
-                                                        contactRef.child(userid.userId.toString())
-                                                            .child("userId").child(currentUid)
-                                                            .setValue(chatuser2)
-                                                    }
-
-
-
-                                                }
-
-
-                                            }
-
-                                            val intent = Intent(this@BookDetail3, ChatActivity::class.java)
-                                            intent.putExtra("userId", userid.userId.toString())
-                                            intent.putExtra("userName", userid.username.toString())
-                                            intent.putExtra("imageUri", userid.profileImageUri.toString())
-                                            startActivity(intent)
-                                        }
-
-                                        override fun onCancelled(error: DatabaseError) {
-                                            Log.w("TAG", "Failed to read value.", error.toException())
-
-                                        }
-                                    })
-                                }
-
-
-                            }
                         }
-
 
                         override fun onCancelled(error: DatabaseError) {
                             Log.w("TAG", "Failed to read value.", error.toException())
@@ -234,6 +131,8 @@ class BookDetail3 : AppCompatActivity() {
                     titleTextView.text = book.title.toString()
                     authorTextView.text = book.author.toString()
                     descriptionTextView.text = book.description.toString()
+                    typeTextView.text = book.type.toString()
+                    priceTextView.text = book.price.toString()
                     images(book.downloadUri.toString())
 
                 }

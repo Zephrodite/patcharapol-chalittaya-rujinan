@@ -115,8 +115,6 @@ class ChatActivity : AppCompatActivity() {
     fun readMessage(senderId: String, receiverId: String, recyclerView: RecyclerView) {
         val databaseReference = FirebaseDatabase.getInstance().getReference("Chat")
 
-
-
         databaseReference.addValueEventListener(object : ValueEventListener {
             override fun onCancelled(error: DatabaseError) {
                 TODO("Not yet implemented")
