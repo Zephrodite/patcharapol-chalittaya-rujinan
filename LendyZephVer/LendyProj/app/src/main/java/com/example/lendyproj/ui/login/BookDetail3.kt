@@ -17,8 +17,12 @@ import com.google.firebase.database.ktx.database
 import com.google.firebase.database.ktx.getValue
 import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_book_detail.*
+import kotlinx.android.synthetic.main.activity_book_detail.addtoWatchlistButton
+import kotlinx.android.synthetic.main.activity_book_detail.authorTextView
+import kotlinx.android.synthetic.main.activity_book_detail.descriptionTextView
 import kotlinx.android.synthetic.main.activity_book_detail.posterImgeView
 import kotlinx.android.synthetic.main.activity_book_detail.titleTextView
+import kotlinx.android.synthetic.main.activity_book_detail3.*
 
 class BookDetail3 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -131,8 +135,8 @@ class BookDetail3 : AppCompatActivity() {
                     titleTextView.text = book.title.toString()
                     authorTextView.text = book.author.toString()
                     descriptionTextView.text = book.description.toString()
-                    typeTextView.text = book.type.toString()
-                    priceTextView.text = book.price.toString()
+                    typeTextView3.text = book.type.toString()
+                    priceTextView3.text = book.price.toString()
                     images(book.downloadUri.toString())
 
                 }
