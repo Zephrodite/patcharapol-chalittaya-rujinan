@@ -9,7 +9,7 @@ Lab 6 :
 </br> Rujinan Thima 221-7 Update up bar
 </br> Chalittaya Nimpattanawong 174-0 Update Navigation drawer
 </br></br>User test login
-email : yo@gmail.com  
+</br>email : yo@gmail.com  
 </br>password : 55555555
 </br>or
 </br>email : jack@gmail.com
