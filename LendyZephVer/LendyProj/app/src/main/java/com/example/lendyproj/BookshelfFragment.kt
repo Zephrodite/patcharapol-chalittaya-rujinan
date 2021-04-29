@@ -132,7 +132,7 @@ class BookshelfFragment : Fragment()  {
             }
 
             holder.itemView.setOnClickListener { v ->
-                val intent = Intent(v.context, BookDetail::class.java).apply {
+                val intent = Intent(v.context, BookDetail3::class.java).apply {
                     putExtra("bookId", book.bookId)
                 }
                 v.context.startActivity(intent)

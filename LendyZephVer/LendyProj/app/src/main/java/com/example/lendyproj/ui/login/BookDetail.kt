@@ -189,11 +189,11 @@ class BookDetail : AppCompatActivity() {
 
                     val bookIdCompare = book.bookId.toString()
 
-//                    shareButton.setOnClickListener {
-//                        val myIntent = Intent(Intent.ACTION_SEND)
-//                        myIntent.setType("type/plain").putExtra(Intent.EXTRA_TEXT, book.title + " by " + book.date + "\n description: " + book.description)
-//                        startActivity(myIntent)
-//                    }
+                    shareButton.setOnClickListener {
+                        val myIntent = Intent(Intent.ACTION_SEND)
+                        myIntent.setType("type/plain").putExtra(Intent.EXTRA_TEXT, book.title + " by " + book.author + "\n description: " + book.description)
+                        startActivity(myIntent)
+                    }
 
                     watchListRef.addValueEventListener(object : ValueEventListener {
                         override fun onDataChange(datasnapshot: DataSnapshot) {
