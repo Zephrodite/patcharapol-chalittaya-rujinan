@@ -14,3 +14,11 @@ password : 55555555
 </br>or
 </br>email : jack@gmail.com
 password : 11111111
+</br>
+</br>1. Member contribution: Who does what and for how long
+
+</br>2. The best features of the game: the features that make the game fun or good
+
+</br>3. The features that you would like to improve
+
+</br>4. Other comments or suggestions
