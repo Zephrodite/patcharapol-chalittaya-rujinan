@@ -28,8 +28,8 @@ password : 11111111
 </br>
 </br>4. Other comments or suggestions
 </br> Patcharapol Pansakdanon 063-9 อาจารย์สอนดีมากครับ
-</br> Rujinan Thima 221-7 
-</br> Chalittaya Nimpattanawong 174-0
+</br> Rujinan Thima 221-7 เรียนต่อกัน 5 ชม. เหนื่อยมากค่ะ แต่สไลด์อาจารย์ทำดีมากเลยค่ะ เข้าใจงา่ย เวลาการสอนนานไป สมองหนูไปก่อนละค่ะ 55555
+</br> Chalittaya Nimpattanawong 174-0 
 </br> 
 </br> Firebase using image.
 </br>
